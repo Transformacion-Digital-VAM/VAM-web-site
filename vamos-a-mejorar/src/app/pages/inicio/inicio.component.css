@@ -1,0 +1,133 @@
+.video-container {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* Relación 16:9 */
+}
+
+.video-container video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* impide pausar con clic */
+}
+
+/*ESTILOS CARDS DE CREDITOS*/
+.title-underline::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    margin: 15px auto;
+    border-radius: 2px;
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hover-transform {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  }
+  
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-check {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .list-check li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .list-check li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #34bc0a;
+  }
+  
+  .btn-hover-icon:hover i {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+  }
+  
+  .benefits-list div:hover {
+    transform: translateX(5px);
+    transition: transform 0.2s ease;
+  }
+
+
+  /*ESTILOS DE CARDS SERVICIOS EXTRAS*/
+  /* Estilos consistentes con el primer componente */
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hover-transform {
+    transition: all 0.3s ease;
+    border-radius: 12px !important;
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand-logo {
+    max-height: 40px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    padding: 5px;
+  }
+  
+  .service-card:hover .brand-logo {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  
+  .brands-grid {
+    padding: 10px 0;
+  }
+  
+  .py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
