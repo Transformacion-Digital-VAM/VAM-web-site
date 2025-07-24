@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +16,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ButtonModule
+    AppRoutingModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
