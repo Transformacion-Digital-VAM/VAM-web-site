@@ -23,13 +23,15 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { TestimoniosComponent } from './pages/testimonios/testimonios.component';
 import { CreditoGrupalComponent } from './pages/credito-grupal/credito-grupal.component';
 import { CreditoIndividualComponent } from './pages/credito-individual/credito-individual.component';
+import { CommonModule } from '@angular/common';
+import { TabsModule } from 'primeng/tabs';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    InicioComponent,
+    // InicioComponent,
     NosotrosComponent,
     TestimoniosComponent
     // CreditoGrupalComponent,
