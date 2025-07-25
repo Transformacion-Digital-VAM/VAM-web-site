@@ -1,0 +1,71 @@
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #214aaa 0%, #5271d7 100%);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #214aaa, #5271d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .divider {
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  
+  .hover-transform {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-check {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .list-check li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .list-check li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #34bc0a;
+  }
+  
+  .bg-light-primary {
+    background-color: rgba(33, 74, 170, 0.05);
+  }
+  
+  .bg-orange {
+    background-color: #fd7e14;
+  }
+  
+  .text-orange {
+    color: #fd7e14;
+  }
+  
+  .py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }

@@ -17,9 +17,9 @@
 .title-underline::after {
     content: '';
     display: block;
-    width: 80px;
+    width: 80%;
     height: 4px;
-    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    background: linear-gradient(90deg, #0d074a, #167fb8);
     margin: 15px auto;
     border-radius: 2px;
   }
@@ -84,7 +84,7 @@
   /*ESTILOS DE CARDS SERVICIOS EXTRAS*/
   /* Estilos consistentes con el primer componente */
   .text-gradient-primary {
-    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    background: linear-gradient(90deg, #190856, #167fb8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -150,7 +150,7 @@
   }
   
   .text-gradient-primary {
-    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    background: linear-gradient(90deg, #0d0b6e, #167fb8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -198,7 +198,7 @@
   }
   
   .text-gradient-primary {
-    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    background: linear-gradient(90deg, #0d1960, #167fb8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
