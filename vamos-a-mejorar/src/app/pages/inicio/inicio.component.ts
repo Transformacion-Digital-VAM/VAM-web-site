@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
+    isChatOpen = false;
 
+  toggleChat() {
+    this.isChatOpen = !this.isChatOpen;
+  }
 }

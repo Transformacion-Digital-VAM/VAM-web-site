@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bolsa de trabajo con las mejores oportunidades laborales">
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href   ="https://via.placeholder.com/32" type="image/png">
+</head>
+
+<body>
+    <main>
+        <section class="testimonios-section">
+            <div class="section-header">
+                <h2>Testimonios de Nuestros Clientes</h2>
+                <p>Descubra lo que nuestros clientes tienen que decir sobre nuestros servicios financieros y cómo hemos
+                    transformado sus vidas.</p>
+            </div>
+
+            <div class="controls">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="video">Con Video</button>
+                <button class="filter-btn" data-filter="text">Solo Texto</button>
+            </div>
+
+            <div class="testimonios-container">
+                <!-- Testimonio 1 - Con video -->
+                <div class="testimonio-card" data-type="video">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-women.jpg" alt="María López">
+                        </div>
+                        <div class="client-info">
+                            <h3>Carmen Rodriguez</h3>
+                            <p>Inversiones</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "Desde que estamos aquí en Vamos a Mejorar, pues he salido adelante, he hecho muchas cosas,
+                            pues mí negocio va creciendo más y más."
+                        </div>
+                        <div class="testimonio-video">
+                            <img src="../assets/testimonio.jpg" alt="Video testimonio" class="video-thumbnail">
+                            <div class="play-btn" data-video="../assets/testimonioseñora.mp4">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">15 Ene, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 - Solo texto -->
+                <div class="testimonio-card" data-type="text">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-man.jpg" alt="Carlos Rodríguez">
+                        </div>
+                        <div class="client-info">
+                            <h3>Carlos Rodríguez</h3>
+                            <p>Financiamiento Empresarial</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "Como pequeño empresario, necesitaba capital para expandir mi negocio. Financiera Confianza
+                            no solo me otorgó el préstamo, sino que también me asesoró financieramente. Hoy mi negocio
+                            creció un 40% gracias a su apoyo."
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">2 Mar, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 - Con video -->
+                <div class="testimonio-card" data-type="video">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-women.jpg" alt="Patricia Gutiérrez Méndez">
+                        </div>
+                        <div class="client-info">
+                            <h3>Patricia Gutiérrez Méndez</h3>
+                            <p>Inversiones</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "Comencé con un pequeño negocio. Vamos a Mejorar me ha llevado a abrir nuevas puesrtas, a un
+                            camino diferente."
+                        </div>
+                        <div class="testimonio-video">
+                            <img src="../assets/testimoniopatricia.jpeg" alt="Video testimonio" class="video-thumbnail">
+                            <div class="play-btn" data-video="../assets/testimoniopatricia.mp4">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">10 Feb, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 - Solo texto -->
+                <div class="testimonio-card" data-type="text">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-man.jpg" alt="Jorge Sánchez">
+                        </div>
+                        <div class="client-info">
+                            <h3>Jorge Sánchez</h3>
+                            <p>Refinanciamiento</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "efinancié mis deudas con Financiera Confianza y reduje mis pagos mensuales en un 35%. El
+                            proceso fue rápido y sin complicaciones. Ahora tengo un plan de pagos que se ajusta a mi
+                            presupuesto."
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">28 Ene, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 - Con video -->
+                <div class="testimonio-card" data-type="video">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-women.jpg" alt="Ana Torres">
+                        </div>
+                        <div class="client-info">
+                            <h3>Ana Torres</h3>
+                            <p>Préstamo Educativo</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "Gracias al préstamo educativo pude completar mi maestría en el extranjero. Las tasas de
+                            interés eran las más competitivas que encontré y el proceso de aprobación fue muy ágil.
+                            Recomiendo totalmente sus servicios."
+                        </div>
+                        <div class="testimonio-video">
+                            <img src="../assets/vector3.avif" alt="Video testimonio" class="video-thumbnail">
+                            <div class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">5 Mar, 2024</div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6 - Solo texto -->
+                <div class="testimonio- border-4 border-gray-300 shadow-2xl rounded-xl p-6" data-type="text">
+                    <div class="card-header">
+                        <div class="avatar">
+                            <img src="../assets/user-man.jpg" alt="Roberto García">
+                        </div>
+                        <div class="client-info">
+                            <h3>Roberto García</h3>
+                            <p>Seguros</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="testimonio-text">
+                            "Contraté un seguro de vida y de salud con Financiera Confianza. Cuando tuve un accidente,
+                            el proceso de reclamación fue sencillo y rápido. Recibí el apoyo económico que necesitaba
+                            sin demoras ni trámites burocráticos."
+                        </div>
+                        <img src="https://static.wixstatic.com/media/0bf950_85079e922d5d402897c56269f1479d84~mv2.jpg/v1/crop/x_552,y_222,w_463,h_352/fill/w_355,h_270,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_3564%20e.jpg"
+                            alt="">
+                    </div>
+                    <div class="card-footer">
+                        <div class="date">20 Feb, 2024</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="video-modal" id="videoModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <div class="video-player">
+                    <iframe id="videoFrame" src="" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Funcionalidad del modal de video
+            const videoModal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            const closeModal = document.getElementById('closeModal');
+            const playButtons = document.querySelectorAll('.play-btn');
+
+            playButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const videoUrl = this.getAttribute('data-video');
+                    videoFrame.src = videoUrl;
+                    videoModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                videoFrame.src = '';
+                videoModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+
+            // Cerrar modal al hacer clic fuera del contenido
+            window.addEventListener('click', function (event) {
+                if (event.target === videoModal) {
+                    videoFrame.src = '';
+                    videoModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Filtrado de testimonios
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const testimonioCards = document.querySelectorAll('.testimonio-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Quitar clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Añadir clase active al botón actual
+                    this.classList.add('active');
+
+                    const filter = this.getAttribute('data-filter');
+
+                    testimonioCards.forEach(card => {
+                        const cardType = card.getAttribute('data-type');
+
+                        if (filter === 'all' || filter === cardType) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

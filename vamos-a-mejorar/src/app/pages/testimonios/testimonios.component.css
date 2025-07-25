@@ -1,0 +1,322 @@
+:root {
+    --primary: #1a3a6c;
+    --secondary: #2d5a9a;
+    --accent: #ff6b35;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --success: #28a745;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f4f8;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.testimonios-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--gray);
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonio-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.card-header::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: serif;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+    line-height: 1;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-info {
+    flex: 1;
+}
+
+.client-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.client-info p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-text {
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 25px;
+    flex: 1;
+    text-align: justify;
+}
+
+.testimonio-text::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-family: serif;
+    font-size: 60px;
+    color: rgba(26, 58, 108, 0.1);
+    line-height: 1;
+}
+
+.testimonio-video {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+    background: var(--light);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.video-thumbnail:hover {
+    opacity: 0.9;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 107, 53, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.play-btn:hover {
+    background: var(--accent);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-btn i {
+    color: white;
+    font-size: 24px;
+    margin-left: 4px;
+}
+
+.card-footer {
+    padding: 15px 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating {
+    color: var(--accent);
+}
+
+.rating i {
+    margin-right: 3px;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+}
+
+.video-player {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    position: relative;
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .testimonios-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+}

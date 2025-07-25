@@ -1,6 +1,26 @@
 <!---VIDEO-->
 
 <!--HEADER-->
+<!-- Botón flotante -->
+<div class="chat-button" (click)="toggleChat()">
+  💬
+</div>
+
+<!-- Widget del chatbot -->
+<div class="chat-widget" *ngIf="isChatOpen">
+  <div class="chat-header">
+    <img src="assets/pepe-icon.png" alt="Avatar" class="avatar" />
+    <span><strong>Prestamoso</strong> · Asistente virtual</span>
+    <button class="close-button" (click)="toggleChat()">✖</button>
+  </div>
+  <iframe
+    src="https://marco98p3.pythonanywhere.com/"
+    class="chat-iframe"
+    allow="microphone"
+    title="Chatbot" scrolling="no" frameborder="0" style=" border: none; width: 100%; height: 100%; overflow: hidden;"
+  ></iframe>
+</div>
+
 
 <!---SERVICIOS-->
 
@@ -9,3 +29,5 @@
 <!---PREGUNTAS FRECUENTES-->
 
 <!--HORARIO DE ATENCION-->
+
+<!-- Chat bot -->
