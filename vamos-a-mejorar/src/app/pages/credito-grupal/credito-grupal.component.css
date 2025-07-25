@@ -1,0 +1,51 @@
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #214aaa 0%, #5271d7 100%);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #214aaa, #5271d7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .divider {
+    width: 80px;
+    height: 4px;
+    border-radius: 2px;
+  }
+  
+  .hover-transform {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .bg-purple {
+    background-color: #6f42c1;
+  }
+  
+  .text-purple {
+    color: #6f42c1;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }

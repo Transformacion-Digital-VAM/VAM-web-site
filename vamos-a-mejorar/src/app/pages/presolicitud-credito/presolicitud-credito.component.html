@@ -1,0 +1,173 @@
+<div class="form-section bg-light py-6">
+  <div class="container">
+    <div class="max-w-3xl mx-auto">
+      <!-- Encabezado -->
+      <div class="text-center mb-6">
+        <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Primer paso</span>
+        <h2 class="display-5 fw-bold mb-3">Presolicitud de <span class="text-gradient-primary">Crédito</span></h2>
+        <p class="text-muted lead">Completa este formulario y un asesor se pondrá en contacto contigo</p>
+      </div>
+
+      <!-- Formulario -->
+      <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+        <div class="card-body p-5">
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- Campo Nombre -->
+            <div class="form-group">
+              <label for="nombre" class="form-label fw-semibold mb-2">Nombre</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-user text-muted"></i>
+                </span>
+                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. Juan">
+              </div>
+            </div>
+
+            <!-- Campo Apellido Paterno -->
+            <div class="form-group">
+              <label for="nombre" class="form-label fw-semibold mb-2">Apellido Paterno</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-user text-muted"></i>
+                </span>
+                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. Pérez">
+              </div>
+            </div>
+
+            <!-- Campo Apellido Materno -->
+            <div class="form-group">
+              <label for="nombre" class="form-label fw-semibold mb-2">Apellido Materno</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-user text-muted"></i>
+                </span>
+                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. López">
+              </div>
+            </div>
+
+            <!-- Campo Año de Nacimiento -->
+            <div class="form-group">
+              <label for="nacimiento" class="form-label fw-semibold mb-2">Fecha de Nacimiento</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-calendar-alt text-muted"></i>
+                </span>
+                <input type="date" id="nacimiento" class="form-control py-3 border-start-0" placeholder="Ej. 1985">
+              </div>
+            </div>
+
+            <!-- Campo Domicilio -->
+            <div class="form-group">
+              <label for="domicilio" class="form-label fw-semibold mb-2">Domicilio</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-map text-muted"></i>
+                </span>
+                <input type="text" id="domicilio" class="form-control py-3 border-start-0" placeholder="Ej. Calle La Loma, #17">
+              </div>
+            </div>
+
+            <!-- Campo Correo -->
+            <div class="form-group">
+              <label for="email" class="form-label fw-semibold mb-2">Correo Electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-envelope text-muted"></i>
+                </span>
+                <input type="email" id="email" class="form-control py-3 border-start-0" placeholder="Ej. ejemplo@ejemplo.com">
+              </div>
+            </div>
+
+            <!-- Campo Teléfono -->
+            <div class="form-group">
+              <label for="telefono" class="form-label fw-semibold mb-2">Número de Contacto</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-phone text-muted"></i>
+                </span>
+                <input type="tel" id="telefono" class="form-control py-3 border-start-0" placeholder="Ej. 4181234567">
+              </div>
+            </div>
+
+            <!-- Campo Correo -->
+            <div class="form-group">
+              <label for="email" class="form-label fw-semibold mb-2">Correo Electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-envelope text-muted"></i>
+                </span>
+                <input type="email" id="email" class="form-control py-3 border-start-0" placeholder="Ej. ejemplo@ejemplo.com">
+              </div>
+            </div>
+
+            <!-- Campo Localidad -->
+            <div class="form-group">
+              <label for="localidad" class="form-label fw-semibold mb-2">Localidad</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-map-marker-alt text-muted"></i>
+                </span>
+                <select id="localidad" class="form-select py-3 border-start-0">
+                  <option selected disabled>Selecciona tu Municipio</option>
+                  <option>Dolores Hidalgo</option>
+                  <option>San Diego de la Unión</option>
+                  <option>San Miguel de Allende</option>
+                  <option>San Luis de la Paz</option>
+                  <option>San Felipe</option>
+                  <option>Victoria</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Campo Credito de Interes -->
+            <div class="form-group">
+              <label for="credito" class="form-label fw-semibold mb-2">Crédito de Interés</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-credit-card-alt text-muted"></i>
+                </span>
+                <select id="credito" class="form-select py-3 border-start-0">
+                  <option selected disabled>Selecciona el crédito que le interesa</option>
+                  <option>Crédito Grupal</option>
+                  <option>Crédito Individual</option>
+                </select>
+              </div>
+            </div>
+
+            <!---Cliente nuevo o antiguo-->
+            <div class="form-group">
+              <label for="cliente" class="form-label fw-semibold mb-2">¿Ya había solicitado un crédito con nosotros?</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="fas fa-check-circle text-muted"></i>
+                </span>
+                <select id="cliente" class="form-select py-3 border-start-0">
+                  <option selected disabled>Selecciona la respuesta</option>
+                  <option>Sí</option>
+                  <option>No</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="md:col-span-2 mt-3">
+              <button type="submit" class="btn btn-primary btn-lg w-full py-3 fw-bold shadow-lg hover-effect">
+                <i class="fas fa-paper-plane me-2"></i> Enviar presolicitud
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Nota legal -->
+      <div class="text-center mt-4">
+        <p class="small text-muted">
+          Al enviar este formulario aceptas nuestro <a href="#" class="text-primary">Aviso de Privacidad</a>.
+          <br>
+          Un asesor se pondrá en contacto contigo en un plazo máximo de 24 horas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

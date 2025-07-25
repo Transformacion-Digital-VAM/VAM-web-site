@@ -13,8 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { InicioComponent } from './pages/inicio/inicio.component';
-import { CreditoGrupalComponent } from './pages/credito-grupal/credito-grupal.component';
 import { CreditoIndividualComponent } from './pages/credito-individual/credito-individual.component';
 
 @NgModule({
@@ -22,7 +20,6 @@ import { CreditoIndividualComponent } from './pages/credito-individual/credito-i
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    CreditoGrupalComponent,
     CreditoIndividualComponent,
     
   ],
