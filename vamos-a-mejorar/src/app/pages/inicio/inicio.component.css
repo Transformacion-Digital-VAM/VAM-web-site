@@ -131,3 +131,162 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+  /*ESTILO PREGUNTAS FRECUENTES */
+   .custom-accordion .accordion-button:not(.collapsed) {
+    background-color: white;
+    color: #212529;
+    box-shadow: none;
+  }
+  
+  .custom-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+  
+  .custom-accordion .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fd7e14'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: scale(1.2);
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .list-check {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .list-check li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 8px;
+  }
+  
+  .list-check li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #34bc0a;
+  }
+  
+  .hover-transform {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-transform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+  }
+  
+  .py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+
+  /**HORARIOS Y UBICACIONES*/
+   .branches-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .text-gradient-primary {
+    background: linear-gradient(90deg, #34bc0a, #167fb8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .custom-tabs {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .custom-tabs .tab-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .custom-tabs .nav-tabs .nav-link {
+    border: none;
+    color: #495057;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-tabs .nav-tabs .nav-link:hover {
+    color: #fd7e14;
+    background-color: rgba(253, 126, 20, 0.05);
+  }
+  
+  .custom-tabs .nav-tabs .nav-link.active {
+    color: #fd7e14;
+    background-color: white;
+    border-bottom: 3px solid #fd7e14;
+  }
+  
+  .branch-card {
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+  }
+  
+  .branch-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .branch-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  
+  .schedule-box {
+    border: 1px solid #e9ecef;
+  }
+  
+  .btn-hover-icon:hover i {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+  }
+  
+  .py-6 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  @media (max-width: 992px) {
+    .branch-card .row {
+      flex-direction: column;
+    }
+    
+    .branch-info, .branch-map {
+      width: 100%;
+    }
+    
+    .branch-map {
+      height: 300px;
+    }
+    
+    .custom-tabs .nav-tabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+    
+    .custom-tabs .nav-link {
+      white-space: nowrap;
+    }
+  }
