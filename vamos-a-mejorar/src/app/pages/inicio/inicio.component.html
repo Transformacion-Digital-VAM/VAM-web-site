@@ -1,33 +1,701 @@
-<!---VIDEO-->
-
-<!--HEADER-->
-<!-- Botón flotante -->
-<div class="chat-button" (click)="toggleChat()">
-  💬
-</div>
-
-<!-- Widget del chatbot -->
-<div class="chat-widget" *ngIf="isChatOpen">
-  <div class="chat-header">
-    <img src="assets/pepe-icon.png" alt="Avatar" class="avatar" />
-    <span><strong>Prestamoso</strong> · Asistente virtual</span>
-    <button class="close-button" (click)="toggleChat()">✖</button>
+<!-- VIDEO -->
+  <div class="video-container p-2">
+    <video 
+      src="../../../assets/videos/file.mp4"
+      alt="video-vam"
+      autoplay
+      muted
+      loop
+      playsinline
+      oncontextmenu="return false;" 
+    ></video>
   </div>
-  <iframe
-    src="https://marco98p3.pythonanywhere.com/"
-    class="chat-iframe"
-    allow="microphone"
-    title="Chatbot" scrolling="no" frameborder="0" style=" border: none; width: 100%; height: 100%; overflow: hidden;"
-  ></iframe>
+
+<!-- HEADER -->
+<section class="hero-section bg-gradient-warning-dark py-2 overflow-hidden">
+  <div class="container py-lg-5">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 position-relative z-1">
+        <div class="mb-5">
+          <span class="badge bg-white text-warning fs-5 fw-bold mb-3 px-3 py-2 shadow-sm">Financiando sueños desde 2010</span>
+          <h1 class="display-3 fw-bold mb-4 text-gray animate__animated animate__fadeInUp">Da el salto <span class="text-warning">emprendedor</span> que mereces</h1>
+          <p class="lead text-white-80 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Tu idea de negocio está a un crédito de distancia. Te acompañamos desde el primer paso.</p>
+          
+          <div class="d-flex flex-wrap gap-3 mb-5 animate__animated animate__fadeInUp animate__delay-2s">
+            <button class="btn btn-warning btn-lg px-4 fw-bold shadow-lg hover-effect">
+              <i class="bi bi-chat-dots-fill me-2"></i>Chatea con nuestro asesor virtual <i class="fa-solid fa-vr-cardboard"></i>
+            </button>
+            <button class="btn btn-outline-dark btn-lg px-4 hover-effect">
+              <i class="bi bi-arrow-right-circle me-2"></i>Descubre cómo
+            </button>
+          </div>
+        </div>
+        
+        <div class="d-flex align-items-center animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="pe-4 border-end border-light">
+            <h3 class="fw-bold text-gray mb-0 display-5">+14</h3>
+            <p class="text-white-60 mb-0">Años creando oportunidades</p>
+          </div>
+          <div class="px-4">
+            <h3 class="fw-bold text-gray mb-0 display-5">100+</h3>
+            <p class="text-white-60 mb-0">Negocios impulsados</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="position-relative">
+          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" alt="Emprendedora sonriente" class="img-fluid rounded-4 shadow-lg floating-animation">
+          <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-3 shadow-sm ms-3 mb-3">
+            <div class="d-flex align-items-center">
+              <div class="bg-warning p-2 rounded-circle me-2">
+                <i class="bi bi-check-lg text-white fs-5"></i>
+              </div>
+              <div>
+                <p class="mb-0 fw-bold">Crédito aprobado en 24h</p>
+                <small class="text-muted">Para clientes calificados</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+<!---BENEFICIOS Y CREDITOS-->
+<div class="container py-2 my-lg-2">
+  <div class="text-center mb-5">
+    <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Impulsando tu éxito</span>
+    <h2 class="display-4 fw-bold mb-4 position-relative title-underline">Tu crecimiento es nuestra <span class="text-gradient-primary">prioridad</span></h2>
+    <p class="lead text-muted mx-auto" style="max-width: 700px;">Soluciones financieras diseñadas para cada etapa de tu emprendimiento</p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Crédito Comunal - Tarjeta mejorada -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-lg hover-transform">
+        <div class="card-body p-4 position-relative">
+          <div class="icon-wrapper bg-success bg-opacity-10 mb-4">
+            <i class="fa-solid fa-people-group fa-2x text-success"></i>
+          </div>
+          <h3 class="h2 fw-bold mb-3">Crédito Comunal</h3>
+          <p class="text-muted mb-4">
+            Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su calidad de vida.
+          </p>
+          <ul class="list-check mb-4">
+            <li>Grupos de 3 a 10 personas</li>
+            <li>Plazos flexibles</li>
+            <li>Garantía solidaria</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="credito-grupal.html" class="btn btn-success btn-hover-icon">
+              Más información <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-0 pt-0">
+          <small class="text-success"><i class="fas fa-clock me-1"></i> Aprobación en 48 horas</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Crédito Individual - Tarjeta mejorada -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-lg hover-transform">
+        <div class="card-body p-4 position-relative">
+          <div class="icon-wrapper bg-primary bg-opacity-10 mb-4">
+            <i class="fa-solid fa-user-tie fa-2x text-primary"></i>
+          </div>
+          <h3 class="h2 fw-bold mb-3">Crédito Individual</h3>
+          <p class="text-muted mb-4">
+            Para clientes nuevos o recurrentes que requieren montos mayores para invertir o fortalecer su microempresa.
+          </p>
+          <ul class="list-check mb-4">
+            <li>Montos hasta $50,000</li>
+            <li>Asesoría personalizada</li>
+            <li>Sin garantías complicadas</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="credito-individual.html" class="btn btn-primary btn-hover-icon">
+              Más información <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-0 pt-0">
+          <small class="text-primary"><i class="fas fa-bolt me-1"></i> Rápido y sencillo</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beneficios - Tarjeta destacada -->
+    <div class="col-md-4">
+      <div class="card h-100 border-0 shadow-lg hover-transform bg-dark text-white">
+        <div class="card-body p-4 position-relative">
+          <div class="icon-wrapper bg-warning bg-opacity-25 mb-4">
+            <i class="fa-solid fa-crown fa-2x text-warning"></i>
+          </div>
+          <h3 class="h2 fw-bold mb-3 text-warning">Ventajas Exclusivas</h3>
+          <p class="text-white-80 mb-4">Beneficios diseñados para hacer crecer tu negocio</p>
+          
+          <div class="benefits-list">
+            <div class="d-flex mb-3">
+              <div class="me-3 text-warning">
+                <i class="fas fa-percentage fa-lg"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Baja tasa de interés</h5>
+                <p class="small text-white-60 mb-0">Las más competitivas del mercado</p>
+              </div>
+            </div>
+            
+            <div class="d-flex mb-3">
+              <div class="me-3 text-warning">
+                <i class="fas fa-gift fa-lg"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Regalos estacionales</h5>
+                <p class="small text-white-60 mb-0">En épocas especiales del año</p>
+              </div>
+            </div>
+            
+            <div class="d-flex mb-3">
+              <div class="me-3 text-warning">
+                <i class="fas fa-hand-holding-usd fa-lg"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Bono por recomendación</h5>
+                <p class="small text-white-60 mb-0">Gana al traer nuevos clientes</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-auto pt-2">
+            <a href="#" class="btn btn-warning btn-hover-icon">
+              Ver todos los beneficios <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<!---SERVICIOS-->
-
 <!---SERVICIOS EXTRA-->
+<section class="otros-servicios py-2 bg-light position-relative overflow-hidden">
+  <!-- Elemento decorativo -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-warning opacity-5" style="clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);"></div>
+  
+  <div class="container position-relative z-1">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Servicios adicionales</span>
+      <h2 class="display-5 fw-bold mb-3">Más formas de <span class="text-gradient-primary">ayudarte</span></h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Soluciones complementarias para simplificar tu vida financiera</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Servicio 1 - Pago de servicios -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 bg-white rounded-3 shadow-sm hover-transform border-0 p-4">
+          <div class="icon-wrapper bg-warning bg-opacity-10 mb-4 mx-auto">
+            <i class="fas fa-file-invoice-dollar fa-2x text-warning"></i>
+          </div>
+          <h3 class="h4 fw-bold text-center mb-3">Pago de servicios</h3>
+          <p class="text-muted text-center mb-4">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
+          
+          <div class="brands-grid mt-auto">
+            <div class="row g-2 justify-content-center">
+              <div class="col-4 col-sm-3">
+                <img src="https://cdn.worldvectorlogo.com/logos/telmex-1.svg" alt="Telmex" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_neutral_de_la_Comisi%C3%B3n_Federal_de_Electricidad.svg" alt="CFE" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://roams.mx/images/logos/Color_280px/megacable.webp" alt="Megacable" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://gowi.mx/wp-content/uploads/2022/06/Aliado-Logo-izzi@2x.png" alt="Izzi" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://images.seeklogo.com/logo-png/2/3/cablemas-logo-png_seeklogo-24388.png" alt="Cablemas" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/axtel-logo-png-transparent.png" alt="Axtel" class="img-fluid brand-logo grayscale">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 2 - Remesas -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 bg-white rounded-3 shadow-sm hover-transform border-0 p-4">
+          <div class="icon-wrapper bg-warning bg-opacity-10 mb-4 mx-auto">
+            <i class="fas fa-hand-holding-usd fa-2x text-warning"></i>
+          </div>
+          <h3 class="h4 fw-bold text-center mb-3">Remesas</h3>
+          <p class="text-muted text-center mb-4">Recibe y envía dinero a nivel nacional e internacional con las mejores tasas.</p>
+          
+          <div class="brands-grid mt-auto">
+            <div class="row g-2 justify-content-center">
+              <div class="col-4 col-sm-3">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/07/logo-MoneyGram.png" alt="MoneyGram" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://1000marcas.net/wp-content/uploads/2020/07/Western-Union-Logo-2013.jpg" alt="Western Union" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://airpak.com/cashpak/wp-content/uploads/2021/03/envialana-300x154.png" alt="Envialana" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://ccolon.org.mx/wp-content/uploads/2023/06/ORLANDI-VALUTA.webp" alt="Orlandi Valuta" class="img-fluid brand-logo grayscale">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicio 3 - Recargas -->
+      <div class="col-lg-4 col-md-6">
+        <div class="service-card h-100 bg-white rounded-3 shadow-sm hover-transform border-0 p-4">
+          <div class="icon-wrapper bg-warning bg-opacity-10 mb-4 mx-auto">
+            <i class="fas fa-mobile-alt fa-2x text-warning"></i>
+          </div>
+          <h3 class="h4 fw-bold text-center mb-3">Recarga de tiempo aire</h3>
+          <p class="text-muted text-center mb-4">Recargas para todas las compañías con bonificaciones especiales.</p>
+          
+          <div class="brands-grid mt-auto">
+            <div class="row g-2 justify-content-center">
+              <div class="col-4 col-sm-3">
+                <img src="https://tsociety.info/wp-content/uploads/2024/01/telcel-logo-300x150.webp" alt="Telcel" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://images.seeklogo.com/logo-png/19/2/unefon-logo-png_seeklogo-196154.png" alt="Unefon" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="AT&T" class="img-fluid brand-logo grayscale">
+              </div>
+              <div class="col-4 col-sm-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Logo_Movistar.svg/1024px-Logo_Movistar.svg.png" alt="Movistar" class="img-fluid brand-logo grayscale">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!---PREGUNTAS FRECUENTES-->
+<section class="faq-section py-2 bg-light position-relative">  
+  <div class="container position-relative z-1">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">¿Tienes dudas?</span>
+      <h2 class="display-5 fw-bold mb-3">Preguntas <span class="text-gradient-primary">Frecuentes</span></h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Encuentra respuestas a las consultas más comunes sobre nuestros créditos</p>
+    </div>
 
+    <div class="accordion custom-accordion" id="faqAccordion">
+      <!-- Pregunta 1 -->
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+        <h3 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+                  aria-expanded="true" aria-controls="collapseOne">
+            <i class="fas fa-file-alt text-warning me-3"></i>
+            ¿Qué necesito para solicitar un crédito?
+          </button>
+        </h3>
+        <div id="collapseOne" class="accordion-collapse collapse show" 
+             aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-light text-muted fs-5 py-4">
+            <div class="d-flex mb-2">
+              <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+              <span>Identificación oficial vigente (INE, pasaporte)</span>
+            </div>
+            <div class="d-flex mb-2">
+              <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+              <span>Comprobante de domicilio reciente (no mayor a 3 meses)</span>
+            </div>
+            <div class="d-flex">
+              <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+              <span>Comprobante de ingresos (estados de cuenta, recibos de nómina)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+        <h3 class="accordion-header" id="headingTwo">
+          <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo" 
+                  aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fas fa-clock text-warning me-3"></i>
+            ¿Cuánto tiempo tarda la aprobación?
+          </button>
+        </h3>
+        <div id="collapseTwo" class="accordion-collapse collapse" 
+             aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-light text-muted fs-5 py-4">
+            <p>Nuestro proceso de aprobación es rápido y eficiente:</p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><span class="fw-bold text-primary">24 horas:</span> Para solicitudes completas con toda la documentación</li>
+              <li class="mb-2"><span class="fw-bold text-primary">48 horas:</span> Cuando se requieren verificaciones adicionales</li>
+              <li><span class="fw-bold text-primary">Inmediato:</span> Para clientes con historial crediticio en nuestro sistema</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
+        <h3 class="accordion-header" id="headingThree">
+          <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree" 
+                  aria-expanded="false" aria-controls="collapseThree">
+            <i class="fas fa-calendar-check text-warning me-3"></i>
+            ¿Puedo liquidar mi crédito antes del plazo?
+          </button>
+        </h3>
+        <div id="collapseThree" class="accordion-collapse collapse" 
+             aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-light text-muted fs-5 py-4">
+            <p class="fw-bold text-success">¡Sí! Y además obtienes importantes beneficios:</p>
+            <ul class="list-check">
+              <li class="mb-2">Sin penalización por pago anticipado</li>
+              <li class="mb-2">Reducción significativa en los intereses</li>
+              <li class="mb-2">Mejora tu historial crediticio</li>
+              <li>Posibilidad de acceder a mayores montos en futuros créditos</li>
+            </ul>
+            <p class="mt-3 mb-0"><i class="fas fa-info-circle text-primary me-2"></i> Puedes realizar pagos anticipados parciales o totales en cualquier momento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <button class="btn btn-warning btn-lg px-4 fw-bold shadow hover-transform">
+        <i class="fas fa-question-circle me-2"></i> ¿Necesitas más ayuda?
+      </button>
+    </div>
+  </div>
+</section>
 <!--HORARIO DE ATENCION-->
 
-<!-- Chat bot -->
+<section class="branches-section py-6 bg-light position-relative">
+  <!-- Elemento decorativo -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-warning opacity-5" style="clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);"></div>
+  
+  <div class="container position-relative z-1">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Nuestras ubicaciones</span>
+      <h2 class="display-5 fw-bold mb-3">Encuentra nuestra <span class="text-gradient-primary">sucursal más cercana</span></h2>
+      <p class="lead text-muted mx-auto" style="max-width: 700px;">Visítanos y descubre cómo podemos ayudarte a hacer realidad tus proyectos</p>
+    </div>
+
+    <div class="card border-0 shadow-lg overflow-hidden">
+      <div class="custom-tabs">
+        <div class="tab-header">
+          <div class="nav nav-tabs border-0" id="branchesTab" role="tablist">
+            <button class="nav-link active" id="dolores-tab" data-bs-toggle="tab" data-bs-target="#dolores" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> Dolores Hidalgo
+            </button>
+            <button class="nav-link" id="san-diego-tab" data-bs-toggle="tab" data-bs-target="#san-diego" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> San Diego
+            </button>
+            <button class="nav-link" id="san-miguel-tab" data-bs-toggle="tab" data-bs-target="#san-miguel" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> San Miguel
+            </button>
+            <button class="nav-link" id="san-luis-tab" data-bs-toggle="tab" data-bs-target="#san-luis" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> San Luis
+            </button>
+            <button class="nav-link" id="san-felipe-tab" data-bs-toggle="tab" data-bs-target="#san-felipe" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> San Felipe
+            </button>
+            <button class="nav-link" id="victoria-tab" data-bs-toggle="tab" data-bs-target="#victoria" type="button" role="tab">
+              <i class="fas fa-map-marker-alt me-2"></i> Victoria
+            </button>
+          </div>
+        </div>
+        
+        <div class="tab-content p-0 border-0" id="branchesTabContent">
+          <!-- Sucursal Dolores Hidalgo -->
+          <div class="tab-pane fade show active" id="dolores" role="tabpanel" aria-labelledby="dolores-tab">
+            <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <div class="branch-badge bg-success text-white mb-3">Sucursal Principal</div>
+                  <h4 class="fw-bold mb-3">Dolores Hidalgo</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0">Rivera del Río, 65 B3, Plaza Patria, 37800 Dolores Hidalgo, Gto.</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.2499058203407!2d-100.93225267015563!3d21.153446414960413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b3f08ee7528d5%3A0x6dcb8197590d59fa!2sPlaza%20Patria!5e0!3m2!1ses-419!2smx!4v1753120795489!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sucursal San Diego de la Unión (las demás siguen el mismo patrón) -->
+          <div class="tab-pane fade" id="san-diego" role="tabpanel" aria-labelledby="san-diego-tab">
+            <!-- Contenido similar para San Diego -->
+            <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <h4 class="fw-bold mb-3">San Diego de la Unión</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0"> Aldama 64, Barrio del Refugio</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1856.5532458757532!2d-100.8709510568376!3d21.4643377875126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b27232708beb7%3A0x70da6d65b1c72ba5!2sAldama%2064%2C%20Barrio%20del%20Refugio%2C%2037853%20San%20Diego%20de%20la%20Uni%C3%B3n%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1753124413058!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sucursal San Miguel de Allende -->
+          <div class="tab-pane fade" id="san-miguel" role="tabpanel" aria-labelledby="san-miguel-tab">
+            <!-- Contenido similar para San Miguel -->
+            <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <h4 class="fw-bold mb-3">San Miguel de Allende</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0"> Blvrd de la Conspiración, Arcos de San Miguel</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.1218058114123!2d-100.72954359116545!3d20.90741858063123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842b51c779907e2d%3A0x7cf27c735f222135!2sPlaza%20Real%20del%20Conde%20San%20Miguel%20Allende!5e0!3m2!1ses-419!2smx!4v1753121265892!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sucursal San Luis de la Paz -->
+          <div class="tab-pane fade" id="san-luis" role="tabpanel" aria-labelledby="san-luis-tab">
+            <!-- Contenido similar para San Luis -->
+            <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <h4 class="fw-bold mb-3">San Luis de la Paz</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0"> C. Galeana 634, Ecce Homo</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.2793520234277!2d-100.51746554917992!3d21.296743840590104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d4cfcc04c46bff%3A0x92783be419f5d678!2sPatio%20Bistro.Deli!5e0!3m2!1ses-419!2smx!4v1753127168525!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sucursal San Felipe -->
+          <div class="tab-pane fade" id="san-felipe" role="tabpanel" aria-labelledby="san-felipe-tab">
+            <!-- Contenido similar para San Felipe -->
+            <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <h4 class="fw-bold mb-3">San Felipe</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0"> C. Obregón #112 Int 7, Centro comercial Vianney</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d464.08783692523366!2d-101.21515321471692!3d21.480179082060534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842afd0061248f6b%3A0x9b260c6b0bb80ffa!2sCENTRO%20COMERCIAL%20VIANNEY!5e0!3m2!1ses-419!2smx!4v1753125446712!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sucursal Victoria -->
+          <div class="tab-pane fade" id="victoria" role="tabpanel" aria-labelledby="victoria-tab">
+            <!-- Contenido similar para Victoria -->
+              <div class="branch-card">
+              <div class="row g-0">
+                <div class="col-lg-4 branch-info bg-white p-4">
+                  <h4 class="fw-bold mb-3">Victoria</h4>
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <p class="mb-0"> Morelos 24, Centro</p>
+                  </div>
+                  
+                  <div class="schedule-box bg-light p-3 rounded mb-4">
+                    <h6 class="d-flex align-items-center text-muted mb-3">
+                      <i class="far fa-clock me-2"></i> Horario de atención
+                    </h6>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span class="fw-medium">Lunes a Viernes:</span>
+                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-medium">Sábados:</span>
+                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex gap-2">
+                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                      <i class="fas fa-phone me-1"></i> Llamar ahora
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
+                      <i class="fas fa-directions me-1"></i> Cómo llegar
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="col-lg-8 branch-map">
+                  <div class="ratio ratio-16x9 h-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3719.519995586905!2d-100.217175!3d21.211219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDEyJzQwLjQiTiAxMDDCsDEzJzAxLjgiVw!5e0!3m2!1ses-419!2smx!4v1753126832732!5m2!1ses-419!2smx"
+                      style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

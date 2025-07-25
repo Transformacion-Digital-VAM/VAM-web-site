@@ -21,6 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { TestimoniosComponent } from './pages/testimonios/testimonios.component';
+import { CreditoGrupalComponent } from './pages/credito-grupal/credito-grupal.component';
+import { CreditoIndividualComponent } from './pages/credito-individual/credito-individual.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { TestimoniosComponent } from './pages/testimonios/testimonios.component'
     InicioComponent,
     NosotrosComponent,
     TestimoniosComponent
+    // CreditoGrupalComponent,
+    // CreditoIndividualComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ import { TestimoniosComponent } from './pages/testimonios/testimonios.component'
     PanelModule,
     CardModule,
     CarouselModule,
-    ScrollTopModule
+    ScrollTopModule,
+    TabsModule,
+    CommonModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
