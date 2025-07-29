@@ -12,6 +12,7 @@ import { CardModule }      from 'primeng/card';
 import { CarouselModule }  from 'primeng/carousel';
 import { InputTextModule } from 'primeng/inputtext';
 import { ScrollTopModule } from 'primeng/scrolltop';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +26,10 @@ import { CreditoGrupalComponent } from './pages/credito-grupal/credito-grupal.co
 import { CreditoIndividualComponent } from './pages/credito-individual/credito-individual.component';
 import { CommonModule } from '@angular/common';
 import { TabsModule } from 'primeng/tabs';
+import { ComunidadComponent } from './pages/comunidad/comunidad.component';
+import { VacantesComponent } from './pages/vacantes/vacantes.component';
+import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { TabsModule } from 'primeng/tabs';
     FooterComponent,
     // InicioComponent,
     NosotrosComponent,
-    TestimoniosComponent
+    TestimoniosComponent,
+    ComunidadComponent,
+    VacantesComponent,
+    CardVacanteComponent,
     // CreditoGrupalComponent,
     // CreditoIndividualComponent,
   ],
@@ -49,7 +57,10 @@ import { TabsModule } from 'primeng/tabs';
     CarouselModule,
     ScrollTopModule,
     TabsModule,
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
