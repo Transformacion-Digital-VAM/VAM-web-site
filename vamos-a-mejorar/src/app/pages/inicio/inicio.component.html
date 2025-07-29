@@ -12,21 +12,24 @@
   </div>
 
 <!-- HEADER -->
-<section class="hero-section bg-gradient-warning-dark py-2 overflow-hidden">
+<section class="hero-section  py-2 overflow-hidden">
   <div class="container py-lg-5">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 position-relative z-1">
         <div class="mb-5">
           <span class="badge bg-white text-primary fs-5 fw-bold mb-3 px-3 py-2 shadow-sm">Financiando sueños desde 2010</span>
-          <h1 class="display-3 fw-bold mb-4 text-gray animate__animated animate__fadeInUp">Da el salto <span class="text-info">emprendedor</span> que mereces</h1>
+          <h1 class="display-3 fw-bold mb-4 text-gray animate__animated animate__fadeInUp">Da el salto 
+            <span class="text-emprendedor" style="color: #2d1f70;">emprendedor</span> que mereces</h1>
           <p class="lead text-white-80 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Tu idea de negocio está a un crédito de distancia. Te acompañamos desde el primer paso.</p>
           
           <div class="d-flex flex-wrap gap-3 mb-5 animate__animated animate__fadeInUp animate__delay-2s">
-            <button class="btn btn-info btn-lg px-4 fw-bold shadow-lg hover-effect">
-              <i class="bi bi-chat-dots-fill me-2"></i>Chatea con nuestro asesor virtual <i class="fa-solid fa-vr-cardboard"></i>
+            <button class="btn btn-lg px-4 fw-bold shadow-lg hover-effect" style="background-color: #2d1f70; color: #ffffff;">
+              <i class="bi bi-chat-dots-fill me-2"></i>
+              {{displayedText}}
+              <i class="fa-solid fa-vr-cardboard ms-2"></i>
             </button>
             <button class="btn btn-outline-dark btn-lg px-4 hover-effect">
-              <i class="bi bi-arrow-right-circle me-2"></i>Descubre cómo
+              <i class="bi bi-arrow-right-circle me-2"></i>Descubre cómo iniciar tu negocio
             </button>
           </div>
         </div>
@@ -37,8 +40,8 @@
             <p class="text-white-60 mb-0">Años creando oportunidades</p>
           </div>
           <div class="px-4">
-            <h3 class="fw-bold text-gray mb-0 display-5">100+</h3>
-            <p class="text-white-60 mb-0">Negocios impulsados</p>
+            <h3 class="fw-bold text-gray mb-0 display-5">5K+</h3>
+            <p class="text-white-60 mb-0">Emprendores impulsados</p>
           </div>
         </div>
       </div>
@@ -82,11 +85,11 @@
           <p class="text-muted mb-4">
             Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su calidad de vida.
           </p>
-            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i> Grupos de 3 a 10 personas
+            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i> Grupos de 10 personas
             <br>
             <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i> Plazos flexibles
             <br>
-            <i class="fas fa-check-circle ms-2 mb-5" style="color: green"></i> solidaria
+            <i class="fas fa-check-circle ms-2 mb-4" style="color: green"></i> Baja tasa de interés
             
           <div class="mt-auto">
             <a href="credito-grupal" class="btn btn-success btn-hover-icon">
@@ -154,8 +157,8 @@
                 <i class="fas fa-gift fa-lg"></i>
               </div>
               <div>
-                <h5 class="mb-1">Regalos estacionales</h5>
-                <p class="small text-white-60 mb-0">En épocas especiales del año</p>
+                <h5 class="mb-1">Regalos por cumplimiento</h5>
+                <p class="small text-white-60 mb-0">Premios por tu historial de pago puntual</p>
               </div>
             </div>
             
@@ -181,7 +184,7 @@
   </div>
 </div>
 <!---SERVICIOS EXTRA-->
-<section class="otros-servicios py-2 position-relative overflow-hidden" style="background-color: #aceaf85e;">
+<section class="otros-servicios py-2 position-relative overflow-hidden">
   <!-- Elemento decorativo -->
   
   <div class="container position-relative z-1">
@@ -286,7 +289,7 @@
 </section>
 
 <!---PREGUNTAS FRECUENTES-->
-<section class="faq-section py-2 position-relative" style="background-color: #aceaf85e;">  
+<section class="faq-section py-2 position-relative">  
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
       <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">¿Tienes dudas?</span>
@@ -358,14 +361,15 @@
           </button>
         </h3>
         <div id="collapseThree" class="accordion-collapse collapse" 
-             aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
           <div class="accordion-body bg-light text-muted fs-5 py-4">
             <p class="fw-bold text-success">¡Sí! Y además obtienes importantes beneficios:</p>
-            <ul class="list-check">
-              <li class="mb-2">Sin penalización por pago anticipado</li>
-              <li class="mb-2">Reducción significativa en los intereses</li>
-              <li class="mb-2">Mejora tu historial crediticio</li>
-              <li>Posibilidad de acceder a mayores montos en futuros créditos</li>
+            <ul>
+              <i class="pi pi-check-circle" style="color: green"></i> Sin penalización por pago anticipado
+              <br>
+               <i class="pi pi-check-circle" style="color: green"></i> Mejora tu historial crediticio
+               <br>
+             <i class="pi pi-check-circle" style="color: green"></i> Posibilidad de acceder a mayores montos en futuros créditos
             </ul>
             <p class="mt-3 mb-0"><i class="fas fa-info-circle text-primary me-2"></i> Puedes realizar pagos anticipados parciales o totales en cualquier momento.</p>
           </div>
@@ -376,16 +380,15 @@
     <div class="text-center mt-5">
       <button class="btn btn-info btn-lg px-4 fw-bold shadow hover-transform">
         <i class="fas fa-question-circle me-2"></i> ¿Necesitas más ayuda?
+        <br>
+        Nuestro asesor prestamoso puede ayudarte
       </button>
     </div>
   </div>
 </section>
 <!--HORARIO DE ATENCION-->
 
-<section class="branches-section py-6 bg-light position-relative">
-  <!-- Elemento decorativo -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 opacity-5" style="clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%); background-color: #d7f1fa;"></div>
-  
+<section class="branches-section py-6 position-relative">  
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
       <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">Nuestras ubicaciones</span>
@@ -449,9 +452,7 @@
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 
@@ -495,9 +496,7 @@
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 
@@ -541,9 +540,7 @@
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 
@@ -587,9 +584,7 @@
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 
@@ -633,9 +628,7 @@
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 
@@ -675,13 +668,11 @@
                     </div>
                   </div>
                   
-                  <div class="d-flex gap-2">
+                  <div class="d-flex gap-1">
                     <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
-                    <a href="#" class="btn btn-outline-primary btn-hover-icon">
-                      <i class="fas fa-directions me-1"></i> Cómo llegar
-                    </a>
+
                   </div>
                 </div>
                 

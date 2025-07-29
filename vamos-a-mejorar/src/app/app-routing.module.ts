@@ -4,13 +4,23 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { CreditoGrupalComponent } from './pages/credito-grupal/credito-grupal.component';
 import { CreditoIndividualComponent } from './pages/credito-individual/credito-individual.component';
 import { PresolicitudCreditoComponent } from './pages/presolicitud-credito/presolicitud-credito.component';
+import { CostosComisionesComponent } from './pages/costos-comisiones/costos-comisiones.component';
+import { UnidadEspecializadaComponent } from './pages/unidad-especializada/unidad-especializada.component';
+import { EntidadesFinancierasComponent } from './pages/entidades-financieras/entidades-financieras.component';
+import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 const routes: Routes = [
   {path: 'inicio', component: InicioComponent},
   {path: 'credito-grupal', component: CreditoGrupalComponent},
   {path: 'credito-individual', component: CreditoIndividualComponent},
+  {path: 'costos-comisiones', component: CostosComisionesComponent},
+  {path: 'unidad-especializada', component: UnidadEspecializadaComponent},
+  {path: 'entidades-financieras', component: EntidadesFinancierasComponent},
   {path: 'presolicitar-credito', component: PresolicitudCreditoComponent},
-  {path: '**', redirectTo: 'inicio'}
+  {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
+  {path: 'error404', component: Error404Component},
+  {path: '**', redirectTo: 'error404'}
 ];
 
 @NgModule({
