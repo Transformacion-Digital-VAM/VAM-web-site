@@ -3,167 +3,181 @@
     <div class="max-w-3xl mx-auto">
       <!-- Encabezado -->
       <div class="text-center mb-6">
-        <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Primer paso</span>
+        <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 mt-3 px-3 py-2">Primer paso</span>
         <h2 class="display-5 fw-bold mb-3">Presolicitud de <span class="text-gradient-primary">Crédito</span></h2>
         <p class="text-muted lead">Completa este formulario y un asesor se pondrá en contacto contigo</p>
       </div>
 
-      <!-- Formulario -->
-      <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
-        <div class="card-body p-5">
-          <form class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <!-- Campo Nombre -->
-            <div class="form-group">
-              <label for="nombre" class="form-label fw-semibold mb-2">Nombre</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-user text-muted"></i>
-                </span>
-                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. Juan">
-              </div>
-            </div>
+      <!-- Formulario Mejorado -->
+    <p-toast></p-toast>
+    <div class="card border-0 shadow-lg rounded-3 overflow-hidden">
+      <div class="card-body p-6">
+        <form [formGroup]="formularioSolicitud" (ngSubmit)="onSubmit()" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-            <!-- Campo Apellido Paterno -->
-            <div class="form-group">
-              <label for="nombre" class="form-label fw-semibold mb-2">Apellido Paterno</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-user text-muted"></i>
-                </span>
-                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. Pérez">
-              </div>
-            </div>
+          <!-- Nombre -->
+          <div>
+            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-user text-gray-500"></i>
+              </p-inputGroupAddon>
+              <input pInputText id="nombre" type="text" formControlName="nombre" class="w-full"
+                placeholder="Ej. Juan Pérez García"
+                [ngClass]="{'p-invalid': f['nombre'].invalid && f['nombre'].touched}" />
+            </p-inputGroup>
+            <small *ngIf="f['nombre'].invalid && f['nombre'].touched" class="p-error">
+              <span *ngIf="f['nombre'].errors?.['required']">Nombre es requerido</span>
+              <span *ngIf="f['nombre'].errors?.['minlength']">Mínimo 3 caracteres</span>
+            </small>
+          </div>
 
-            <!-- Campo Apellido Materno -->
-            <div class="form-group">
-              <label for="nombre" class="form-label fw-semibold mb-2">Apellido Materno</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-user text-muted"></i>
-                </span>
-                <input type="text" id="nombre" class="form-control py-3 border-start-0" placeholder="Ej. López">
-              </div>
-            </div>
+          <!-- Fecha de nacimiento -->
+          <div>
+            <label for="fechaNacimiento" class="block text-sm font-medium text-gray-700 mb-1">Fecha de Nacimiento*</label>
+            <br>
+              <p-datepicker  id="fechaNacimiento" formControlName="fechaNacimiento"  [showIcon]="true" inputId="buttondisplay" [showOnFocus]="false"               placeholder="Seleccione fecha" class="w-full"
+              [ngClass]="{'p-invalid': f['fechaNacimiento'].invalid && f['fechaNacimiento'].touched}"> />
+              </p-datepicker>
+            <br>
+            <small *ngIf="f['fechaNacimiento'].invalid && f['fechaNacimiento'].touched" class="p-error">
+              Fecha de nacimiento es requerida
+            </small>
+          </div>
 
-            <!-- Campo Año de Nacimiento -->
-            <div class="form-group">
-              <label for="nacimiento" class="form-label fw-semibold mb-2">Fecha de Nacimiento</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-calendar-alt text-muted"></i>
-                </span>
-                <input type="date" id="nacimiento" class="form-control py-3 border-start-0" placeholder="Ej. 1985">
-              </div>
-            </div>
+          <!-- Domicilio -->
+          <div>
+            <label for="domicilio" class="block text-sm font-medium text-gray-700 mb-1">Domicilio*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-map-marker text-gray-500"></i>
+              </p-inputGroupAddon>
+              <input pInputText id="domicilio" type="text" formControlName="domicilio" class="w-full"
+                placeholder="Ej. Calle La Loma, #17"
+                [ngClass]="{'p-invalid': f['domicilio'].invalid && f['domicilio'].touched}" />
+            </p-inputGroup>
+            <small *ngIf="f['domicilio'].invalid && f['domicilio'].touched" class="p-error">
+              Domicilio es requerido
+            </small>
+          </div>
 
-            <!-- Campo Domicilio -->
-            <div class="form-group">
-              <label for="domicilio" class="form-label fw-semibold mb-2">Domicilio</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-map text-muted"></i>
-                </span>
-                <input type="text" id="domicilio" class="form-control py-3 border-start-0" placeholder="Ej. Calle La Loma, #17">
-              </div>
-            </div>
+          <!-- Teléfono -->
+          <div>
+            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Número de Contacto*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-phone text-gray-500"></i>
+              </p-inputGroupAddon>
+              <input pInputText id="telefono" type="tel" formControlName="telefono" class="w-full"
+                placeholder="Ej. 4181234567"
+                [ngClass]="{'p-invalid': f['telefono'].invalid && f['telefono'].touched}" />
+            </p-inputGroup>
+            <small *ngIf="f['telefono'].invalid && f['telefono'].touched" class="p-error">
+              <span *ngIf="f['telefono'].errors?.['required']">Teléfono es requerido</span>
+              <span *ngIf="f['telefono'].errors?.['pattern']">Debe tener 10 dígitos</span>
+            </small>
+          </div>
 
-            <!-- Campo Correo -->
-            <div class="form-group">
-              <label for="email" class="form-label fw-semibold mb-2">Correo Electrónico</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-envelope text-muted"></i>
-                </span>
-                <input type="email" id="email" class="form-control py-3 border-start-0" placeholder="Ej. ejemplo@ejemplo.com">
-              </div>
-            </div>
+          <!-- Correo -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-envelope text-gray-500"></i>
+              </p-inputGroupAddon>
+              <input pInputText id="email" type="email" formControlName="email" class="w-full"
+                placeholder="Ej. ejemplo@ejemplo.com"
+                [ngClass]="{'p-invalid': f['email'].invalid && f['email'].touched}" />
+            </p-inputGroup>
+            <small *ngIf="f['email'].invalid && f['email'].touched" class="p-error">
+              <span *ngIf="f['email'].errors?.['required']">Correo es requerido</span>
+              <span *ngIf="f['email'].errors?.['email']">Formato no válido</span>
+            </small>
+          </div>
 
-            <!-- Campo Teléfono -->
-            <div class="form-group">
-              <label for="telefono" class="form-label fw-semibold mb-2">Número de Contacto</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-phone text-muted"></i>
-                </span>
-                <input type="tel" id="telefono" class="form-control py-3 border-start-0" placeholder="Ej. 4181234567">
-              </div>
-            </div>
+          <!-- Localidad -->
+          <div>
+            <label for="localidad" class="block text-sm font-medium text-gray-700 mb-1">Localidad*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-map text-gray-500"></i>
+              </p-inputGroupAddon>
+              <p-select  id="localidad" formControlName="localidad" [options]="localidades" optionLabel="name"
+                placeholder="Selecciona tu municipio" class="w-full"
+                [ngClass]="{'p-invalid': f['localidad'].invalid && f['localidad'].touched}">
+              </p-select >
+            </p-inputGroup>
+            <small *ngIf="f['localidad'].invalid && f['localidad'].touched" class="p-error">
+              Localidad es requerida
+            </small>
+          </div>
 
-            <!-- Campo Correo -->
-            <div class="form-group">
-              <label for="email" class="form-label fw-semibold mb-2">Correo Electrónico</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-envelope text-muted"></i>
-                </span>
-                <input type="email" id="email" class="form-control py-3 border-start-0" placeholder="Ej. ejemplo@ejemplo.com">
-              </div>
-            </div>
+          <!-- Crédito de interés -->
+          <div>
+            <label for="credito" class="block text-sm font-medium text-gray-700 mb-1">Crédito de Interés*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-credit-card text-gray-500"></i>
+              </p-inputGroupAddon>
+              <p-select  id="credito" formControlName="creditoInteres" [options]="creditos" optionLabel="name"
+                placeholder="Selecciona el crédito" class="w-full"
+                [ngClass]="{'p-invalid': f['creditoInteres'].invalid && f['creditoInteres'].touched}">
+              </p-select >
+            </p-inputGroup>
+            <small *ngIf="f['creditoInteres'].invalid && f['creditoInteres'].touched" class="p-error">
+              Crédito de interés es requerido
+            </small>
+          </div>
 
-            <!-- Campo Localidad -->
-            <div class="form-group">
-              <label for="localidad" class="form-label fw-semibold mb-2">Localidad</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-map-marker-alt text-muted"></i>
-                </span>
-                <select id="localidad" class="form-select py-3 border-start-0">
-                  <option selected disabled>Selecciona tu Municipio</option>
-                  <option>Dolores Hidalgo</option>
-                  <option>San Diego de la Unión</option>
-                  <option>San Miguel de Allende</option>
-                  <option>San Luis de la Paz</option>
-                  <option>San Felipe</option>
-                  <option>Victoria</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-            </div>
+          <!-- Cliente existente -->
+          <div>
+            <label for="clienteExistente" class="block text-sm font-medium text-gray-700 mb-1">¿Cliente anterior?*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-check-circle text-gray-500"></i>
+              </p-inputGroupAddon>
+              <p-select  id="clienteExistente" formControlName="clienteExistente" [options]="opcionesCliente"
+                optionLabel="name" placeholder="Selecciona la respuesta" class="w-full"
+                [ngClass]="{'p-invalid': f['clienteExistente'].invalid && f['clienteExistente'].touched}">
+              </p-select >
+            </p-inputGroup>
+            <small *ngIf="f['clienteExistente'].invalid && f['clienteExistente'].touched" class="p-error">
+              Este campo es requerido
+            </small>
+          </div>
 
-            <!-- Campo Credito de Interes -->
-            <div class="form-group">
-              <label for="credito" class="form-label fw-semibold mb-2">Crédito de Interés</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-credit-card-alt text-muted"></i>
-                </span>
-                <select id="credito" class="form-select py-3 border-start-0">
-                  <option selected disabled>Selecciona el crédito que le interesa</option>
-                  <option>Crédito Grupal</option>
-                  <option>Crédito Individual</option>
-                </select>
-              </div>
-            </div>
+          <!-- Monto -->
+          <div>
+            <label for="monto" class="block text-sm font-medium text-gray-700 mb-1">Monto*</label>
+            <p-inputGroup>
+              <p-inputGroupAddon>
+                <i class="pi pi-dollar text-gray-500"></i>
+              </p-inputGroupAddon>
+              <p-inputNumber id="monto" formControlName="monto" mode="currency" currency="MXN" locale="es-MX"
+                placeholder="Ej. $5,000.00" class="w-full"
+                [ngClass]="{'p-invalid': f['monto'].invalid && f['monto'].touched}">
+              </p-inputNumber>
+            </p-inputGroup>
+            <small *ngIf="f['monto'].invalid && f['monto'].touched" class="p-error">
+              <span *ngIf="f['monto'].errors?.['required']">Monto es requerido</span>
+              <span *ngIf="f['monto'].errors?.['min']">Mínimo $1,000.00</span>
+            </small>
+          </div>
 
-            <!---Cliente nuevo o antiguo-->
-            <div class="form-group">
-              <label for="cliente" class="form-label fw-semibold mb-2">¿Ya había solicitado un crédito con nosotros?</label>
-              <div class="input-group">
-                <span class="input-group-text bg-light border-end-0">
-                  <i class="fas fa-check-circle text-muted"></i>
-                </span>
-                <select id="cliente" class="form-select py-3 border-start-0">
-                  <option selected disabled>Selecciona la respuesta</option>
-                  <option>Sí</option>
-                  <option>No</option>
-                </select>
-              </div>
-            </div>
+          <!-- Botón de envío -->
+          <div class="md:col-span-2 mt-5">
+            <p-button type="submit" label="Enviar presolicitud" icon="pi pi-send" class="w-full" [raised]="true"
+              severity="primary" [disabled]="formularioSolicitud.invalid">
+            </p-button>
+          </div>
 
-            <!-- Botón de envío -->
-            <div class="md:col-span-2 mt-3">
-              <button type="submit" class="btn btn-primary btn-lg w-full py-3 fw-bold shadow-lg hover-effect">
-                <i class="fas fa-paper-plane me-2"></i> Enviar presolicitud
-              </button>
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
+    </div>
 
       <!-- Nota legal -->
       <div class="text-center mt-4">
         <p class="small text-muted">
-          Al enviar este formulario aceptas nuestro <a href="#" class="text-primary">Aviso de Privacidad</a>.
+          Al enviar este formulario aceptas nuestro <a href="../../../assets/files/Aviso de Privacidad.pdf" target="_blank" class="text-primary">Aviso de Privacidad</a>.
           <br>
           Un asesor se pondrá en contacto contigo en un plazo máximo de 24 horas.
         </p>

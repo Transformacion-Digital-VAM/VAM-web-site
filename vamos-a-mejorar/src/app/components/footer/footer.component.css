@@ -1,83 +1,214 @@
+/* Footer Styles */
 .modern-footer {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.bg-primary-dark {
+  background-color: #062466;
+}
+
+.text-primary {
+  color: #062466 !important;
+}
+
+/* Decorative Elements */
+.footer-decoration {
+  z-index: 0;
+  overflow: hidden;
+}
+
+.decoration-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(6, 36, 102, 0.03);
+  top: -150px;
+  right: -100px;
+}
+
+.decoration-wave {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23062466" opacity=".05"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Logo Effect */
+.logo-hover:hover .logo-img {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 5px 10px rgba(6, 36, 102, 0.2));
+}
+
+.logo-img {
+  transition: all 0.3s ease;
+}
+
+/* Company Description */
+.company-description {
+  line-height: 1.7;
+  position: relative;
+  padding-left: 15px;
+}
+
+.company-description::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: calc(100% - 10px);
+  width: 3px;
+  background: linear-gradient(to bottom, #062466, #3a7bd5);
+  border-radius: 3px;
+}
+
+/* Contact Info */
+.contact-info li {
+  transition: all 0.3s ease;
+}
+
+.contact-info li:hover {
+  transform: translateX(5px);
+}
+
+.contact-info i {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Quick Links */
+.quick-links li a {
+  color: #041c65;
+  position: relative;
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.quick-links li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  color: #062466;
+  font-weight: bold;
+}
+
+.hover-link:hover {
+  color: #f8c200 !important;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+/* Title Underline */
+.title-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #062466, #3a7bd5);
+  border-radius: 3px;
+}
+
+/* Social Icons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bg-facebook {
+  background: linear-gradient(45deg, #3b5998, #4a6fbe);
+}
+
+.bg-instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #d445fc);
+  background-size: 200% 200%;
+}
+
+.bg-whatsapp {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+}
+
+.bg-artixan {
+  background: linear-gradient(45deg, #041c65, #0c228e);
+}
+
+/* Schedule Box */
+.schedule-box {
+  border-left: 4px solid #062466;
+  transition: all 0.3s ease;
+}
+
+.schedule-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .modern-footer {
+    text-align: center;
   }
   
-  .text-white-80 {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  .bg-dark-2 {
-    background-color: #1a1a1a;
+  .company-description::before {
+    display: none;
   }
   
   .title-underline::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, #fd7e14, transparent);
-    border-radius: 3px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
-  .hover-white:hover {
-    color: white !important;
-    transform: translateX(5px);
-    transition: all 0.3s ease;
-  }
-  
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
+  .contact-info li {
     justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
   }
   
-  .social-icon:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  .quick-links li a::before {
+    display: none;
   }
   
-  .bg-facebook {
-    background: linear-gradient(45deg, #3b5998, #4a6fbe);
+  .social-links {
+    justify-content: center;
   }
   
-  .bg-instagram {
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #d445fc);
-    background-size: 200% 200%;
+  .footer-decoration {
+    display: none;
   }
-  
-  .bg-whatsapp {
-    background: linear-gradient(45deg, #25D366, #128C7E);
-  }
-  
-  @media (max-width: 768px) {
-    .modern-footer {
-      text-align: center;
-    }
-    
-    .title-underline::after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    
-    .d-flex {
-      justify-content: center;
-    }
-    
-    .social-links {
-      justify-content: center;
-    }
-  }
-
-  .h4{
-    color: #062466  !important;
-  }
+}
