@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { TabsModule } from 'primeng/tabs';
 import { CommonModule } from '@angular/common';
+import { PrimeIcons } from 'primeng/api';
+import { interval, takeWhile } from 'rxjs';
+
 @Component({
   selector: 'app-inicio',
   standalone: true,
@@ -9,9 +12,20 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, TabsModule]
 })
 export class InicioComponent {
-    isChatOpen = false;
+ displayedText = '';
+  private fullText = "Chatea con nuestro asesor virtual";
 
-  toggleChat() {
-    this.isChatOpen = !this.isChatOpen;
+  ngOnInit(): void {
+    this.startTypingAnimation();
+  }
+
+  startTypingAnimation(): void {
+    interval(88) // Intervalo de 100ms entre caracteres
+      .pipe(
+        takeWhile(index => index <= this.fullText.length)
+      )
+      .subscribe(index => {
+        this.displayedText = this.fullText.substring(0, index);
+      });
   }
 }

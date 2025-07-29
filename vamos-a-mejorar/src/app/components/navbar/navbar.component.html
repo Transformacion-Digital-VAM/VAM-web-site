@@ -1,6 +1,6 @@
   <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top align-content-xl-center">
     <div class="container-fluid px-4">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" routerLink="/inicio">
         <img src="https://static.wixstatic.com/media/0bf950_155f8cd81f6d4fe5ac3419b8e0397b40~mv2.png/v1/crop/x_0,y_260,w_6000,h_2480/fill/w_508,h_210,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20SIN%20FONDO%20OFICIAL.png" alt="logo" height="60">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
@@ -10,15 +10,17 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav" >
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./inicio.html">Inicio</a>
+            <a class="nav-link fw-semibold" routerLink="/inicio" >Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./credito-grupal.html">Crédito Grupal</a>
+            <a class="nav-link fw-semibold" routerLink="/credito-grupal">Crédito Grupal</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="./credito-individual.html">Crédito Individual</a>
+            <a class="nav-link fw-semibold" routerLink="/credito-individual">Crédito Individual</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" routerLink="/credito-individual">Apoyo a la Comunidad</a>
+          </li>
           <!-- Mega Dropdown -->
           <li class="nav-item dropdown position-static">
             <a class="nav-link dropdown-toggle fw-semibold" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,0 +1,30 @@
+ .divider {
+      width: 55%;
+      height: 5px;
+      background: linear-gradient(90deg, #0d074a, #167fb8);
+      margin: 0 auto;
+    }
+    
+    .card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .card-header {
+      border-radius: 0 !important;
+    }
+    
+    .btn-link {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-link:hover {
+      text-decoration: underline;
+      transform: translateX(3px);
+    }
