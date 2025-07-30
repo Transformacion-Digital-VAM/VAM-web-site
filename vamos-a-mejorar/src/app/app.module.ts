@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
 import { ButtonModule } from 'primeng/button';
-import { definePreset, palette } from '@primeng/themes';
 import {AuraIndigo} from './theme'
 import { TabsModule } from 'primeng/tabs';
 import { CommonModule } from '@angular/common';
@@ -24,7 +22,6 @@ import { EntidadesFinancierasComponent } from './pages/entidades-financieras/ent
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { SmothScrollDirective } from './pages/credito-grupal/smoth-scroll.directive';
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
-import { Error404Component } from './pages/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -63,8 +60,6 @@ import { Error404Component } from './pages/error404/error404.component';
           }
         }
       })
-
-
   ],
   bootstrap: [AppComponent]
 })
