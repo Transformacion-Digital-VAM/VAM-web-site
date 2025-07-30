@@ -1,71 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bolsa de trabajo con las mejores oportunidades laborales">
-    <!-- Iconos Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href   ="https://via.placeholder.com/32" type="image/png">
-</head>
-
-<body>
     <main>
-       <div class="header-section">
+        <div class="header-section">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="display-4 fw-bold mb-4 position-relative title-underline">Testimonios de nuestros clientes</h2>
-                <p>Descubra lo que nuestros clientes tienen que decir sobre nuestros servicios financieros y cómo hemos transformado sus vidas.</p>
+                <h2 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Testimonios de nuestros clientes</h2>
+                <p class="lead mb-5 fs-3 animate__animated animate__fadeIn animate__delay-1s">Descubra lo que nuestros clientes tienen que decir sobre nuestros servicios financieros y cómo hemos transformado sus vidas.</p>
             </div>
         </div>
-        
-
         <section class="testimonios-section">
-            <div class="controls">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="video">Video</button>
-                <button class="filter-btn" data-filter="text">Texto</button>
-            </div>
-
             <div class="testimonios-container">
-                <!-- Testimonio 1 - Con video -->
-                <div class="testimonio-card" data-type="video">
+                <div class="testimonio-card">
                     <div class="card-header">
                         <div class="avatar">
                             <img src="assets/user-women.jpg" alt="María López">
                         </div>
                         <div class="client-info">
-                            <h3>Carmen Rodriguez</h3>
-                            <p>Inversiones</p>
+                            <h3 style="color: #fff;">Carmen Rodriguez</h3>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="testimonio-text">
                             "Desde que estamos aquí en Vamos a Mejorar, pues he salido adelante, he hecho muchas cosas,
                             pues mí negocio va creciendo más y más."
-                        </div>
-                        <div class="testimonio-video">
-                            <img src="assets/testimonio.jpg" alt="Video testimonio" class="video-thumbnail">
-                            <div class="play-btn" data-video="assets/testimonio.mp4">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                     <div class="card-footer">
                         <div class="date">15 Ene, 2024</div>
                     </div>
                 </div>
 
-                <!-- Testimonio 2 - Solo texto -->
-                <div class="testimonio-card" data-type="text">
+                <div class="testimonio-card">
                     <div class="card-header">
                         <div class="avatar">
                             <img src="assets/user-man.jpg" alt="Carlos Rodríguez">
                         </div>
                         <div class="client-info">
-                            <h3>Carlos Rodríguez</h3>
-                            <p>Financiamiento Empresarial</p>
+                            <h3 style="color: #fff;">Carlos Rodríguez</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -78,15 +47,13 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 3 - Con video -->
-                <div class="testimonio-card" data-type="video">
+                <div class="testimonio-card">
                     <div class="card-header">
                         <div class="avatar">
                             <img src="assets/user-women.jpg" alt="Patricia Gutiérrez Méndez">
                         </div>
                         <div class="client-info">
-                            <h3>Patricia Gutiérrez Méndez</h3>
-                            <p>Inversiones</p>
+                            <h3 style="color: #fff;">Patricia Gutiérrez Méndez</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -94,27 +61,19 @@
                             "Comencé con un pequeño negocio. Vamos a Mejorar me ha llevado a abrir nuevas puesrtas, a un
                             camino diferente."
                         </div>
-                        <div class="testimonio-video">
-                            <img src="assets/testimoniopatricia.jpeg" alt="Video testimonio" class="video-thumbnail">
-                            <div class="play-btn" data-video="assets/testimoniopatricia.mp4">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="date">10 Feb, 2024</div>
                     </div>
                 </div>
 
-                <!-- Testimonio 4 - Solo texto -->
-                <div class="testimonio-card" data-type="text">
+                <div class="testimonio-card fila-2">
                     <div class="card-header">
                         <div class="avatar">
                             <img src="assets/user-man.jpg" alt="Jorge Sánchez">
                         </div>
                         <div class="client-info">
-                            <h3>Jorge Sánchez</h3>
-                            <p>Refinanciamiento</p>
+                            <h3 style="color: #fff;">Jorge Sánchez</h3>
                         </div>
                     </div>
                     <div class="card-body">
@@ -128,79 +87,24 @@
                     </div>
                 </div>
 
-                <!-- Testimonio 5 - Con video -->
-                <div class="testimonio-card" data-type="video">
+                <div class="testimonio-card fila-2 ">
                     <div class="card-header">
                         <div class="avatar">
                             <img src="assets/user-women.jpg" alt="Ana Torres">
                         </div>
                         <div class="client-info">
-                            <h3>Ana Torres</h3>
-                            <p>Préstamo Educativo</p>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="testimonio-text">
-                            "Gracias al préstamo educativo pude completar mi maestría en el extranjero. Las tasas de
-                            interés eran las más competitivas que encontré y el proceso de aprobación fue muy ágil.
-                            Recomiendo totalmente sus servicios."
-                        </div>
-                        <div class="testimonio-video">
-                            <img src="assets/vector3.avif" alt="Video testimonio" class="video-thumbnail">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="date">5 Mar, 2024</div>
-                    </div>
-                </div>
-
-                <!-- Testimonio 6 - Solo texto -->
-                               <div class="testimonio-card" data-type="video">
-                    <div class="card-header">
-                        <div class="avatar">
-                            <img src="assets/user-women.jpg" alt="Ana Torres">
-                        </div>
-                        <div class="client-info">
-                            <h3>Ana Torres</h3>
-                            <p>Préstamo Educativo</p>
+                            <h3 style="color: #fff;">Ana Torres</h3>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="testimonio-text">
                             "Pues considero que es bastante bueno porque, por ejemplo, ahorita tengo los gastos funerarios y algunas otras cosas que pagar, entonces si me ayuda, o sea, con esto alcanzo a cubrir gastos funerarios"
                         </div>
-                        <div class="testimonio-video">
-                            <img src="assets/vector3.avif" alt="Video testimonio" class="video-thumbnail">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="date">5 Mar, 2024</div>
                     </div>
                 </div>
             </div>
-           
         </section>
-
-        <div class="video-modal" id="videoModal">
-            <div class="modal-content">
-                <span class="close-modal" id="closeModal">&times;</span>
-                <div class="video-player">
-                    <iframe id="videoFrame" src="" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
- <div class="seccion-decorativa-final "></div>
- <!-- <div class="position-absolute bottom-0 start-0 w-100 h-100 bg-warning opacity-5" style="clip-path: polygon(0 70%, 100% 100%, 100% 100%, 0 100%);"></div> -->
-
     </main>
-</body>
-</html>

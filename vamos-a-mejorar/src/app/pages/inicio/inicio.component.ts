@@ -28,4 +28,10 @@ export class InicioComponent {
         this.displayedText = this.fullText.substring(0, index);
       });
   }
+
+  isChatOpen: boolean = false; 
+
+  toggleChat() {
+    this.isChatOpen = !this.isChatOpen; 
+  }
 }

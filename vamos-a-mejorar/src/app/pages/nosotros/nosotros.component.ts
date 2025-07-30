@@ -8,16 +8,4 @@ import { Component } from '@angular/core';
 })
 export class NosotrosComponent {
 
-
-  isChatOpen = false;
-
-  slides = [
-    { title: 'Nuestra Misión', image: 'misión.jpg', text: 'Dar oportunidad…' },
-    { title: 'Nuestra Visión', image: 'visión.jpg', text: 'Somos la mejor…' }
-  ];
-
-  toggleChat() {
-    this.isChatOpen = !this.isChatOpen;
-  }
-
 }
