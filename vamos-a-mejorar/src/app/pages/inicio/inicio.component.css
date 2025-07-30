@@ -316,3 +316,17 @@
 
   }
   
+
+  .hover-transform {
+    transform: translateY(0);
+  }
+  .hover-transform:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15) !important;
+  }
+  .btn-hover-icon:hover i {
+    transform: translateX(3px);
+  }
+  .btn-hover-icon i {
+    transition: transform 0.2s ease;
+  }

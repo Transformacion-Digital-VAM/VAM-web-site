@@ -3,13 +3,14 @@ import { TabsModule } from 'primeng/tabs';
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
 import { interval, takeWhile } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
-  imports: [CommonModule, TabsModule]
+  imports: [CommonModule, TabsModule, RouterModule]
 })
 export class InicioComponent {
  displayedText = '';

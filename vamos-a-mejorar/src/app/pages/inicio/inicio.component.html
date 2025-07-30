@@ -28,19 +28,19 @@
               {{displayedText}}
               <i class="fa-solid fa-vr-cardboard ms-2"></i>
             </button>
-            <button class="btn btn-outline-dark btn-lg px-4 hover-effect">
-              <i class="bi bi-arrow-right-circle me-2"></i>Descubre cómo iniciar tu negocio
-            </button>
+            <a [routerLink]="'/credito-grupal'" class="btn btn-outline-dark btn-lg px-4 hover-effect" >
+              <i class="bi bi-arrow-right-circle me-2"></i> Descubre cómo iniciar tu negocio
+            </a>
           </div>
         </div>
         
         <div class="d-flex align-items-center animate__animated animate__fadeInUp animate__delay-3s">
           <div class="pe-4 border-end border-light">
-            <h3 class="fw-bold text-gray mb-0 display-5">+14</h3>
+            <h3 class="fw-bold  mb-0 display-5" style="color: #3c9cc8;">+14</h3>
             <p class="text-white-60 mb-0">Años creando oportunidades</p>
           </div>
           <div class="px-4">
-            <h3 class="fw-bold text-gray mb-0 display-5">5K+</h3>
+            <h3 class="fw-bold mb-0 display-5 " style="color: #3c9cc8;">5K+</h3>
             <p class="text-white-60 mb-0">Emprendores impulsados</p>
           </div>
         </div>
@@ -75,33 +75,77 @@
 
   <div class="row g-4">
     <!-- Crédito Comunal - Tarjeta mejorada -->
-    <div class="col-md-8">
-      <div class="card h-100 border-0 shadow-lg hover-transform">
-        <div class="card-body p-4 position-relative">
-          <div class="icon-wrapper bg-success bg-opacity-10 mb-4">
-            <i class="fa-solid fa-people-group fa-2x text-success"></i>
-          </div>
-          <h3 class="h2 fw-bold mb-3">Recursos para tus ideas</h3>
-          <p class="text-muted mb-4">
-            Apoyo a grupos solidarios con microempresas o negocios por iniciar. Financia su crecimiento y mejora su calidad de vida.
-          </p>
-            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i> Grupos de 10 personas
-            <br>
-            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i> Plazos flexibles
-            <br>
-            <i class="fas fa-check-circle ms-2 mb-4" style="color: green"></i> Baja tasa de interés
-            
-          <div class="mt-auto">
-            <a href="credito-grupal" class="btn btn-success btn-hover-icon">
-              Más información <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-          </div>
+  <div class="col-md-8">
+    <div class="card h-100 border-0 shadow-lg hover-transform" style="border-radius: 20px; overflow: hidden; transition: all 0.3s ease; border-color: #2d1f70;">
+      <!-- Ribbon de destacado -->
+      <div class="position-absolute end-0 top-0 m-3">
+        <span class="badge bg-warning text-dark rounded-pill px-3 py-2 shadow-sm">
+          <i class="fas fa-bolt me-1"></i> Popular
+        </span>
+      </div>
+      
+      <div class="card-body p-4 position-relative">
+        <!-- Icono con efecto 3D -->
+        <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-circle" 
+            style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(45, 31, 112, 0.2);">
+          <i class="fa-solid fa-people-group fa-2x" style="color: #2d1f70;"></i>
         </div>
-        <div class="card-footer bg-transparent border-0 pt-0">
-          <small class="text-success"><i class="fas fa-clock me-1"></i> Aprobación en 48 horas</small>
+        
+        <!-- Título con gradiente -->
+        <h3 class="h2 fw-bold mb-3" style="background: linear-gradient(45deg, #2d1f70, #3a2a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          Recursos para tus ideas
+        </h3>
+        
+        <!-- Texto descriptivo -->
+        <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6;">
+          ¿Listo para hacer crecer tu negocio? Nosotros te ayudamos a lograrlo con grandes beneficios y oportunidades pensadas para emprendedores como tú.
+        </p>
+        
+        <!-- Lista de beneficios con mejor diseño -->
+        <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
+          <li class="mb-2 d-flex align-items-center">
+            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
+            <span>Grupos de 10 personas</span>
+          </li>
+          <li class="mb-2 d-flex align-items-center">
+            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
+            <span>Plazos flexibles</span>
+          </li>
+          <li class="mb-2 d-flex align-items-center">
+            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
+            <span>Baja tasa de interés</span>
+          </li>
+        </ul>
+        
+        <!-- Botón con efecto hover -->
+        <div class="mt-auto pt-2">
+          <a [routerLink]="'/credito-grupal'" class="btn btn-lg btn-hover-icon rounded-pill px-4" 
+            style="background: linear-gradient(45deg, #2d1f70, #4a36b5); color: #ffffff; border: none; position: relative; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(45, 31, 112, 0.3);">
+            <span class="position-relative z-index-1">
+              Más información <i class="fas fa-arrow-right ms-2"></i>
+            </span>
+            <span class="position-absolute top-0 left-0 w-100 h-100 bg-white opacity-0 hover-opacity-10 transition-all"></span>
+          </a>
         </div>
       </div>
+      
+      <!-- Pie de tarjeta con efecto de brillo -->
+      <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <small class="text-success fw-bold">
+            <i class="fas fa-clock me-2"></i> Aprobación en 48 horas
+          </small>
+          <small class="text-primary fw-bold">
+            <i class="fas fa-user-check me-2"></i> +500 grupos beneficiados
+          </small>
+        </div>
+      </div>
+      
+      <!-- Efecto de resplandor al hover -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 hover-opacity-100 transition-all" 
+          style="background: radial-gradient(circle at center, rgba(45, 31, 112, 0.08) 0%, transparent 70%); pointer-events: none;"></div>
     </div>
+  </div>
 
     <!-- Crédito Individual - Tarjeta mejorada -->
     <!-- <div class="col-md-4">
@@ -317,12 +361,20 @@
             </div>
             <div class="d-flex mb-2">
               <i class="fas fa-check-circle text-success me-2 mt-1"></i>
-              <span>Comprobante de domicilio reciente (no mayor a 3 meses)</span>
+              <span>Comprobante de domicilio reciente (no mayor a 2 meses)</span>
             </div>
+            <div class="d-flex mb-2">
+              <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+              <span>Comprobante de domicilio no mayor a 2 meses  (agua, luz, telefonía y gas natural). En caso de no tenerlo, solicitar carta de residencia con vigencia máxima de 1 año. </span>
+            </div>
+            <div class="d-flex mb-2">
+              <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+              <span>CURP</span>
+            </div>   
             <div class="d-flex">
               <i class="fas fa-check-circle text-success me-2 mt-1"></i>
-              <span>Comprobante de ingresos (estados de cuenta, recibos de nómina)</span>
-            </div>
+              <span>Acta de Nacimiento</span>
+            </div>           
           </div>
         </div>
       </div>
@@ -352,26 +404,20 @@
 
       <!-- Pregunta 3 -->
       <div class="accordion-item border-0 mb-3 shadow-sm rounded-3 overflow-hidden">
-        <h3 class="accordion-header" id="headingThree">
+        <h3 class="accordion-header" id="headingTwo">
           <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
                   data-bs-toggle="collapse" data-bs-target="#collapseThree" 
                   aria-expanded="false" aria-controls="collapseThree">
-            <i class="fas fa-calendar-check text-info me-3"></i>
-            ¿Puedo liquidar mi crédito antes del plazo?
+            <i class="fas fa-clock text-info me-3"></i>
+            ¿Cuál es el monto máximo que pueden prestarme?
           </button>
         </h3>
         <div id="collapseThree" class="accordion-collapse collapse" 
-            aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+             aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
           <div class="accordion-body bg-light text-muted fs-5 py-4">
-            <p class="fw-bold text-success">¡Sí! Y además obtienes importantes beneficios:</p>
-            <ul>
-              <i class="pi pi-check-circle" style="color: green"></i> Sin penalización por pago anticipado
-              <br>
-               <i class="pi pi-check-circle" style="color: green"></i> Mejora tu historial crediticio
-               <br>
-             <i class="pi pi-check-circle" style="color: green"></i> Posibilidad de acceder a mayores montos en futuros créditos
-            </ul>
-            <p class="mt-3 mb-0"><i class="fas fa-info-circle text-primary me-2"></i> Puedes realizar pagos anticipados parciales o totales en cualquier momento.</p>
+            <p>
+              Podemos prestarte hasta $80,000.00 pesos, dependiendo de tu historial crediticio y comportamiento de pago dentro de nuestro sistema
+            </p>
           </div>
         </div>
       </div>
@@ -392,7 +438,7 @@
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
       <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">Nuestras ubicaciones</span>
-      <h2 class="display-5 fw-bold mb-3" style="color: #f9ba19;">Encuentra nuestra <span style="color: rgb(10, 32, 117);">sucursal más cercana</span></h2>
+      <h2 class="display-5 fw-bold mb-3" style="color: #000000;">Encuentra nuestra <span style="color: rgb(10, 32, 117);">sucursal más cercana</span></h2>
       <p class="lead  mx-auto" style="max-width: 700px; color: #0000005e;">Visítanos y descubre cómo podemos ayudarte a hacer realidad tus proyectos</p>
     </div>
 
@@ -403,18 +449,18 @@
             <button class="nav-link active" id="dolores-tab" data-bs-toggle="tab" data-bs-target="#dolores" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> Dolores Hidalgo
             </button>
-            <button class="nav-link" id="san-diego-tab" data-bs-toggle="tab" data-bs-target="#san-diego" type="button" role="tab">
+            <!-- <button class="nav-link" id="san-diego-tab" data-bs-toggle="tab" data-bs-target="#san-diego" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> San Diego
             </button>
             <button class="nav-link" id="san-miguel-tab" data-bs-toggle="tab" data-bs-target="#san-miguel" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> San Miguel de Allende
-            </button>
+            </button> -->
             <button class="nav-link" id="san-luis-tab" data-bs-toggle="tab" data-bs-target="#san-luis" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> San Luis de la Paz
             </button>
-            <button class="nav-link" id="san-felipe-tab" data-bs-toggle="tab" data-bs-target="#san-felipe" type="button" role="tab">
+            <!-- <button class="nav-link" id="san-felipe-tab" data-bs-toggle="tab" data-bs-target="#san-felipe" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> San Felipe
-            </button>
+            </button> -->
             <button class="nav-link" id="victoria-tab" data-bs-toggle="tab" data-bs-target="#victoria" type="button" role="tab">
               <i class="fas fa-map-marker-alt me-2"></i> Victoria
             </button>
@@ -449,7 +495,7 @@
                   </div>
                   
                   <div class="d-flex gap-2">
-                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 
@@ -467,8 +513,7 @@
           </div>
           
           <!-- Sucursal San Diego de la Unión (las demás siguen el mismo patrón) -->
-          <div class="tab-pane fade" id="san-diego" role="tabpanel" aria-labelledby="san-diego-tab">
-            <!-- Contenido similar para San Diego -->
+          <!-- <div class="tab-pane fade" id="san-diego" role="tabpanel" aria-labelledby="san-diego-tab">
             <div class="branch-card">
               <div class="row g-0">
                 <div class="col-lg-4 branch-info bg-white p-4">
@@ -508,11 +553,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <!-- Sucursal San Miguel de Allende -->
-          <div class="tab-pane fade" id="san-miguel" role="tabpanel" aria-labelledby="san-miguel-tab">
-            <!-- Contenido similar para San Miguel -->
+          <!-- <div class="tab-pane fade" id="san-miguel" role="tabpanel" aria-labelledby="san-miguel-tab">
             <div class="branch-card">
               <div class="row g-0">
                 <div class="col-lg-4 branch-info bg-white p-4">
@@ -553,7 +597,7 @@
               </div>
             </div>
           </div>
-          
+           -->
           <!-- Sucursal San Luis de la Paz -->
           <div class="tab-pane fade" id="san-luis" role="tabpanel" aria-labelledby="san-luis-tab">
             <!-- Contenido similar para San Luis -->
@@ -581,7 +625,7 @@
                   </div>
                   
                   <div class="d-flex gap-2">
-                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 
@@ -599,8 +643,7 @@
           </div>
           
           <!-- Sucursal San Felipe -->
-          <div class="tab-pane fade" id="san-felipe" role="tabpanel" aria-labelledby="san-felipe-tab">
-            <!-- Contenido similar para San Felipe -->
+          <!-- <div class="tab-pane fade" id="san-felipe" role="tabpanel" aria-labelledby="san-felipe-tab">
             <div class="branch-card">
               <div class="row g-0">
                 <div class="col-lg-4 branch-info bg-white p-4">
@@ -640,7 +683,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           
           <!-- Sucursal Victoria -->
           <div class="tab-pane fade" id="victoria" role="tabpanel" aria-labelledby="victoria-tab">
@@ -669,7 +712,7 @@
                   </div>
                   
                   <div class="d-flex gap-1">
-                    <a href="tel:+523333333333" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 

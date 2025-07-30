@@ -49,3 +49,15 @@
       padding-bottom: 3rem;
     }
   }
+
+
+  .pdf-container {
+    width: 100%;
+    height: 80vh; /* Se adapta al tamaño de la ventana */
+  }
+
+  .pdf-container object {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }

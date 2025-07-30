@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: 'presolicitar-credito', component: PresolicitudCreditoComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
   {path: 'error404', component: Error404Component},
-  {path: '**', redirectTo: 'error404'}
+  {path: '**', redirectTo: 'inicio'}
 ];
 
 @NgModule({
