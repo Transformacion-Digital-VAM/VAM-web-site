@@ -37,6 +37,7 @@ import { SmothScrollDirective } from './pages/credito-grupal/smoth-scroll.direct
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { MessageService } from 'primeng/api';
+import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MessageService } from 'primeng/api';
     SmothScrollDirective,
     PreguntasFrecuentesComponent,
     Error404Component,
+    ChatBotComponent,
 
   ],
   imports: [
