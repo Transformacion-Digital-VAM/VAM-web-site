@@ -12,6 +12,7 @@ import { interval, takeWhile } from 'rxjs';
   imports: [CommonModule, TabsModule]
 })
 export class InicioComponent {
+ isChatOpen: boolean = false; 
  displayedText = '';
   private fullText = "Chatea con nuestro asesor virtual";
 
@@ -29,7 +30,6 @@ export class InicioComponent {
       });
   }
 
-  isChatOpen: boolean = false; 
 
   toggleChat() {
     this.isChatOpen = !this.isChatOpen; 
