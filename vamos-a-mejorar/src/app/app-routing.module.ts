@@ -9,8 +9,19 @@ import { UnidadEspecializadaComponent } from './pages/unidad-especializada/unida
 import { EntidadesFinancierasComponent } from './pages/entidades-financieras/entidades-financieras.component';
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { TestimoniosComponent } from './pages/testimonios/testimonios.component';
+import { ComunidadComponent } from './pages/comunidad/comunidad.component';
+import { VacantesComponent } from './pages/vacantes/vacantes.component';
+import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 const routes: Routes = [
+  {path: 'vacantes', component: VacantesComponent},
+  // {path: 'card-vacante', component: CardVacanteComponent},
+  {path: 'nosotros', component: NosotrosComponent},
+  { path: 'vacante/:id', component: CardVacanteComponent },
+  {path: 'comunidad', component: ComunidadComponent},
+  {path: 'testimonios', component: TestimoniosComponent},
   {path: 'inicio', component: InicioComponent},
   {path: 'credito-grupal', component: CreditoGrupalComponent},
   {path: 'credito-individual', component: CreditoIndividualComponent},

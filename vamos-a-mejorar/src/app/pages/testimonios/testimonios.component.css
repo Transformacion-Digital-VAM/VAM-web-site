@@ -1,0 +1,213 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.max-w-4xl {
+    max-width: 960px; /* Ajuste del ancho máximo para un mejor control */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.display-4 {
+    font-size: 2.5rem; /* Tamaño de fuente para encabezados */
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* Header Section */
+.header-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(10, 32, 117, 0.8), rgba(10, 32, 117, 0.6)), url('../../../assets/fachada2.jpg');
+    border-bottom: 1px solid #eee;
+}
+
+.header-section h2 {
+    color: #f7f4f4;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.header-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d6d5d5;
+}
+
+/* Underline effect for title */
+.title-underline::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(255, 255, 255); /* Color de la línea de subrayado */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Testimonios Section */
+.testimonios-section {
+    padding: 40px 20px;
+}
+
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    justify-content: center;
+}
+.fila-2 {
+  justify-content: center; 
+}
+
+.testimonio-card {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1.5px solid #007bff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.308);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.342);
+}
+
+
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgb(10, 32, 117, 0.8);
+    border-radius: 10px 10px 0 0;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    border: 3px solid #007bff;
+    flex-shrink: 0; 
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.client-info p {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.card-body {
+    flex-grow: 1;
+    
+}
+
+.testimonio-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-style: italic; 
+    position: relative;
+    text-align: justify;
+}
+
+.card-footer {
+    border-top: 1px solid #ffbb00;
+    padding-top: 15px;
+    text-align: right;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .testimonios-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .header-section h2 {
+        font-size: 2rem;
+        
+    }
+
+    .header-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-section {
+        padding: 30px 15px;
+    }
+
+    .testimonio-card {
+        padding: 20px;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .client-info h3 {
+        font-size: 1.2rem;
+        color: #ffffff;
+    }
+
+    .info-name {
+        color: #ffffff;
+    }
+
+
+    .testimonio-text {
+        font-size: 0.95rem;
+    }
+}

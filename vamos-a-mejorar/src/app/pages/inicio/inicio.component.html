@@ -690,3 +690,29 @@
     </div>
   </div>
 </section>
+
+<section class="chatbot">
+  <div class="chat-button" (click)="toggleChat()">
+    <video autoplay loop muted playsinline>
+      <source src="assets/Chatbot.mp4" type="video/mp4" />
+      Tu navegador no soporta videos.
+    </video>
+  </div>
+
+  <div *ngIf="isChatOpen" class="chat-widget">
+    <div class="chat-header">
+      <img src="assets/oso-formal.gif" alt="Avatar" class="avatar" />
+      <span><strong>Prestamoso</strong> · Asistente virtual</span>
+      <button class="close-button" (click)="toggleChat()">✖</button>
+    </div>
+    <iframe
+      src="https://marco98p3.pythonanywhere.com/"
+      class="chat-iframe"
+      allow="microphone"
+      title="Chatbot"
+      scrolling="no"
+      frameborder="0"
+    ></iframe>
+  </div>
+</section>
+
