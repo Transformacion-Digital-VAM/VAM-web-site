@@ -17,7 +17,7 @@
     <div class="row align-items-center g-5">
       <div class="col-lg-6 position-relative z-1">
         <div class="mb-5">
-          <span class="badge bg-white text-primary fs-5 fw-bold mb-3 px-3 py-2 shadow-sm">Financiando sueños desde 2010</span>
+          <span class="badge bg-white fs-5 fw-bold mb-3 px-3 py-2 shadow-sm" style="color: #2d1f70;">Financiando sueños desde 2010</span>
           <h1 class="display-3 fw-bold mb-4 text-gray animate__animated animate__fadeInUp">Da el salto 
             <span class="text-emprendedor" style="color: #2d1f70;">emprendedor</span> que mereces</h1>
           <p class="lead text-white-80 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Tu idea de negocio está a un crédito de distancia. Te acompañamos desde el primer paso.</p>
@@ -76,75 +76,191 @@
   <div class="row g-4">
     <!-- Crédito Comunal - Tarjeta mejorada -->
   <div class="col-md-8">
-    <div class="card h-100 border-0 shadow-lg hover-transform" style="border-radius: 20px; overflow: hidden; transition: all 0.3s ease; border-color: #2d1f70;">
-      <!-- Ribbon de destacado -->
-      <div class="position-absolute end-0 top-0 m-3">
-        <span class="badge bg-warning text-dark rounded-pill px-3 py-2 shadow-sm">
-          <i class="fas fa-bolt me-1"></i> Popular
-        </span>
-      </div>
-      
-      <div class="card-body p-4 position-relative">
-        <!-- Icono con efecto 3D -->
-        <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-circle" 
-            style="width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(45, 31, 112, 0.2);">
-          <i class="fa-solid fa-people-group fa-2x" style="color: #2d1f70;"></i>
+          <div class="card h-100 border-0 shadow-hover" style="
+          border-radius: 24px; 
+          overflow: hidden; 
+          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+          position: relative;
+          z-index: 1;
+      ">
+        <!-- Efecto de borde animado -->
+        <div class="position-absolute top-0 left-0 w-100 h-100 border-animation" style="
+            border-radius: 24px;
+            padding: 2px;
+            background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db, #6a5acd, #2d1f70);
+            background-size: 400% 400%;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        "></div>
+        
+        <!-- Ribbon de destacado con animación -->
+        <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
+          <span class="badge bg-gradient-warning text-dark rounded-pill px-3 py-2 shadow" style="
+              background: linear-gradient(45deg, #ffc107, #ffdb58);
+              font-weight: 600;
+              letter-spacing: 0.5px;
+          ">
+            <i class="fas fa-bolt me-1"></i> ¡LO MÁS POPULAR!
+          </span>
         </div>
         
-        <!-- Título con gradiente -->
-        <h3 class="h2 fw-bold mb-3" style="background: linear-gradient(45deg, #2d1f70, #3a2a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-          Recursos para tus ideas
-        </h3>
+        <div class="card-body p-4 position-relative">
+          <!-- Icono con efecto flotante -->
+          <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-3" style="
+              width: 80px;
+              height: 80px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(135deg, rgba(45, 31, 112, 0.1) 0%, rgba(106, 90, 205, 0.2) 100%);
+              box-shadow: 0 8px 20px rgba(45, 31, 112, 0.15);
+              transition: all 0.4s ease;
+              animation: float 3s ease-in-out infinite;
+          ">
+            <i class="fa-solid fa-people-group fa-2x" style="
+                color: transparent;
+                background: linear-gradient(45deg, #2d1f70, #6a5acd);
+                -webkit-background-clip: text;
+                background-clip: text;
+            "></i>
+          </div>
+          
+          <!-- Título con gradiente y sombra de texto -->
+          <h3 class="h1 fw-bold mb-3" style="
+              background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              text-shadow: 0 2px 4px rgba(45, 31, 112, 0.1);
+              font-size: 2rem;
+          ">
+            Recursos para tus ideas
+          </h3>
+          
+          <!-- Texto descriptivo -->
+          <p class="mb-4" style="
+              font-size: 1.1rem;
+              line-height: 1.7;
+              color: #5a5a72;
+              font-weight: 400;
+          ">
+            ¿Listo para hacer crecer tu negocio? Nosotros te ayudamos a lograrlo con grandes beneficios y oportunidades pensadas para emprendedores como tú.
+          </p>
+          
+          <!-- Lista de beneficios con mejor diseño -->
+          <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Grupos de 10 personas</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Plazos flexibles</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Baja tasa de interés</span>
+            </li>
+          </ul>
+          
+          <!-- Botón con efecto hover mejorado -->
+          <div class="mt-auto pt-2">
+            <a [routerLink]="'/credito-grupal'" class="btn btn-lg btn-hover-icon rounded-pill px-4 position-relative" style="
+                background: linear-gradient(45deg, #2d1f70, #6a5acd);
+                color: #ffffff;
+                border: none;
+                overflow: hidden;
+                transition: all 0.4s ease;
+                box-shadow: 0 6px 20px rgba(106, 90, 205, 0.3);
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                z-index: 1;
+            ">
+              <span class="position-relative z-index-1 d-flex align-items-center justify-content-center">
+                Más información <i class="fas fa-arrow-right ms-2 transition-all" style="transform: translateX(0);"></i>
+              </span>
+              <span class="position-absolute top-0 left-0 w-100 h-100 bg-white opacity-0 hover-opacity-10 transition-all"></span>
+              <span class="btn-hover-effect" style="
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  width: 5px;
+                  height: 5px;
+                  background: rgba(255, 255, 255, 0.5);
+                  opacity: 0;
+                  border-radius: 100%;
+                  transform: scale(1, 1) translate(-50%, -50%);
+                  transform-origin: 50% 50%;
+              "></span>
+            </a>
+          </div>
+        </div>
         
-        <!-- Texto descriptivo -->
-        <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.6;">
-          ¿Listo para hacer crecer tu negocio? Nosotros te ayudamos a lograrlo con grandes beneficios y oportunidades pensadas para emprendedores como tú.
-        </p>
-        
-        <!-- Lista de beneficios con mejor diseño -->
-        <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
-          <li class="mb-2 d-flex align-items-center">
-            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
-            <span>Grupos de 10 personas</span>
-          </li>
-          <li class="mb-2 d-flex align-items-center">
-            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
-            <span>Plazos flexibles</span>
-          </li>
-          <li class="mb-2 d-flex align-items-center">
-            <i class="fas fa-check-circle me-3" style="color: #28a745; font-size: 1.2rem;"></i>
-            <span>Baja tasa de interés</span>
-          </li>
-        </ul>
-        
-        <!-- Botón con efecto hover -->
-        <div class="mt-auto pt-2">
-          <a [routerLink]="'/credito-grupal'" class="btn btn-lg btn-hover-icon rounded-pill px-4" 
-            style="background: linear-gradient(45deg, #2d1f70, #4a36b5); color: #ffffff; border: none; position: relative; overflow: hidden; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(45, 31, 112, 0.3);">
-            <span class="position-relative z-index-1">
-              Más información <i class="fas fa-arrow-right ms-2"></i>
-            </span>
-            <span class="position-absolute top-0 left-0 w-100 h-100 bg-white opacity-0 hover-opacity-10 transition-all"></span>
-          </a>
+        <!-- Pie de tarjeta con efecto de brillo -->
+        <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+          <div class="d-flex align-items-center justify-content-between">
+            <small class="text-success fw-bold d-flex align-items-center" style="font-size: 0.9rem;">
+              <div class="me-2" style="
+                  width: 24px;
+                  height: 24px;
+                  background: rgba(40, 167, 69, 0.1);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-clock" style="font-size: 0.7rem;"></i>
+              </div>
+              <span>Aprobación en 48h</span>
+            </small>
+            <small class="text-primary fw-bold d-flex align-items-center" style="font-size: 0.9rem;">
+              <div class="me-2" style="
+                  width: 24px;
+                  height: 24px;
+                  background: rgba(45, 31, 112, 0.1);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-user-check" style="font-size: 0.7rem;"></i>
+              </div>
+              <span>+500 grupos</span>
+            </small>
+          </div>
         </div>
       </div>
-      
-      <!-- Pie de tarjeta con efecto de brillo -->
-      <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
-        <div class="d-flex align-items-center justify-content-between">
-          <small class="text-success fw-bold">
-            <i class="fas fa-clock me-2"></i> Aprobación en 48 horas
-          </small>
-          <small class="text-primary fw-bold">
-            <i class="fas fa-user-check me-2"></i> +500 grupos beneficiados
-          </small>
-        </div>
-      </div>
-      
-      <!-- Efecto de resplandor al hover -->
-      <div class="position-absolute top-0 start-0 w-100 h-100 opacity-0 hover-opacity-100 transition-all" 
-          style="background: radial-gradient(circle at center, rgba(45, 31, 112, 0.08) 0%, transparent 70%); pointer-events: none;"></div>
-    </div>
   </div>
 
     <!-- Crédito Individual - Tarjeta mejorada -->

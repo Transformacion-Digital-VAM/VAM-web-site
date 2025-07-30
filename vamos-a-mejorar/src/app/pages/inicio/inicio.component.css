@@ -83,7 +83,6 @@
   }
 
 
-  /*ESTILOS DE CARDS SERVICIOS EXTRAS*/
   /* Estilos consistentes con el primer componente */
   .text-gradient-primary {
     background: linear-gradient(90deg, #190856, #167fb8);
@@ -329,4 +328,58 @@
   }
   .btn-hover-icon i {
     transition: transform 0.2s ease;
+  }
+
+
+  /* Animaciones */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Efectos hover */
+  .shadow-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(45, 31, 112, 0.15) !important;
+  }
+  
+  .shadow-hover:hover .border-animation {
+    opacity: 1;
+    animation: gradientBorder 3s ease infinite;
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  .btn-hover-icon:hover i {
+    transform: translateX(4px) !important;
+  }
+  
+  .btn-hover-icon:hover .btn-hover-effect {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(40, 40);
+      opacity: 0;
+    }
   }
