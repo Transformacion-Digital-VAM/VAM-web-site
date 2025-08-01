@@ -1,3 +1,4 @@
+/* Reset y base */
 * {
     margin: 0;
     padding: 0;
@@ -17,11 +18,16 @@ body {
     margin: 0 auto;
 }
 
+/* Encabezado */
 .header {
     text-align: center;
     margin: 40px 0;
     padding: 20px;
     background: linear-gradient(rgba(17, 17, 158, 0.681), rgba(17, 17, 158, 0.681)), url('../../../assets/fachada.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 12px;
 }
 
 .header h1 {
@@ -35,17 +41,20 @@ body {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
-    color: #555;
+    color: #e4e4e4;
 }
+
+/* Hero */
 .hero {
-    background: radial-gradient(rgba(17, 17, 158, 0.681)), url('../../../assets/fachada.jpg');
+    background: radial-gradient(circle, rgba(17, 17, 158, 0.681), rgba(17, 17, 158, 0.5)), url('../../../assets/fachada.jpg');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 20px 50px;
+    padding: 100px 20px 40px;
     text-align: center;
 }
 
+/* Secciones */
 .contenedor-secciones {
     display: flex;
     flex-direction: column;
@@ -56,7 +65,6 @@ body {
 .seccion {
     display: flex;
     min-height: 75vh;
-    /* height: max-content; */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
@@ -64,7 +72,7 @@ body {
     position: relative;
 }
 
-/* Estilos para tarjetas impares (imagen a la izquierda) */
+/* Sección impar: imagen izquierda */
 .seccion:nth-child(odd) {
     flex-direction: row;
 }
@@ -86,7 +94,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilos para tarjetas pares (imagen a la derecha) */
+/* Sección par: imagen derecha */
 .seccion:nth-child(even) {
     flex-direction: row-reverse;
 }
@@ -107,11 +115,12 @@ body {
     margin-right: -70px;
 }
 
+/* Imagen de sección */
 .seccion-imagen {
     position: relative;
     background-size: cover;
     background-position: center;
-    width: 80%;
+    width: 100%;
 }
 
 .seccion-imagen::before {
@@ -121,17 +130,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.300));
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 }
 
+/* Contenido de sección */
 .seccion-contenido {
     background: rgb(240, 246, 255);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.212);
+    transition: all 0.3s ease;
 }
+
 .seccion-contenido:hover {
     background: #f1f2f3;
-    transform: translateY(-10px);    
+    transform: translateY(-10px);
     box-shadow: 0 6px 30px rgba(4, 15, 114, 0.404);
 }
 
@@ -176,6 +188,7 @@ body {
     box-shadow: 0 6px 20px rgba(94, 108, 235, 0.5);
 }
 
+/* Footer */
 .footer {
     background: #222;
     color: #fff;
@@ -217,17 +230,24 @@ body {
     background: #c2171d;
 }
 
-/* Responsive */
+/* ========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablets y laptops pequeños */
 @media (max-width: 992px) {
-    .seccion, .seccion:nth-child(odd), .seccion:nth-child(even) {
+    .seccion,
+    .seccion:nth-child(odd),
+    .seccion:nth-child(even) {
         flex-direction: column;
     }
-    
+
     .seccion-imagen {
         height: 300px;
         flex: none;
+        width: 100%;
     }
-    
+
     .seccion-contenido {
         flex: none;
         margin: -60px 30px 0;
@@ -235,21 +255,77 @@ body {
     }
 }
 
-@media (max-width: 576px) {
+/* Teléfonos y pantallas muy pequeñas */
+@media (max-width: 768px) {
     .header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
-    
+
     .header p {
         font-size: 1rem;
     }
-    
+
     .seccion-contenido {
         margin: -40px 20px 0;
         padding: 25px;
     }
-    
+
     .seccion-contenido h2 {
+        font-size: 1.8rem;
+    }
+
+    .seccion-contenido p {
+        font-size: 1rem;
+    }
+
+    .seccion-boton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .header h1 {
         font-size: 1.6rem;
+    }
+
+    .header p {
+        font-size: 0.95rem;
+    }
+
+    .seccion-contenido {
+        padding: 20px;
+        margin: -30px 10px 0;
+    }
+
+    .seccion-contenido h2 {
+        font-size: 1.4rem;
+        gap: 8px;
+    }
+
+    .seccion-contenido p {
+        font-size: 0.95rem;
+    }
+
+    .seccion-imagen {
+        width: 100%;
+        height: 200px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+        margin: 0 6px;
     }
 }

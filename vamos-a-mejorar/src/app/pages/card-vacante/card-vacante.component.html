@@ -1,208 +1,84 @@
-<header class="app-header flex flex-col items-center justify-center relative">
-  <div class="fondo-irregular absolute inset-0"></div>
-  <div class="text-center mb-5">
-    <h2 class="display-4 mb-2 position-relative app-title z-10">
-      ¡Postúlate ahora!
-    </h2>
-    <p class="header-p">
-      Completa tu postulación con tu CV en PDF y cuéntanos por qué eres el candidato ideal.
-    </p>
-  </div>
-</header>
+<body class="container">
+  <img src="assets/fondo.jpg" alt="">
 
 
-<main class="container">
-  <!-- Mensajes de carga y error -->
-  <div *ngIf="loading" class="text-center text-gray-600">Cargando detalle...</div>
-  <div *ngIf="error" class="text-center text-red-500">{{ error }}</div>
-
-  <!-- Detalle de vacante -->
-  <div *ngIf="!loading && vacante" class="vacante-detalle">
-    <!-- Encabezado con degradado -->
-    <div class="vacante-header">
-      <div>
-        <h2 class="vacante-titulo-principal">{{ vacante.titulo }}</h2>
-        <p class="vacante-area">{{ vacante.area }}</p>
-      </div>
-      <button (click)="openModal()" class="btn-postularse">
-        <i class="fas fa-paper-plane"></i>Postularse
-      </button>
-    </div>
-
-    <!-- Contenido principal -->
-    <div class="vacante-grid">
-      <!-- Columna izquierda -->
-      <div class="vacante-col">
-        <!-- Descripción -->
-        <section>
-          <h3 class="vacante-titulo"><i class="fas fa-file-alt text-blue-600 mr-2"></i> Descripción del puesto</h3>
-          <p class="vacante-texto">{{ vacante.descripcion }}</p>
-        </section>
-
-        <!-- Requisitos -->
-        <section>
-          <h3 class="vacante-titulo"><i class="fas fa-tools text-blue-600 mr-2"></i> Requisitos y habilidades</h3>
-          <ul class="vacante-lista enhanced-list list-disc pl-5">
-            <li *ngFor="let req of vacante.requisitos"><i class="fa-solid fa-circle small icono"></i> {{ req }}</li>
-          </ul>
-        </section>
+  <!-- Modal -->
+  <div id="modal" class="modal-overlay" *ngIf="modalOpen">
+    <div class="modal-content">
+      <!-- Encabezado -->
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-user-tie"></i>
+          Postulación: <strong>{{ vacante?.titulo }}</strong>
+        </h3>
+        <button (click)="closeModal()" class="modal-close-btn">&times;</button>
       </div>
 
-      <!-- Columna derecha -->
-      <div class="vacante-col">
-        <!-- Horario y ubicación -->
-        <section>
-          <h3 class="vacante-titulo"><i class="far fa-clock text-blue-600 mr-2"></i> Horario y ubicación</h3>
-          <ul class="vacante-lista">
-            <li>
-              <i class="far fa-calendar-alt icono"></i>
-              {{ vacante.horario.dias }} | {{ vacante.horario.horas }}
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt icono"></i>
-              {{ vacante.ubicacion }}
-            </li>
-            <li>
-              <i class="fas fa-briefcase icono"></i>
-              {{ vacante.modalidad }} ({{ vacante.tipo }})
-            </li>
-          </ul>
-        </section>
-
-        <!-- Beneficios -->
-        <section>
-          <h3 class="vacante-titulo"><i class="fas fa-gift text-blue-600 mr-2"></i> Beneficios</h3>
-          <ul class="vacante-lista">
-            <li *ngFor="let ben of vacante.beneficios"><i class="fa-solid fa-circle small icono"></i> {{ ben }}</li>
-          </ul>
-        </section>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<!-- Modal -->
-<div
-  id="modal"
-  class="modal-overlay"
-  *ngIf="modalOpen"
->
-  <div class="modal-content">
-    <!-- Encabezado -->
-    <div class="modal-header">
-      <h3 class="modal-title">
-        <i class="fas fa-user-tie"></i>
-        Postulación para: <strong>{{ vacante?.titulo }}</strong>
-      </h3>
-      <button (click)="closeModal()" class="modal-close-btn">&times;</button>
-    </div>
-
-    <!-- Formulario -->
-    <form
-      #postForm="ngForm"
-      (ngSubmit)="submitForm()"
-      enctype="multipart/form-data"
-      class="modal-form"
-    >
-      <!-- Nombre -->
-      <div>
-        <label class="form-label">
-          <i class="fas fa-user"></i>Nombre completo
-        </label>
-        <input
-          name="nombre"
-          [(ngModel)]="form.nombre"
-          #nombre="ngModel"
-          required
-          class="form-input"
-        />
-        <div *ngIf="nombre.invalid && nombre.touched" class="form-error">
-          Requerido
-        </div>
-      </div>
-
-      <!-- Teléfono y email -->
-      <div class="form-grid">
+      <!-- Formulario -->
+      <form #postForm="ngForm" (ngSubmit)="submitForm()" enctype="multipart/form-data" class="modal-form">
+        <!-- Nombre -->
         <div>
           <label class="form-label">
-            <i class="fas fa-phone"></i>Teléfono
+            <i class="fas fa-user"></i>Nombre completo
           </label>
-          <input
-            name="telefono"
-            [(ngModel)]="form.telefono"
-            #telefono="ngModel"
-            required
-            class="form-input" alt="Ejemplo: 4198765432"
-          />
-          <div *ngIf="telefono.invalid && telefono.touched" class="form-error">
+          <input name="nombre" [(ngModel)]="form.nombre" #nombre="ngModel" required class="form-input" />
+          <div *ngIf="nombre.invalid && nombre.touched" class="form-error">
             Requerido
           </div>
         </div>
-        <div>
-          <label class="form-label">
-            <i class="fas fa-envelope"></i>Correo electrónico
-          </label>
-          <input
-            type="email"
-            name="email"
-            [(ngModel)]="form.email"
-            #email="ngModel"
-            required
-            class="form-input" alt="Ejemplo: email@ejemplo.com"
-          />
-          <div *ngIf="email.invalid && email.touched" class="form-error">
-            Email inválido
+
+        <!-- Teléfono y email -->
+        <div class="form-grid">
+          <div>
+            <label class="form-label">
+              <i class="fas fa-phone"></i>Teléfono
+            </label>
+            <input name="telefono" [(ngModel)]="form.telefono" #telefono="ngModel" required class="form-input"
+              alt="Ejemplo: 4198765432" />
+            <div *ngIf="telefono.invalid && telefono.touched" class="form-error">
+              Requerido
+            </div>
+          </div>
+          <div>
+            <label class="form-label">
+              <i class="fas fa-envelope"></i>Correo electrónico
+            </label>
+            <input type="email" name="email" [(ngModel)]="form.email" #email="ngModel" required class="form-input"
+              alt="Ejemplo: email@ejemplo.com" />
+            <div *ngIf="email.invalid && email.touched" class="form-error">
+              Email inválido
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- CV -->
-      <div>
-        <label class="form-label">
-          <i class="fas fa-file-pdf"></i>Curriculum Vitae (PDF)
-        </label>
-        <input
-        type="file"
-        accept="application/pdf"
-        (change)="onFileChange($event)"
-        required
-        class="form-input"
-        />
-        <span class="file-info">Adjunta el archivo no max a 50MB en formato PDF</span>
-        <div *ngIf="fileError" class="form-error">{{ fileError }}</div>
-      </div>
+        <!-- CV -->
+        <div>
+          <label class="form-label">
+            <i class="fas fa-file-pdf"></i>Curriculum Vitae (PDF)
+          </label>
+          <input type="file" accept="application/pdf" (change)="onFileChange($event)" required class="form-input" />
+          <span class="file-info">Adjunta el archivo no max a 50MB en formato PDF</span>
+          <div *ngIf="fileError" class="form-error">{{ fileError }}</div>
+        </div>
 
-      <!-- Mensaje -->
-      <div>
-        <label class="form-label">
-          <i class="fas fa-comment"></i>Mensaje adicional
-        </label>
-        <textarea
-          name="mensaje"
-          [(ngModel)]="form.mensaje"
-          rows="3"
-          class="form-textarea"
-        ></textarea>
-      </div>
+        <!-- Mensaje -->
+        <div>
+          <label class="form-label">
+            <i class="fas fa-comment"></i>Mensaje adicional
+          </label>
+          <textarea name="mensaje" [(ngModel)]="form.mensaje" rows="3" class="form-textarea"></textarea>
+        </div>
 
-      <!-- Botones -->
-      <div class="modal-footer">
-        <button
-          type="button"
-          (click)="closeModal()"
-          class="btn-secondary"
-        >
-          Cancelar
-        </button>
-        <button
-          type="submit"
-          [disabled]="postForm.invalid || submitting"
-          class="btn-primary"
-        >
-          {{ submitting ? 'Enviando…' : 'Enviar solicitud' }}
-        </button>
-      </div>
-    </form>
+        <!-- Botones -->
+        <div class="modal-footer">
+          <button type="button" (click)="closeModal()" class="btn-secondary">
+            Cancelar
+          </button>
+          <button type="submit" [disabled]="postForm.invalid || submitting" class="btn-primary">
+            {{ submitting ? 'Enviando…' : 'Enviar solicitud' }}
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+</body>

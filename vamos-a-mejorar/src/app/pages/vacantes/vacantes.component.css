@@ -324,6 +324,284 @@ body {
     font-weight: bold;
 }
 
+.vacante-detalle {
+  border-left: 5px solid #0f2955;
+  background: #f9f9fc;
+}
+
+.vacante-detalle h5 {
+  font-weight: 600;
+  color: #0f2955;
+}
+
+  /* Detalle de Vacante */
+  .vacante-detalle {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px; 
+    box-shadow: 0 0px 15px 1px rgba(0, 0, 0, 0.534), 0 0px 15px 1px rgba(0, 0, 0, 0.295); 
+    overflow: hidden;
+  }
+
+  .vacante-header {
+    background: linear-gradient(90deg, #c7dffe, #85b0c7); /* bg-gradient-to-r from-blue-100 to-blue-200 */
+    padding: 24px; /* p-6 */
+    color: #01051d; /* text-gray-800 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Default for flex-col */
+    border-radius: 10px;
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .vacante-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .vacante-titulo-principal {
+    font-size: 24px; /* text-2xl */
+    font-weight: bold;
+    margin-bottom: 4px; /* mb-1 */
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .vacante-titulo-principal {
+      font-size: 30px; /* md:text-3xl */
+    }
+  }
+
+  .vacante-area {
+    font-size: 16px; /* text-base */
+  }
+
+  .btn-postularse {
+    margin-top: 16px; /* mt-4 */
+    background-color: white;
+    color: #2563eb; /* text-blue-600 */
+    font-weight: 500; /* font-medium */
+    padding: 8px 24px; /* py-2 px-6 */
+    border-radius: 8px; /* rounded-lg */
+    transition: background-color 0.3s ease; /* transition duration-300 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    border: none; /* Ensure no default button border */
+    cursor: pointer;
+  }
+
+  .btn-postularse:hover {
+    background-color: #eff6ff; /* hover:bg-blue-50 */
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .btn-postularse {
+      margin-top: 0; /* md:mt-0 */
+    }
+  }
+
+  .btn-postularse .fas {
+    margin-right: 8px; /* mr-2 */
+  }
+
+  /* Contenido de la Vacante (Grid) */
+  .vacante-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default for mobile */
+    gap: 24px; /* gap-6 */
+    padding: 24px; /* p-6 */
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .vacante-grid {
+      grid-template-columns: 1fr 1fr; /* md:grid-cols-2 */
+    }
+  }
+
+  .vacante-titulo {
+    font-size: 20px; /* text-xl */
+    font-weight: bold;
+    margin-bottom: 16px; /* mb-4 */
+    color: #1e5799; /* custom blue */
+  }
+
+  .vacante-texto {
+    margin-bottom: 16px; /* mb-4 */
+    color: #4a5568; /* text-gray-700 */
+  }
+
+  .vacante-lista {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .vacante-lista li {
+    margin-bottom: 8px; /* mb-2 */
+    color: #4a5568; /* text-gray-700 */
+  }
+
+  .vacante-lista li:last-child {
+    margin-bottom: 0;
+  }
+
+  .icono {
+    margin-right: 8px; /* mr-2 */
+    color: #3b82f6; /* text-blue-500 */
+  }
+
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999; /* Aumentado para asegurar que esté por encima de todo */
+    overflow-y: auto;
+    background-color: rgba(75, 85, 99, 0.5); /* bg-gray-700 bg-opacity-50 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    border-radius: 8px; /* rounded-lg */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-xl */
+    width: 100%;
+    max-width: 512px; /* max-w-lg */
+    margin: 20px 16px; /* Añadido margen superior/inferior para espacio */
+    max-height: 90vh; /* Limita la altura del modal al 90% del viewport height */
+    overflow-y: auto; /* Permite el scroll interno si el contenido es muy largo */
+  }
+
+  .modal-header {
+    background: linear-gradient(90deg, #00087a, #016da7);
+    padding: 16px; /* p-4 */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Asegura que el header no se mueva al hacer scroll en el contenido del modal */
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Asegura que el header esté por encima del contenido del formulario al hacer scroll */
+  }
+
+  .modal-title {
+    font-weight: 500; /* font-medium */
+  }
+
+  .modal-title .fas {
+    margin-right: 8px; /* mr-2 */
+  }
+
+  .modal-close-btn {
+    color: white;
+    font-size: 20px; /* text-xl */
+    line-height: 1; /* leading-none */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modal-form {
+    padding: 24px; /* p-6 */
+    /* space-y-4 se maneja con margin-bottom en los divs hijos */
+  }
+
+  .modal-form > div {
+    margin-bottom: 16px; /* Equivalente a space-y-4 para divs directos */
+  }
+
+  .modal-form > div:last-of-type {
+    margin-bottom: 0; /* Eliminar margin-bottom del último div antes del footer */
+  }
+
+  .form-label {
+    display: block;
+    margin-bottom: 4px; /* mb-1 */
+  }
+
+  .form-label .fas {
+    color: #3b82f6; /* text-blue-500 */
+    margin-right: 4px; /* mr-1 */
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    border: 1px solid #d1d5db; /* border */
+    border-radius: 4px; /* rounded */
+    padding: 8px; /* p-2 */
+  }
+
+  .form-error {
+    color: #ef4444; /* text-red-500 */
+    font-size: 14px; /* text-sm */
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default for mobile */
+    gap: 16px; /* gap-4 */
+  }
+
+  @media (min-width: 768px) { /* md: */
+    .form-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+  }
+
+  .file-info {
+    font-size: 14px; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+    display: block; /* Para que ocupe su propia línea */
+    margin-top: 4px;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px; /* gap-2 */
+    padding: 16px 24px; /* pt-4 y p-6 del modal-form */
+    border-top: 1px solid #e5e7eb; /* border-t */
+    /* Asegura que el footer no se mueva al hacer scroll en el contenido del modal */
+    position: sticky;
+    bottom: 0;
+    background-color: white; /* Para que no se vea el contenido debajo */
+    z-index: 10; /* Asegura que el footer esté por encima del contenido del formulario al hacer scroll */
+  }
+
+  .btn-secondary {
+    padding: 8px 16px; /* px-4 py-2 */
+    border: 1px solid #db6c12; /* border */
+    border-radius: 4px; /* rounded */
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+  }
+
+  .btn-primary {
+    padding: 8px 16px; /* px-4 py-2 */
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    border-radius: 4px; /* rounded */
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -358,4 +636,5 @@ body {
     .section-title h2 {
         font-size: 1.8rem;
     }
+
 }

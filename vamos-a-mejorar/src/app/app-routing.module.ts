@@ -12,14 +12,13 @@ import { Error404Component } from './pages/error404/error404.component';
 import { TestimoniosComponent } from './pages/testimonios/testimonios.component';
 import { ComunidadComponent } from './pages/comunidad/comunidad.component';
 import { VacantesComponent } from './pages/vacantes/vacantes.component';
-import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
 
 const routes: Routes = [
   {path: 'vacantes', component: VacantesComponent},
-  // {path: 'card-vacante', component: CardVacanteComponent},
+  {path: 'vacante/:id', component: CardVacanteComponent},
   {path: 'nosotros', component: NosotrosComponent},
-  { path: 'vacante/:id', component: CardVacanteComponent },
   {path: 'comunidad', component: ComunidadComponent},
   {path: 'testimonios', component: TestimoniosComponent},
   {path: 'inicio', component: InicioComponent},
@@ -31,7 +30,7 @@ const routes: Routes = [
   {path: 'presolicitar-credito', component: PresolicitudCreditoComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
   {path: 'error404', component: Error404Component},
-  {path: '**', redirectTo: 'error404'}
+  {path: '**', redirectTo: 'inicio'}
 ];
 
 @NgModule({

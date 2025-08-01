@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { VacantesService, Vacante } from '../../service/vacantes.service';
 import { PostulacionService } from '../../service/postulacion.service';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -30,7 +31,8 @@ export class CardVacanteComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private vacantesService: VacantesService,
-    private postulacionService: PostulacionService
+    private postulacionService: PostulacionService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +41,8 @@ export class CardVacanteComponent implements OnInit {
       next: v => {
         this.vacante = v;
         this.loading = false;
+
+        this.openModal();
       },
       error: () => {
         this.error = 'No se pudo cargar la vacante';
@@ -55,6 +59,8 @@ export class CardVacanteComponent implements OnInit {
     this.modalOpen = false;
     this.fileData = null;
     this.fileError = null;
+
+    this.router.navigate(['/vacantes']);
   }
 
   onFileChange(event: Event) {
@@ -117,7 +123,6 @@ export class CardVacanteComponent implements OnInit {
     this.submitting = true;
     const data = new FormData();
     data.append('vacanteId', this.vacante._id);
-    // Se añade el nombre de la vacante al FormData
     data.append('titulo', this.vacante.titulo);
     data.append('nombre', this.form.nombre.trim());
     data.append('telefono', this.form.telefono.trim());
@@ -137,6 +142,9 @@ export class CardVacanteComponent implements OnInit {
         });
         this.closeModal();
         this.submitting = false;
+
+        this.router.navigate(['/vacantes']);
+
       },
       error: (err) => {
         console.error('Error enviando postulación:', err);

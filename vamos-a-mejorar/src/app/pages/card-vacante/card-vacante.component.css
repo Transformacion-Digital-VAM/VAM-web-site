@@ -1,35 +1,6 @@
-  .app-header {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg,#0b205c, #1a45b4);
-    justify-content: center;
-    position: relative;
-  }
-
-  .header-p{
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    text-align: center;
-    max-width: 800px;
-  }
-  .app-title {
-    color: rgb(255, 255, 255);
-    font-size: 3.2rem;
-    font-weight: bold;
-  }
-
-  .container {
-    max-width: 1280px; /* container */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px; /* px-4 */
-    padding-right: 16px; /* px-4 */
-    padding-top: 32px; /* py-8 */
-    padding-bottom: 32px; /* py-8 */
-    min-height: 100vh; /* min-h-screen */
+  .container img{
+    align-content: center;
+    opacity: 2;
   }
 
   /* Mensajes de Carga y Error */
@@ -44,19 +15,7 @@
   .text-red-500 {
     color: #ef4444;
   }
-  /* Forma decorativa que va detrás */
-.fondo-irregular {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color:#dce5ec;
-  clip-path: polygon(0 0, 100% 10%, 100% 60%, 0% 90%);
-  z-index: -1; /* CLAVE: Detrás de todo */
-  opacity: 0.9;
-  filter: drop-shadow(0 50px 40px rgb(0, 0, 0));
-}
+
 
   /* Detalle de Vacante */
   .vacante-detalle {
@@ -107,7 +66,7 @@
     padding: 8px 24px; /* py-2 px-6 */
     border-radius: 8px; /* rounded-lg */
     transition: background-color 0.3s ease; /* transition duration-300 */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 6px 1px rgba(0, 0, 0, 0.06); /* shadow-md */
     border: none; /* Ensure no default button border */
     cursor: pointer;
   }
@@ -140,11 +99,12 @@
     }
   }
 
+
   .vacante-titulo {
     font-size: 20px; /* text-xl */
     font-weight: bold;
     margin-bottom: 16px; /* mb-4 */
-    color: #1e5799; /* custom blue */
+    color: #2563eb; /* custom blue */
   }
 
   .vacante-texto {
@@ -168,7 +128,7 @@
 
   .icono {
     margin-right: 8px; /* mr-2 */
-    color: #3b82f6; /* text-blue-500 */
+    color: #2563eb; /* text-blue-500 */
   }
 
   /* Modal */
@@ -246,7 +206,7 @@
   }
 
   .form-label .fas {
-    color: #3b82f6; /* text-blue-500 */
+    color: #2563eb; /* text-blue-500 */
     margin-right: 4px; /* mr-1 */
   }
 

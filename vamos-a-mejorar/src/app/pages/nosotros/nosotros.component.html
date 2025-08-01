@@ -9,7 +9,7 @@
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 animate-on-scroll">
             <a href="/credito-grupal" class="btn btn-primary">Me Interesa</a>
-            <a href="https://api.whatsapp.com/message/CD27WLZQZSXIJ1?autoload=1&app_absent=0"
+            <a href="https://api.whatsapp.com/message/CD27WLZQZSXIJ1?autoload=1&app_absent=0" target="_blank"
                 class="btn btn-outline">Contáctanos</a>
         </div>
     </div>
@@ -44,17 +44,17 @@
                 confiable para dar oportunidad de progreso para ellos y sus familias desde 2010.
 
             </p>
-            <div class="d-flex align-items-center animate__animated animate__fadeInUp animate__delay-3s">
+            <div class="subtitulos d-flex animate__animated animate__fadeInUp animate__delay-3s">
                 <div class="pe-4 border-end border-light">
-                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: justify;">15</h3>
+                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: center;">15</h3>
                     <p class="text-white-60 mb-0" style="text-align: justify; color: #0f2955;">Años Apoyando </p>
                 </div>
                 <div class="px-4">
-                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: justify;">5K+</h3>
+                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: center;">5K+</h3>
                     <p class="text-white-60 mb-0" style="text-align: justify; color: #0f2955;">Clientes Satisfechos</p>
                 </div>
                 <div class="px-4">
-                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: justify;">6</h3>
+                    <h3 class="fw-bold text-primary mb-0 display-5" style="text-align: center;">6</h3>
                     <p class="text-white-60 mb-0" style="text-align: justify; color: #0f2955;">Sucursales</p>
                 </div>
             </div>
@@ -165,12 +165,14 @@
     </div>
     <br>
 
-    <section class="section team">
-        <div class="service-container">
-            <div class="service-card animate-on-scroll">
+    <section class="section team py-5">
+        <div class="service-container d-flex flex-wrap align-items-center justify-content-between">
+
+            <!-- Texto -->
+            <div class="service-card animate-on-scroll col-md-4 mb-4">
                 <div class="icon-wrapper bg-primary bg-opacity-10 mb-4 mx-auto large-icon">
-                        <i class="fas fa-home fa-2x text-primary"></i>
-                    </div>
+                    <i class="fas fa-home fa-2x text-primary"></i>
+                </div>
                 <h3 class="display-4 fw-bold mb-4 position-relative">Atención al cliente</h3>
                 <p class="text-justify fs-5 text-muted mb-0">
                     Nuestros asesores financieros acuden hasta tu hogar para brindarte un
@@ -192,10 +194,13 @@
                 </div>
             </div>
 
-            <div class="service-image animate-on-scroll">
-                <img src="assets/fachada3.jpg"
-                    alt="Asesor financiero en hogar" />
+            <!-- Imagen -->
+            <div class="service-image animate-on-scroll col-md-6 text-center">
+                <img src="assets/fachada3.jpg" alt="Asesor financiero en hogar" class="img-fluid rounded shadow-lg"
+                    style="max-width: 100%; width: 420px;" />
             </div>
+
         </div>
     </section>
+
 </div>
