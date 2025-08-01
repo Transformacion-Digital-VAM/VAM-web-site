@@ -2,11 +2,13 @@ import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { RouterModule } from '@angular/router';
+import { ScrollSpyDirective } from './directivas/scroll-spy.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-credito-grupal',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ScrollSpyDirective, CommonModule],
   templateUrl: './credito-grupal.component.html',
   styleUrl: './credito-grupal.component.css',
     animations: [
@@ -27,6 +29,7 @@ import { RouterModule } from '@angular/router';
 })
 export class CreditoGrupalComponent implements AfterViewInit {
   sidebarVisible = true;
+  currentSection: string = '';
 
   constructor(private route: ActivatedRoute) {}
 
@@ -44,4 +47,9 @@ export class CreditoGrupalComponent implements AfterViewInit {
   toggleSidebar(): void {
     this.sidebarVisible = !this.sidebarVisible;
   }
+
+  onSectionChange(sectionId: string) {
+  this.currentSection = sectionId;
+}
+
 }

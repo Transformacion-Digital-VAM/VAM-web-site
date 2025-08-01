@@ -1,0 +1,15 @@
+.chat-iframe {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la altura visible de la pantalla */
+  border: none;
+  display: block; /* Asegura que el iframe se comporte como bloque */
+  background-color: #f9fafb;
+}
+
+/* Opcional: Si necesitas que el iframe esté dentro de un contenedor específico */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* o el valor que necesites */
+  overflow: hidden;
+}

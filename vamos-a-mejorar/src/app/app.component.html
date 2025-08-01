@@ -1,19 +1,17 @@
 <app-navbar></app-navbar>
 <!-- Contenedor para toasts -->
 <div class="position-fixed bottom-7 end-0 p-3" style="z-index: 1080;">
-  <div class="toast show rounded-circle border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" style="width: 100px; height: 100px; overflow: hidden;">
+  <div id="toast-confetti" class="toast show rounded-circle border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" style="width: 100px; height: 100px; overflow: hidden;">
     <button type="button" class="btn-close position-absolute top-0 end-0 m-1" data-bs-dismiss="toast" aria-label="Close" style="z-index: 2;"></button>
-    <a href="#" class="d-block h-100 w-100">
+    <a class="d-block h-100 w-100">
       <img src="../assets/icons/decimoquinto-aniversario.jpg" 
            class="h-100 w-100 object-fit-cover" 
            alt="15° Aniversario"
            style="object-position: center;">
     </a>
-    <div class="position-absolute bottom-0 start-0 end-0 text-center bg-primary text-white py-1" style="font-size: 0.7rem; z-index: 1;">
-      15°
-    </div>
   </div>
 </div>
 
+<app-chat-bot></app-chat-bot>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

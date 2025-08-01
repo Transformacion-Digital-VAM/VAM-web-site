@@ -15,6 +15,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http'; 
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -32,12 +33,13 @@ import { CreditoIndividualComponent } from './pages/credito-individual/credito-i
 import { CostosComisionesComponent } from './pages/costos-comisiones/costos-comisiones.component';
 import { UnidadEspecializadaComponent } from './pages/unidad-especializada/unidad-especializada.component';
 import { EntidadesFinancierasComponent } from './pages/entidades-financieras/entidades-financieras.component';
-import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { SmothScrollDirective } from './pages/credito-grupal/smoth-scroll.directive';
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { MessageService } from 'primeng/api';
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
+import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.component';
+import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 
 @NgModule({
   declarations: [
@@ -56,11 +58,12 @@ import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
     CostosComisionesComponent,
     UnidadEspecializadaComponent,
     EntidadesFinancierasComponent,
-    PopUpComponent,
     SmothScrollDirective,
     PreguntasFrecuentesComponent,
     Error404Component,
     ChatBotComponent,
+    AsesorVirtualComponent,
+    BeneficiosComponent,
 
   ],
   imports: [
@@ -95,8 +98,6 @@ import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
           }
         }
       })
-
-
   ],
   bootstrap: [AppComponent]
 })

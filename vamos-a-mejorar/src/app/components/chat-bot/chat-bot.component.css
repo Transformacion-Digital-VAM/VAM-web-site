@@ -2,16 +2,29 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
   padding: 0;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(21, 22, 22, 0.486);
-  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff;
   background-color: transparent;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.chat-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 75px;
+  height: 75px;
+}
+
+.chat-button:active {
+  transform: translateY(0) scale(0.95);
 }
 
 .chat-button video {
@@ -20,66 +33,146 @@
   object-fit: cover;
   display: block;
   border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.chat-button:hover video {
+  transform: scale(1.05);
+}
+
+/* Animación de pulso para llamar la atención */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 150, 255, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 150, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 150, 255, 0); }
+}
+
+.chat-button.pulse {
+  animation: pulse 1.5s infinite;
 }
  
 .chat-widget {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   width: 360px;
-  height: 475px;
+  height: 490px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.548);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  z-index: 1001;
+  transform: scale(0.95);
+  opacity: 0;
+  animation: widgetFadeIn 0.3s ease-out forwards;
+  border: 1px solid #e5e7eb;
+}
+@media (max-width: 480px) {
+  .chat-widget {
+    width: 90vw;
+    height: 85vh;
+    right: 5vw;
+    bottom: 10px;
+  }
+}
+
+@keyframes widgetFadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.chat-iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  flex-grow: 1;
+  background-color: #f9fafb;
 }
 
 .chat-header {
-  background-color: #005fa3;
+  background: linear-gradient(135deg, #005fa3 0%, #003a6d 100%);
   color: white;
-  padding: 12px 16px;
+  padding: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.header-text span {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 400;
 }
 
 .chat-header .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.close-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
   width: 28px;
   height: 28px;
-  margin-right: 8px;
   border-radius: 50%;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  padding: 0;
 }
 
-.chat-header span {
-  flex-grow: 1;
-  margin-left: 8px;
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
 }
 
-.text-emprendedor {
-  font-size: 65px;
-  font-weight: bold;
-  color: transparent;
-  background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMGNvbG9yZXN8ZW58MHx8MHx8fDA%3D');
-  background-size: 200%;
-  /* Enlarged for smooth animation */
-  background-position: 0 50%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animate-background 5s infinite alternate linear;
+.close-button:active {
+  transform: scale(0.9) rotate(90deg);
+}
 
-  @keyframes animate-background {
-    0% {
-      background-position: 0 50%;
-    }
+/* Efecto de carga para el iframe */
+.chat-iframe.loading {
+  position: relative;
+  overflow: hidden;
+}
 
-    100% {
-      background-position: 100% 50%;
-    }
-  }
+.chat-iframe.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f3f3f3 25%, #e0e0e0 50%, #f3f3f3 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
 
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }

@@ -1,51 +1,78 @@
-.form-section {
-    background-color: #f8f9fa;
+ .form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-header {
+    padding: 2rem 0;
+  }
+  
+  .header-icon {
+    color: #2d1f70;
   }
   
   .text-gradient-primary {
-    background: linear-gradient(90deg, #214aaa, #5271d7);
+    background: linear-gradient(45deg, #2d1f70, #4a3a9a);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   
-  .form-label {
+  .bg-gradient {
+    background: linear-gradient(45deg, #2d1f70, #4a3a9a);
+  }
+  
+  .form-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-title {
+    color: #2d1f70;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .section-divider {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(45deg, #2d1f70, #4a3a9a);
+    margin-top: 0.5rem;
+  }
+  
+  .form-floating label {
     color: #495057;
-    display: block;
   }
   
-  .input-group-text {
-    transition: all 0.3s ease;
-  }
-  
-  .form-control, .form-select {
-    border-left: 0 !important;
-    padding: 0.75rem 1rem;
-    transition: all 0.3s ease;
+  .form-floating>.form-control:focus~label,
+  .form-floating>.form-control:not(:placeholder-shown)~label,
+  .form-floating>.form-select~label {
+    color: #2d1f70;
   }
   
   .form-control:focus, .form-select:focus {
-    box-shadow: none;
-    border-color: #dee2e6;
+    border-color: #2d1f70;
+    box-shadow: 0 0 0 0.25rem rgba(45, 31, 112, 0.25);
   }
   
-  .form-control:focus + .input-group-text, 
-  .form-select:focus + .input-group-text {
-    color: #214aaa;
+  .btn-primary {
+    background-color: #2d1f70;
+    border-color: #2d1f70;
   }
   
-  .hover-effect {
-    transition: all 0.3s ease;
+  .btn-primary:hover {
+    background-color: #3d2b8c;
+    border-color: #3d2b8c;
   }
   
-  .hover-effect:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(33, 74, 170, 0.3) !important;
-  }
-  
-  @media (max-width: 768px) {
-    .form-section {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
+  .pdf-container {
+    width: 100%;
+    min-height: 500px;
   }
