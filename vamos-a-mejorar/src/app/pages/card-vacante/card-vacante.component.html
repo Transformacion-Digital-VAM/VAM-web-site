@@ -19,9 +19,9 @@
         <!-- Nombre -->
         <div>
           <label class="form-label">
-            <i class="fas fa-user"></i>Nombre completo
+            <i class="fas fa-user"></i>Nombre completo<span class="text-danger">*</span>
           </label>
-          <input name="nombre" [(ngModel)]="form.nombre" #nombre="ngModel" required class="form-input" />
+          <input name="nombre" [(ngModel)]="form.nombre" #nombre="ngModel" required class="form-input" placeholder="Nombre(s) Apdo. Paterno Apdo. Materno" />
           <div *ngIf="nombre.invalid && nombre.touched" class="form-error">
             Requerido
           </div>
@@ -31,20 +31,20 @@
         <div class="form-grid">
           <div>
             <label class="form-label">
-              <i class="fas fa-phone"></i>Teléfono
+              <i class="fas fa-phone"></i>Teléfono<span class="text-danger">*</span>
             </label>
             <input name="telefono" [(ngModel)]="form.telefono" #telefono="ngModel" required class="form-input"
-              alt="Ejemplo: 4198765432" />
+              placeholder="Ejemplo: 4198765432" />
             <div *ngIf="telefono.invalid && telefono.touched" class="form-error">
               Requerido
             </div>
           </div>
           <div>
             <label class="form-label">
-              <i class="fas fa-envelope"></i>Correo electrónico
+              <i class="fas fa-envelope"></i>Correo electrónico<span class="text-danger">*</span>
             </label>
             <input type="email" name="email" [(ngModel)]="form.email" #email="ngModel" required class="form-input"
-              alt="Ejemplo: email@ejemplo.com" />
+              placeholder="email@ejemplo.com" />
             <div *ngIf="email.invalid && email.touched" class="form-error">
               Email inválido
             </div>
@@ -54,7 +54,7 @@
         <!-- CV -->
         <div>
           <label class="form-label">
-            <i class="fas fa-file-pdf"></i>Curriculum Vitae (PDF)
+            <i class="fas fa-file-pdf"></i>Curriculum Vitae (PDF)<span class="text-danger">*</span>
           </label>
           <input type="file" accept="application/pdf" (change)="onFileChange($event)" required class="form-input" />
           <span class="file-info">Adjunta el archivo no max a 50MB en formato PDF</span>
@@ -66,7 +66,7 @@
           <label class="form-label">
             <i class="fas fa-comment"></i>Mensaje adicional
           </label>
-          <textarea name="mensaje" [(ngModel)]="form.mensaje" rows="3" class="form-textarea"></textarea>
+          <textarea name="mensaje" [(ngModel)]="form.mensaje" rows="3" class="form-textarea" placeholder="¿Qué te hace una persona ideal para unirte a nosotros?"></textarea>
         </div>
 
         <!-- Botones -->

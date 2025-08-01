@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { VacantesService, Vacante } from '../../service/vacantes.service';
-import { PostulacionService } from '../../service/postulacion.service';
+// import { VacantesService, Vacante } from '../../service/vacantes.service';
+// import { PostulacionService } from '../../service/postulacion.service';
+import { VacantesService, Vacante } from '../../services/vacantes.service';
+import { PostulacionService } from '../../services/postulacion.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
