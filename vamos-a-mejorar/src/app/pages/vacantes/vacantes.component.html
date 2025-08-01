@@ -1,29 +1,29 @@
 <!-- Hero Section -->
 <div class="hero-section" style="background-image: url('assets/fondovalores.jpg');">
-    <div class="h-[600px] w-full"></div>
-    <div class="hero-content text-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-on-scroll">¿Te interesa formar parte de Vamos a Mejorar?</h1>
-        <p style="color: #ffffff;">Explora nuestras oportunidades laborales y encuentra tu próximo desafío
-            profesional</p>
-    </div>
+  <div class="h-[600px] w-full"></div>
+  <div class="hero-content text-center text-white">
+    <h1 class="text-4xl md:text-5xl font-bold animate-on-scroll">¿Te interesa formar parte de Vamos a Mejorar?</h1>
+    <p style="color: #ffffff;">Explora nuestras oportunidades laborales y encuentra tu próximo desafío
+      profesional</p>
+  </div>
 </div>
 
 <!-- Contenido visible -->
 <div class="contenido">
-    <div class="fondo-irregular"></div>
-    <div class="dos-columnas">
-        <div class="columna-izquierda">
-            <h3 style="text-align: center; ">Buscamos personas apasionadas y comprometidas que deseen
-                crecer profesionalmente y contribuir a un mundo mejor.
-            </h3>
-            <br>
-            <h3 style="text-align: center;">¡Únete al equipo de <strong>Vamos a Mejorar</strong> y transforma tu
-                futuro con nosotros!</h3>
-        </div>
-        <div class="columna-derecha">
-            <img src="assets/Prestamoso.png" alt="">
-        </div>
+  <div class="fondo-irregular"></div>
+  <div class="dos-columnas">
+    <div class="columna-izquierda">
+      <h3 style="text-align: center; ">Buscamos personas apasionadas y comprometidas que deseen
+        crecer profesionalmente y contribuir a un mundo mejor.
+      </h3>
+      <br>
+      <h3 style="text-align: center;">¡Únete al equipo de <strong>Vamos a Mejorar</strong> y transforma tu
+        futuro con nosotros!</h3>
     </div>
+    <div class="columna-derecha">
+      <img src="assets/Prestamoso.png" alt="">
+    </div>
+  </div>
 </div>
 <!-- Main Content -->
 <div class="container">
@@ -31,66 +31,107 @@
     <h2 class="display-4 fw-bold mb-4 position-relative title-underline">
       Vacantes <span class="text-gradient-primary">Disponibles</span>
     </h2>
+     <p class="header-p">
+      Completa tu postulación con tu CV en PDF y cuéntanos por qué eres el candidato ideal.
+    </p>
   </div>
 
   <div *ngIf="loading">Cargando vacantes...</div>
 
-  <div class="grid" *ngIf="!loading && vacantes.length">
-    <a
-      *ngFor="let vacante of vacantes"
-      [routerLink]="['/vacante', vacante._id]"
-      class="card h-100 border-2 shadow-lg hover-transform text-decoration-none text-reset"
-    >
-      <div class="card-content">
-        <div class="card-icon">
-          <i class="fas fa-briefcase"></i>
+  
+  <div *ngIf="!loading && vacantes.length">
+    <div *ngFor="let vacante of vacantes" class="vacante-detalle shadow-lg p-4 mb-5 bg-white rounded">
+      <div class="vacante-header d-flex justify-content-between align-items-start flex-wrap">
+        <div>
+          <h2 class="vacante-titulo-principal fw-bold text-primary mb-2">{{ vacante.titulo }}</h2>
+          <h3 class="vacante-area text-muted">{{ vacante.area }}</h3>
         </div>
-        <h3 class="fw-bold mb-3">{{ vacante.titulo }}</h3>
-        <p class="card-description">{{ vacante.descripcion }}</p>
+        <!-- <button class="btn-postularse btn btn-primary"><i class="fas fa-paper-plane"></i>Postularse</button> -->
+         <a [routerLink]="['/vacante', vacante._id]" class="btn-postularse btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Postularse
+        </a>
       </div>
-      <div class="card-details">
-        <div class="location">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>{{ vacante.ubicacion }}</span>
+      <br>
+      <hr />
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="vacante-titulo"><i class="fas fa-info-circle me-2 text-primary"></i>Descripción del puesto</h3>
+          <p class="vacante-texto">{{ vacante.descripcion }}</p>
+
+                    <!-- Horario y ubicación -->
+          <section>
+            <h3 class="vacante-titulo"><i class="far fa-clock text-blue-600 mr-2"></i> Horario y ubicación</h3>
+            <ul class="vacante-lista">
+              <li>
+                <i class="far fa-calendar-alt icono"></i>{{ vacante.horario.dias }}
+              </li>
+              <li>
+                <i class="far fa-calendar-alt icono"></i>{{ vacante.horario.horas }}
+              </li>
+              <li>
+                <i class="fas fa-briefcase icono"></i>{{ vacante.modalidad }} ({{ vacante.tipo }})
+              </li>
+            </ul>
+          </section>
+          <h3 class="vacante-titulo mt-4"><i class="fas fa-gift me-2 text-primary"></i>Beneficios</h3>
+          <ul class="vacante-lista">
+            <li *ngFor="let beneficio of vacante.beneficios"><i class="fa-solid fa-circle small icono"></i>{{ beneficio
+              }}</li>
+          </ul>
         </div>
-        <span class="job-type">{{ vacante.tipo }}</span>
+
+        <div class="col-md-6">
+          <h3 class="vacante-titulo mt-4"><i class="fas fa-list me-2 text-primary"></i>Requisitos y habilidades</h3>
+          <ul class="vacante-lista enhanced-list list-disc pl-5">
+            <li *ngFor="let requisito of vacante.requisitos"><i class="fa-solid fa-circle small icono"></i> {{ requisito
+              }}</li>
+          </ul>
+        </div>
       </div>
-    </a>
+    </div>
   </div>
+
+
+  <!-- <div *ngIf="!loading && vacantes.length">
+    <div *ngFor="let vacante of vacantes" class="vacante-detalle shadow-lg p-4 mb-5 bg-white rounded">
+      <div class="vacante-header d-flex justify-content-between align-items-start flex-wrap">
+        <div>
+          <h2 class="vacante-titulo-principal fw-bold text-primary mb-2">{{ vacante.titulo }}</h2>
+          <h5 class="vacante-area text-muted"><i class="fas fa-paper-plane"></i>{{ vacante.area }}</h5>
+        </div>
+        <button class="btn-postularse btn btn-primary">Postularse</button>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="vacante-titulo"><i class="fas fa-info-circle me-2 text-primary"></i>Descripción del puesto</h5>
+          <p class="vacante-texto">{{ vacante.descripcion }}</p>
+
+          <h5 class="vacante-titulo mt-4"><i class="fas fa-list me-2 text-primary"></i>Requisitos y habilidades</h5>
+          <ul class="vacante-lista enhanced-list list-disc pl-5">
+            <li *ngFor="let requisito of vacante.requisitos">{{ requisito }}</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h5 class="vacante-titulo"><i class="fas fa-clock me-2 text-primary"></i>Horario y ubicación</h5>
+          <p><strong>Días:</strong> {{ vacante.horario.dias }}</p>
+          <p><strong>Horario:</strong> {{ vacante.horario.horas }}</p>
+          <p><strong>Modalidad:</strong> {{ vacante.modalidad }}</p>
+          <p><strong>Ubicación:</strong> {{ vacante.ubicacion }}</p>
+
+          <h5 class="vacante-titulo mt-4"><i class="fas fa-gift me-2 text-primary"></i>Beneficios</h5>
+          <ul>
+            <li *ngFor="let beneficio of vacante.beneficios">{{ beneficio }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
   <div *ngIf="!loading && !vacantes.length">No hay vacantes disponibles.</div>
 </div>
 
-
-<!-- Main Content -->
-<!-- <div class="container">
-    <div class="section-title">
-        <h2 class="display-4 fw-bold mb-4 position-relative title-underline">Vacantes <span
-                class="text-gradient-primary">Disponibles</span></h2>
-    </div>
-    <div *ngIf="loading">Cargando vacantes...</div>
-    <div class="grid" *ngIf="!loading && vacantes.length">
-        <a *ngFor="let vacante of vacantes" [routerLink]="['/vacante', vacante._id]">
-            class="card h-100 border-2 shadow-lg hover-transform text-decoration-none text-reset">
-            <div class="card h-100 border-2 shadow-lg hover-transform" *ngFor="let vacante of vacantes">
-                <div class="card-content ">
-                    <div class="card-icon" style="align-content: center;">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="fw-bold mb-3">{{ vacante.titulo }}</h3>
-                    <p class="card-description">{{ vacante.descripcion }}</p>
-                </div>
-                <div class="card-details">
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>{{ vacante.ubicacion }}</span>
-                    </div>
-                    <span class="job-type">{{ vacante.tipo }}</span>
-                </div>
-            </div>
-            </a>
-    </div>
-    <div *ngIf="!loading && !vacantes.length">No hay vacantes disponibles.</div>
-
-</div> -->
-<br>

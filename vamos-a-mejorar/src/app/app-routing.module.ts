@@ -12,17 +12,16 @@ import { Error404Component } from './pages/error404/error404.component';
 import { TestimoniosComponent } from './pages/testimonios/testimonios.component';
 import { ComunidadComponent } from './pages/comunidad/comunidad.component';
 import { VacantesComponent } from './pages/vacantes/vacantes.component';
-import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { CardVacanteComponent } from './pages/card-vacante/card-vacante.component';
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.component';
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 
 const routes: Routes = [
   {path: 'vacantes', component: VacantesComponent},
-  // {path: 'card-vacante', component: CardVacanteComponent},
+  {path: 'vacante/:id', component: CardVacanteComponent},
   {path: 'nosotros', component: NosotrosComponent},
-  { path: 'vacante/:id', component: CardVacanteComponent },
   {path: 'comunidad', component: ComunidadComponent},
   {path: 'testimonios', component: TestimoniosComponent},
   {path: 'inicio', component: InicioComponent},

@@ -37,6 +37,7 @@ import { SmothScrollDirective } from './pages/credito-grupal/smoth-scroll.direct
 import { PreguntasFrecuentesComponent } from './pages/preguntas-frecuentes/preguntas-frecuentes.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { MessageService } from 'primeng/api';
+import { AlertafraudeComponent } from './pages/alertafraude/alertafraude.component';
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.component';
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
@@ -46,14 +47,11 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    // InicioComponent,
     NosotrosComponent,
     TestimoniosComponent,
     ComunidadComponent,
     VacantesComponent,
     CardVacanteComponent,
-    // CreditoGrupalComponent,
-    // CreditoIndividualComponent,
     CreditoIndividualComponent,
     CostosComisionesComponent,
     UnidadEspecializadaComponent,
@@ -61,6 +59,7 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     SmothScrollDirective,
     PreguntasFrecuentesComponent,
     Error404Component,
+    AlertafraudeComponent,
     ChatBotComponent,
     AsesorVirtualComponent,
     BeneficiosComponent,
