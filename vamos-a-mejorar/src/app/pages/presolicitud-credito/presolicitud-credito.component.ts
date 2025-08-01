@@ -22,8 +22,7 @@ import { DynamicDialogModule } from 'primeng/dynamicdialog';
   templateUrl: './presolicitud-credito.component.html',
   styleUrl: './presolicitud-credito.component.css',
   imports: [FormsModule, InputGroupModule, InputGroupAddonModule, 
-    InputTextModule, SelectModule, InputNumberModule, DatePickerModule, 
-    Select, Button, ReactiveFormsModule, CommonModule, ToastModule, DynamicDialogModule],
+    InputTextModule, SelectModule, InputNumberModule, DatePickerModule, ReactiveFormsModule, CommonModule, ToastModule, DynamicDialogModule],
     providers: [MessageService]
 })
 export class PresolicitudCreditoComponent {
@@ -63,9 +62,10 @@ date1: any;
       telefono: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
       email: ['', [Validators.required, Validators.email]],
       localidad: [null, Validators.required],
-      creditoInteres: [null, Validators.required],
+      //creditoInteres: [null, Validators.required],
       clienteExistente: [null, Validators.required],
-      monto: [null, [Validators.required, Validators.min(1000)]]
+      monto: [null, [Validators.required, Validators.min(1000)]],
+      terminosCondiciones:[null, Validators.required]
     });
   }
 
@@ -85,7 +85,7 @@ date1: any;
     const solicitud = {
       ...this.formularioSolicitud.value,
       localidad: this.formularioSolicitud.value.localidad.name,
-      creditoInteres: this.formularioSolicitud.value.creditoInteres.name,
+      //creditoInteres: this.formularioSolicitud.value.creditoInteres.name,
       clienteExistente: this.formularioSolicitud.value.clienteExistente.name
     };
 

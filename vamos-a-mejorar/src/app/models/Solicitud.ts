@@ -5,7 +5,7 @@
     telefono: String;
     email: String;
     localidad: String;
-    credito: String;
     clienteExistente: String;
-    monto: String
+    monto: String,
+    terminosCondiciones: String;
 }

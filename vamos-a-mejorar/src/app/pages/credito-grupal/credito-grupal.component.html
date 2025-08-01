@@ -1,8 +1,8 @@
 <!-- Sidebar de Navegación Flotante -->
 <div class="position-fixed d-none d-lg-block" style="top: 50%; left: 20px; transform: translateY(-50%); z-index: 1000;">
   <!-- Botón de toggle (siempre visible) -->
-  <button class="btn btn-primary rounded-circle p-2 mb-2 shadow" (click)="toggleSidebar()">
-    <i class="fas" [class.fa-bars]="!sidebarVisible" [class.fa-times]="sidebarVisible"></i>
+  <button class="btn rounded-circle p-1 mb-2 shadow" (click)="toggleSidebar()" style="background-color: #2d1f70; border-width: 1px;">
+    <i class="fas" [class.fa-bars]="!sidebarVisible" [class.fa-times]="sidebarVisible" style="color: aliceblue;"></i>
   </button>
   
   <!-- Contenido del sidebar con animación -->
@@ -10,33 +10,38 @@
     <div class="card-body p-2">
       <ul class="nav flex-column gap-2">
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="hero-section">
-            <i class="fas fa-home me-2"></i> Inicio
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'inicio'}"
+            [routerLink]="[]" fragment="inicio" style="color: #2d1f70;">
+            <i class="fa-solid fa-house"></i> Inicio
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="descripcion">
-            <i class="fas fa-info-circle me-2"></i> Descripción
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'beneficios'}"
+            [routerLink]="[]" fragment="beneficios" style="color: #2d1f70;">
+            <i class="fa-solid fa-trophy"></i> Beneficios
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="beneficios">
-            <i class="fas fa-star me-2"></i> Beneficios
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'requisitos'}"
+            [routerLink]="[]" fragment="requisitos" style="color: #2d1f70;">
+            <i class="fas fa-star me-2"></i> Requisitos
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="requisitos">
-            <i class="fas fa-clipboard-check me-2"></i> Requisitos
+        <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'documentacion'}"
+            [routerLink]="[]" fragment="documentacion" style="color: #2d1f70;">
+            <i class="fa-solid fa-file"></i> Documentación
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="documentacion">
-            <i class="fas fa-file-alt me-2"></i> Documentación
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-primary rounded-pill text-start" [routerLink]="[]" fragment="contacto">
-            <i class="fas fa-phone-alt me-2"></i> Contacto
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'solicitar'}"
+            [routerLink]="[]" fragment="solicitar" style="color: #2d1f70;">
+            <i class="fa-solid fa-plus"></i> Solicitar
           </a>
         </li>
       </ul>
@@ -45,10 +50,8 @@
 </div>
 
 <!-- Hero Section -->
-<section 
-  id="hero-section"
-  class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden" 
-  style="background-image: url('../../../assets/images/grupo-personas.jpg'); 
+<section id="inicio" appScrollSpy [sectionId]="'inicio'" (sectionInView)="onSectionChange($event)" class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden" 
+  style="background-image: url('https://cdn.pixabay.com/photo/2017/01/12/07/00/people-1973918_1280.png'); 
          background-size: cover; 
          background-position: center; 
          background-repeat: no-repeat; 
@@ -65,13 +68,13 @@
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
         <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">
-          Crédito Grupal Solidario
+          NUESTRO CRÉDITO
         </h1>
         <div class="divider mx-auto bg-white mb-4 animate__animated animate__fadeIn"></div>
         <p class="lead mb-5 fs-3 animate__animated animate__fadeIn animate__delay-1s">
           Apoyo financiero para grupos que se unen para progresar. Basado en la solidaridad y apoyo mutuo para impulsar tus proyectos productivos o comerciales.
         </p>
-        <a href="#solicitar" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="/presolicitar-credito" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
           Solicitar ahora <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
@@ -82,34 +85,8 @@
   <div class="position-absolute bottom-0 start-0 w-100" style="height: 25%; background-color: white; opacity: 0.1;"></div>
 </section>
 
-
-<!-- Descripción -->
-<section id="descripcion" class="py-2 bg-white">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
-          <div class="card-body p-5">
-            <div class="d-flex align-items-start">
-              <div class="bg-warning bg-opacity-10 text-warning rounded-3 p-3 me-4">
-                <i class="fas fa-hands-helping fa-2x"></i>
-              </div>
-              <div>
-                <h3 class="fw-bold mb-4">¿Qué es el Crédito Grupal Solidario?</h3>
-                <p class="fs-5 text-muted mb-0">
-                  El microcrédito comunal es aquel que se otorga a un grupo de personas auto seleccionable, basado en la solidaridad, apoyo mutuo y capacidad de pago, que cuentan con una actividad productiva, comercial o de servicios propia e independiente o con una actividad por iniciar, con el fin de mejorar sus ingresos y su nivel de vida.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Beneficios -->
-<section id="beneficios" class="py-2 bg-light">
+<section id="beneficios" appScrollSpy [sectionId]="'beneficios'" (sectionInView)="onSectionChange($event)" class="py-2 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Beneficios exclusivos</span>
@@ -153,7 +130,7 @@
               <i class="fas fa-gift fa-2x text-danger"></i>
             </div>
             <h4 class="fw-bold mb-3">Regalos especiales</h4>
-            <p class="text-muted mb-4">En regreso a clases y Navidad</p>
+            <p class="text-muted mb-4">Para clientes leales y con buen historial de pago</p>
           </div>
         </div>
       </div>
@@ -192,7 +169,7 @@
               <i class="fas fa-heartbeat fa-2x text-light"></i>
             </div>
             <h4 class="fw-bold mb-3">Microseguro de vida</h4>
-            <p class="text-muted mb-4">Protección para ti y tu familia</p>
+            <p class="text-muted mb-4">Tranquilidad y respaldo económico ante imprevistos</p>
           </div>
         </div>
       </div>
@@ -201,7 +178,7 @@
 </section>
 
 <!-- Requisitos -->
-<section id="requisitos" class="py-2 bg-white">
+<section id="requisitos" appScrollSpy [sectionId]="'requisitos'" (sectionInView)="onSectionChange($event)"  class="py-2 bg-white">
   <div class="container">
     <div class="text-center mb-5">
       <span class="badge bg-primary text-white fs-5 fw-semibold mb-3 px-3 py-2">Requisitos</span>
@@ -282,7 +259,7 @@
 </section>
 
 <!-- Documentación -->
-<section class="py-2 bg-light" id="documentacion">
+<section class="py-2 bg-light" id="documentacion" appScrollSpy [sectionId]="'documentacion'" (sectionInView)="onSectionChange($event)" >
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -331,7 +308,7 @@
                 </div>
               </div>
               
-              <div class="list-group-item p-4">
+              <!-- <div class="list-group-item p-4">
                 <div class="d-flex align-items-center">
                   <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3 me-4">
                     <i class="fas fa-certificate fa-2x"></i>
@@ -341,7 +318,7 @@
                     <p class="text-muted mb-0">Documento oficial</p>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -351,7 +328,7 @@
 </section>
 
 <!-- CTA Section -->
-<section id="contacto" class="py-2 bg-gray text-white position-relative overflow-hidden">
+<section id="solicitar" class="py-2 bg-gray text-white position-relative overflow-hidden" appScrollSpy [sectionId]="'solicitar'" (sectionInView)="onSectionChange($event)" >
   <div class="container position-relative z-1 text-center">
     <h2 class="display-5 fw-bold mb-4 text-dark">¿Listo para formar tu grupo solidario?</h2>
     <p class="lead mb-5 mx-auto text-gradient-primary" style="max-width: 700px;">
@@ -378,7 +355,7 @@
         <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
           <p class="mb-2 mb-md-0">
             <i class="fas fa-info-circle text-primary me-2"></i>
-            <span class="fw-dark">* Tasa de interés anual desde 60% tasa fija. CAT promedio 16 semanas.</span>
+            <span class="fw-dark">* Tasa de interés anual desde 60.0% tasa fija. CAT promedio 16 semanas.</span>
           </p>
           <a [routerLink]="'/costos-comisiones'" class="btn btn-link btn-sm text-decoration-none fw-bold">
             <span class="d-flex align-items-center">
