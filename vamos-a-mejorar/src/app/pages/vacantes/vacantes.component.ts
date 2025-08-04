@@ -1,30 +1,48 @@
+// src/app/vacantes/vacantes.component.ts
 import { Component, OnInit } from '@angular/core';
-import { VacantesService, Vacante } from '../../service/vacantes.service';
+import { VacantesService, Vacante } from '../../services/vacantes.service';
 
 @Component({
   selector: 'app-vacantes',
   standalone: false,
   templateUrl: './vacantes.component.html',
-  styleUrl: './vacantes.component.css'
+  styleUrls: ['./vacantes.component.css']
 })
-export class VacantesComponent {
-    vacantes: Vacante[] = [];
+
+export class VacantesComponent implements OnInit {
+  vacantes: Vacante[] = [];
   loading = true;
   error: string | null = null;
 
+  // Para el modal
+  selectedVacante: Vacante | null = null;
+  modalOpen = false;
+
   constructor(private vacantesService: VacantesService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.vacantesService.getVacantes().subscribe({
-      next: (data) => {
+      next: data => {
         this.vacantes = data;
         this.loading = false;
       },
-      error: (err) => {
+      error: () => {
         this.error = 'Error al cargar vacantes.';
-        console.error(err);
         this.loading = false;
       }
     });
   }
+
+
+  openModal(v: Vacante) {
+    this.selectedVacante = v;
+    this.modalOpen = true;
+  }
+
+  closeModal() {
+    this.modalOpen = false;
+    this.selectedVacante = null;
+  }
 }
+
+

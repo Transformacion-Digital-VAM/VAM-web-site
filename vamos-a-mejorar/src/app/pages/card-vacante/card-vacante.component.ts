@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-// import { VacantesService, Vacante } from '../../service/vacantes.service';
-// import { PostulacionService } from '../../service/postulacion.service';
-import { VacantesService, Vacante } from '../../services/vacantes.service';
+// src/app/vacantes/card-vacante.component.ts
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Vacante } from '../../services/vacantes.service';
 import { PostulacionService } from '../../services/postulacion.service';
-import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -13,12 +10,10 @@ import Swal from 'sweetalert2';
   templateUrl: './card-vacante.component.html',
   styleUrls: ['./card-vacante.component.css']
 })
-export class CardVacanteComponent implements OnInit {
-  vacante: Vacante | null = null;
-  loading = true;
-  error: string | null = null;
+export class CardVacanteComponent {
+  @Input() vacante!: Vacante;
+  @Output() close = new EventEmitter<void>();
 
-  modalOpen = false;
   submitting = false;
   fileData: File | null = null;
   fileError: string | null = null;
@@ -30,40 +25,7 @@ export class CardVacanteComponent implements OnInit {
     mensaje: ''
   };
 
-  constructor(
-    private route: ActivatedRoute,
-    private vacantesService: VacantesService,
-    private postulacionService: PostulacionService,
-    private router: Router
-  ) { }
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.vacantesService.getVacanteById(id).subscribe({
-      next: v => {
-        this.vacante = v;
-        this.loading = false;
-
-        this.openModal();
-      },
-      error: () => {
-        this.error = 'No se pudo cargar la vacante';
-        this.loading = false;
-      }
-    });
-  }
-
-  openModal() {
-    this.modalOpen = true;
-  }
-
-  closeModal() {
-    this.modalOpen = false;
-    this.fileData = null;
-    this.fileError = null;
-
-    this.router.navigate(['/vacantes']);
-  }
+  constructor(private postulacionService: PostulacionService) {}
 
   onFileChange(event: Event) {
     const input = event.target as HTMLInputElement;
@@ -78,53 +40,24 @@ export class CardVacanteComponent implements OnInit {
   }
 
   submitForm() {
-    // 1) Validaciones de campos
-    if (!this.form.nombre.trim() ||
-      !this.form.telefono.trim() ||
-      !this.form.email.trim()) {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Campos incompletos',
-        text: 'Por favor completa nombre, teléfono y correo.',
-      });
+    // Validaciones
+    if (!this.form.nombre.trim() || !this.form.telefono.trim() || !this.form.email.trim()) {
+      Swal.fire('Campos incompletos', 'Por favor completa nombre, teléfono y correo.', 'warning');
       return;
     }
-
-    // Validar formato de email con regex simple
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.form.email)) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Email inválido',
-        text: 'Ingresa un correo con formato válido.',
-      });
+      Swal.fire('Email inválido', 'Ingresa un correo con formato válido.', 'error');
       return;
     }
-
     if (!this.fileData) {
-      this.fileError = 'Adjunta tu CV en PDF';
-      Swal.fire({
-        icon: 'info',
-        title: 'CV faltante',
-        text: 'Por favor adjunta tu currículum en formato PDF.',
-      });
+      Swal.fire('CV faltante', 'Por favor adjunta tu currículum en formato PDF.', 'info');
       return;
     }
 
-    // Asegúrate de que this.vacante no sea null antes de acceder a sus propiedades
-    if (!this.vacante) {
-      Swal.fire({
-        icon: 'error',
-        title: 'Error de Vacante',
-        text: 'No se pudo obtener la información de la vacante para postular.',
-      });
-      return;
-    }
-
-    // 2) Prepara y envía
-    this.submitting = true;
+    // Preparamos FormData
     const data = new FormData();
-    data.append('vacanteId', this.vacante._id);
+    // Si quieres enviar el título de la vacante:
     data.append('titulo', this.vacante.titulo);
     data.append('nombre', this.form.nombre.trim());
     data.append('telefono', this.form.telefono.trim());
@@ -132,32 +65,21 @@ export class CardVacanteComponent implements OnInit {
     data.append('mensaje', this.form.mensaje.trim());
     data.append('cv', this.fileData);
 
+    this.submitting = true;
     this.postulacionService.enviarPostulacion(data).subscribe({
       next: () => {
-        // 3) Notificación de éxito
-        Swal.fire({
-          icon: 'success',
-          title: '¡Enviado!',
-          text: 'Tu postulación se ha enviado correctamente.',
-          timer: 2500,
-          showConfirmButton: false
-        });
-        this.closeModal();
+        Swal.fire({ icon: 'success', title: '¡Enviado!', timer: 2000, showConfirmButton: false });
         this.submitting = false;
-
-        this.router.navigate(['/vacantes']);
-
+        this.close.emit();
       },
-      error: (err) => {
-        console.error('Error enviando postulación:', err);
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Hubo un problema al enviar tu postulación. Intenta más tarde.',
-        });
+      error: () => {
+        Swal.fire('Error', 'Hubo un problema al enviar tu postulación. Intenta más tarde.', 'error');
         this.submitting = false;
       }
     });
   }
 
+  onClose() {
+    this.close.emit();
+  }
 }

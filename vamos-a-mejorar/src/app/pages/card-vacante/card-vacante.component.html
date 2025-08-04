@@ -1,84 +1,62 @@
-<body class="container">
-  <img src="assets/fondo.jpg" alt="">
+<div class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">
+        <i class="fas fa-user-tie"></i>
+        Postulación: {{ vacante.titulo }}
+      </h3>
+      <button (click)="onClose()" class="modal-close-btn">&times;</button>
+    </div>
 
-
-  <!-- Modal -->
-  <div id="modal" class="modal-overlay" *ngIf="modalOpen">
-    <div class="modal-content">
-      <!-- Encabezado -->
-      <div class="modal-header">
-        <h3 class="modal-title">
-          <i class="fas fa-user-tie"></i>
-          Postulación: <strong>{{ vacante?.titulo }}</strong>
-        </h3>
-        <button (click)="closeModal()" class="modal-close-btn">&times;</button>
+    <form (ngSubmit)="submitForm()" #postForm="ngForm" enctype="multipart/form-data" class="modal-form">
+      <!-- Nombre completo -->
+      <div>
+        <label class="form-label">
+          <i class="fas fa-user"></i> Nombre completo<span class="text-danger">*</span>
+        </label>
+        <input name="nombre" [(ngModel)]="form.nombre" class="form-input" required />
       </div>
 
-      <!-- Formulario -->
-      <form #postForm="ngForm" (ngSubmit)="submitForm()" enctype="multipart/form-data" class="modal-form">
-        <!-- Nombre -->
-        <div>
-          <label class="form-label">
-            <i class="fas fa-user"></i>Nombre completo<span class="text-danger">*</span>
-          </label>
-          <input name="nombre" [(ngModel)]="form.nombre" #nombre="ngModel" required class="form-input" placeholder="Nombre(s) Apdo. Paterno Apdo. Materno" />
-          <div *ngIf="nombre.invalid && nombre.touched" class="form-error">
-            Requerido
-          </div>
-        </div>
+      <!-- Teléfono -->
+      <div>
+        <label class="form-label">
+          <i class="fas fa-phone"></i> Teléfono <span class="text-danger">*</span>
+        </label>
+        <input name="telefono" [(ngModel)]="form.telefono" class="form-input" required />
+      </div>
 
-        <!-- Teléfono y email -->
-        <div class="form-grid">
-          <div>
-            <label class="form-label">
-              <i class="fas fa-phone"></i>Teléfono<span class="text-danger">*</span>
-            </label>
-            <input name="telefono" [(ngModel)]="form.telefono" #telefono="ngModel" required class="form-input"
-              placeholder="Ejemplo: 4198765432" />
-            <div *ngIf="telefono.invalid && telefono.touched" class="form-error">
-              Requerido
-            </div>
-          </div>
-          <div>
-            <label class="form-label">
-              <i class="fas fa-envelope"></i>Correo electrónico<span class="text-danger">*</span>
-            </label>
-            <input type="email" name="email" [(ngModel)]="form.email" #email="ngModel" required class="form-input"
-              placeholder="email@ejemplo.com" />
-            <div *ngIf="email.invalid && email.touched" class="form-error">
-              Email inválido
-            </div>
-          </div>
-        </div>
+      <!-- Correo -->
+      <div>
+        <label class="form-label">
+          <i class="fas fa-envelope"></i> Correo electrónico <span class="text-danger">*</span>
+        </label>
+        <input type="email" name="email" [(ngModel)]="form.email" class="form-input" required />
+      </div>
 
-        <!-- CV -->
-        <div>
-          <label class="form-label">
-            <i class="fas fa-file-pdf"></i>Curriculum Vitae (PDF)<span class="text-danger">*</span>
-          </label>
-          <input type="file" accept="application/pdf" (change)="onFileChange($event)" required class="form-input" />
-          <span class="file-info">Adjunta el archivo no max a 50MB en formato PDF</span>
-          <div *ngIf="fileError" class="form-error">{{ fileError }}</div>
-        </div>
+      <!-- CV -->
+      <div>
+        <label class="form-label">
+          <i class="fas fa-file-pdf"></i> CV (PDF) <span class="text-danger">*</span>
+        </label>
+        <input type="file" accept="application/pdf" (change)="onFileChange($event)" required />
+        <div *ngIf="fileError" class="form-error">{{ fileError }}</div>
+      </div>
 
-        <!-- Mensaje -->
-        <div>
-          <label class="form-label">
-            <i class="fas fa-comment"></i>Mensaje adicional
-          </label>
-          <textarea name="mensaje" [(ngModel)]="form.mensaje" rows="3" class="form-textarea" placeholder="¿Qué te hace una persona ideal para unirte a nosotros?"></textarea>
-        </div>
+      <!-- Mensaje adicional -->
+      <div>
+        <label class="form-label">
+          <i class="fas fa-comment"></i> Mensaje adicional
+        </label>
+        <textarea name="mensaje" [(ngModel)]="form.mensaje" rows="3" class="form-textarea"></textarea>
+      </div>
 
-        <!-- Botones -->
-        <div class="modal-footer">
-          <button type="button" (click)="closeModal()" class="btn-secondary">
-            Cancelar
-          </button>
-          <button type="submit" [disabled]="postForm.invalid || submitting" class="btn-primary">
-            {{ submitting ? 'Enviando…' : 'Enviar solicitud' }}
-          </button>
-        </div>
-      </form>
-    </div>
+      <!-- Botones -->
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary" (click)="onClose()">Cancelar</button>
+        <button type="submit" class="btn-primary" [disabled]="postForm.invalid || submitting">
+          {{ submitting ? 'Enviando…' : 'Enviar solicitud' }}
+        </button>
+      </div>
+    </form>
   </div>
-</body>
+</div>

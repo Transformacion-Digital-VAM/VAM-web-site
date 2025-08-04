@@ -51,34 +51,34 @@
     </script>
 
      <script>
-        document.getElementById('actionBtn').addEventListener('click', function() {
-            // Animación al hacer clic
-            this.classList.add('animate__animated', 'animate__pulse');
+        // document.getElementById('actionBtn').addEventListener('click', function() {
+        //     // Animación al hacer clic
+        //     this.classList.add('animate__animated', 'animate__pulse');
             
-            // Redirigir después de la animación
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 500);
+        //     // Redirigir después de la animación
+        //     setTimeout(() => {
+        //         window.location.href = '/';
+        //     }, 500);
             
-            // Eliminar la clase para poder repetir la animación
-            setTimeout(() => {
-                this.classList.remove('animate__animated', 'animate__pulse');
-            }, 1000);
-        });
+        //     // Eliminar la clase para poder repetir la animación
+        //     setTimeout(() => {
+        //         this.classList.remove('animate__animated', 'animate__pulse');
+        //     }, 1000);
+        // });
 
         // Efecto de movimiento con el cursor para los elementos flotantes
-        document.addEventListener('mousemove', (e) => {
-            const floatingElements = document.querySelectorAll('.animate-float, .animate-float-reverse');
+    //     document.addEventListener('mousemove', (e) => {
+    //         const floatingElements = document.querySelectorAll('.animate-float, .animate-float-reverse');
             
-            floatingElements.forEach(element => {
-                const speed = parseFloat(element.getAttribute('data-speed')) || 20;
-                const x = (window.innerWidth - e.pageX * speed) / 100;
-                const y = (window.innerHeight - e.pageY * speed) / 100;
+    //         floatingElements.forEach(element => {
+    //             const speed = parseFloat(element.getAttribute('data-speed')) || 20;
+    //             const x = (window.innerWidth - e.pageX * speed) / 100;
+    //             const y = (window.innerHeight - e.pageY * speed) / 100;
                 
-                element.style.transform = `translateX(${x}px) translateY(${y}px) ${element.classList.contains('animate-float-reverse') ? 'rotate(5deg)' : 'rotate(-5deg)'}`;
-            });
-        });
-    </script>
+    //             element.style.transform = `translateX(${x}px) translateY(${y}px) ${element.classList.contains('animate-float-reverse') ? 'rotate(5deg)' : 'rotate(-5deg)'}`;
+    //         });
+    //     });
+    // </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

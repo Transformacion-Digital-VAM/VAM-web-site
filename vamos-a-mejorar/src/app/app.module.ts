@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
@@ -50,8 +51,6 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     NosotrosComponent,
     TestimoniosComponent,
     ComunidadComponent,
-    VacantesComponent,
-    CardVacanteComponent,
     CreditoIndividualComponent,
     CostosComisionesComponent,
     UnidadEspecializadaComponent,
@@ -63,6 +62,8 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     ChatBotComponent,
     AsesorVirtualComponent,
     BeneficiosComponent,
+    CardVacanteComponent,
+    VacantesComponent
 
   ],
   imports: [
@@ -80,7 +81,9 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
+    
   ],
   providers: [
     provideHttpClient(withFetch()),

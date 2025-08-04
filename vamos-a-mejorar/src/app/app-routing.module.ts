@@ -20,7 +20,7 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 
 const routes: Routes = [
   {path: 'vacantes', component: VacantesComponent},
-  {path: 'vacante/:id', component: CardVacanteComponent},
+  {path: 'vacante', component: CardVacanteComponent},
   {path: 'nosotros', component: NosotrosComponent},
   {path: 'comunidad', component: ComunidadComponent},
   {path: 'testimonios', component: TestimoniosComponent},

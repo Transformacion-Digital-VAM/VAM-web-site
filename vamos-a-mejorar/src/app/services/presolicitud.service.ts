@@ -7,7 +7,7 @@ import { Solicitud } from '../models/Solicitud';
   providedIn: 'root'
 })
 export class PresolicitudService {
-  url = 'http://localhost:5000/api/solicitudes/'
+  url = 'https://vam-backend.onrender.com/api/solicitudes/'
   constructor(private http: HttpClient ) {
 
   } 
