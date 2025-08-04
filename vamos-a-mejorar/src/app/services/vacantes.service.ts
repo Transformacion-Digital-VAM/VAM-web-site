@@ -21,7 +21,7 @@ export interface Vacante {
 })
 export class VacantesService {
   // Asegúrate de apuntar a la ruta correcta del backend
-  private apiUrl = 'http://localhost:5000/vacantes';
+  private apiUrl = 'https://vam-backend.onrender.com/vacantes';
 
   constructor(private http: HttpClient) { }
 

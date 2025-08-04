@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class PostulacionService {
-  private apiUrl = 'http://localhost:5000/postulacion'; 
+  private apiUrl = 'https://vam-backend.onrender.com/postulacion'; 
 
   constructor(private http: HttpClient) {}
 
