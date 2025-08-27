@@ -51,7 +51,6 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     NosotrosComponent,
     TestimoniosComponent,
     ComunidadComponent,
-    CreditoIndividualComponent,
     CostosComisionesComponent,
     UnidadEspecializadaComponent,
     EntidadesFinancierasComponent,
@@ -64,7 +63,6 @@ import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
     BeneficiosComponent,
     CardVacanteComponent,
     VacantesComponent
-
   ],
   imports: [
     BrowserModule,

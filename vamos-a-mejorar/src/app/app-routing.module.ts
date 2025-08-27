@@ -19,12 +19,13 @@ import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.co
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 
 const routes: Routes = [
+  {path: '', redirectTo:'inicio', pathMatch: 'full'},
+  {path: 'inicio', component: InicioComponent},
   {path: 'vacantes', component: VacantesComponent},
   {path: 'vacante', component: CardVacanteComponent},
   {path: 'nosotros', component: NosotrosComponent},
   {path: 'comunidad', component: ComunidadComponent},
   {path: 'testimonios', component: TestimoniosComponent},
-  {path: 'inicio', component: InicioComponent},
   {path: 'credito-grupal', component: CreditoGrupalComponent},
   {path: 'credito-individual', component: CreditoIndividualComponent},
   {path: 'beneficios', component: BeneficiosComponent},
@@ -34,7 +35,6 @@ const routes: Routes = [
   {path: 'presolicitar-credito', component: PresolicitudCreditoComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
   {path: 'asesor-virtual', component: AsesorVirtualComponent},
-
   {path: 'error404', component: Error404Component},
   {path: '**', redirectTo: 'inicio'}
 ];

@@ -1,10 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ScrollSpyDirective } from './directiva/scroll-spy.directive';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-credito-individual',
-  standalone: false,
+  standalone: true,
+  imports: [ScrollSpyDirective, CommonModule, RouterModule],
   templateUrl: './credito-individual.component.html',
   styleUrl: './credito-individual.component.css',
   animations: [
@@ -25,6 +28,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class CreditoIndividualComponent implements AfterViewInit {
   sidebarVisible = true;
+  currentSection: string = '';
 
   constructor(private route: ActivatedRoute) {}
 
@@ -42,4 +46,8 @@ export class CreditoIndividualComponent implements AfterViewInit {
   toggleSidebar(): void {
     this.sidebarVisible = !this.sidebarVisible;
   }
+
+    onSectionChange(sectionId: string) {
+  this.currentSection = sectionId;
+}
 }

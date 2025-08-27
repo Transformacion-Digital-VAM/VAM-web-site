@@ -33,100 +33,26 @@
     justify-content: center;
   }
   
-  .list-check {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .list-check li {
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 8px;
-  }
-  
-  .list-check li::before {
-    content: '\f00c';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: #34bc0a;
-  }
-  
-  .bg-light-primary {
-    background-color: rgba(33, 74, 170, 0.05);
-  }
-  
-  .bg-orange {
-    background-color: #fd7e14;
-  }
-  
-  .text-orange {
-    color: #fd7e14;
-  }
-  
   .py-6 {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+  
+  .bg-purple {
+    background-color: #6f42c1;
+  }
+  
+  .text-purple {
+    color: #6f42c1;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
 
-.floating-sidebar {
-  transition: all 0.3s ease;
   
-  .card {
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    width: 200px;
-    height: auto;
-    
-    &:hover {
-      box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15) !important;
-    }
-  }
-  
-  .nav-link {
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    
-    &:hover {
-      transform: translateX(5px);
-    }
-    
-    .nav-text {
-      transition: opacity 0.2s ease;
-    }
-  }
-  
-  .toggle-sidebar {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-50%) scale(1.1);
-    }
-  }
-  
-  &.collapsed {
-    .card {
-      opacity: 0;
-      pointer-events: none;
-    }
-    
-    .toggle-sidebar:hover {
-      transform: translateY(-50%) scale(1.1);
-    }
-  }
+.nav-link.active {
+  background-color: #2d1f70;
+  color: white !important;
+  font-weight: bold;
 }

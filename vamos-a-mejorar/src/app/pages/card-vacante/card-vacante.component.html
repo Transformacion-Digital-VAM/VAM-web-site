@@ -9,6 +9,7 @@
     </div>
 
     <form (ngSubmit)="submitForm()" #postForm="ngForm" enctype="multipart/form-data" class="modal-form">
+      <p class="text-muted small" style="text-align: justify;">Todos los campos marcados con <span class="text-danger">*</span> son obligatorios</p>
       <!-- Nombre completo -->
       <div>
         <label class="form-label">

@@ -3,8 +3,8 @@
     <video 
       src="../../../assets/videos/file.mp4"
       alt="video-vam"
-      autoplay
       muted
+      autoplay
       loop
       playsinline
       oncontextmenu="return false;" 
@@ -75,7 +75,7 @@
 
   <div class="row g-4">
     <!-- Crédito Comunal - Tarjeta mejorada -->
-  <div class="col-md-8">
+  <div class="col-md-4">
           <div class="card h-100 border-0 shadow-hover" style="
           border-radius: 24px; 
           overflow: hidden; 
@@ -264,33 +264,171 @@
   </div>
 
     <!-- Crédito Individual - Tarjeta mejorada -->
-    <!-- <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-lg hover-transform">
-        <div class="card-body p-4 position-relative">
-          <div class="icon-wrapper bg-primary bg-opacity-10 mb-4">
-            <i class="fa-solid fa-user-tie fa-2x text-primary"></i>
-          </div>
-          <h3 class="h2 fw-bold mb-3">Crédito Individual</h3>
-          <p class="text-muted mb-4">
-            Para clientes nuevos o recurrentes que requieren montos mayores para invertir o fortalecer su microempresa.
-          </p>
-            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i>  Montos hasta $50,000
-            <br>
-            <i class="fas fa-check-circle ms-2 mb-2" style="color: green"></i>  Asesoría personalizada
-            <br>
-            <i class="fas fa-check-circle ms-2 mb-5" style="color: green"></i>  Sin garantías complicadas
-          <div class="mt-auto">
-            <a href="credito-individual" class="btn btn-primary btn-hover-icon">
-              Más información <i class="fas fa-arrow-right ms-2"></i>
-            </a>
-          </div>
+ <div class="col-md-4">
+      <div class="card h-100 individual-card shadow-hover card-hover" style="border-radius: 24px; overflow: hidden;">
+          <!-- Badge destacado -->
+        <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
+          <span class="badge bg-gradient-warning text-light rounded-pill px-3 py-2 shadow" style="
+              background: linear-gradient(45deg, #2003a3, #2003a3);
+              font-weight: 600;
+              letter-spacing: 0.5px;
+          ">
+            <i class="fa-solid fa-dollar-sign me-1"></i>  Mayores Montos
+          </span>
         </div>
-        <div class="card-footer bg-transparent border-0 pt-0">
-          <small class="text-primary"><i class="fas fa-bolt me-1"></i> Rápido y sencillo</small>
-        </div>
-      </div>
-    </div> -->
+          
+          <div class="card-body p-4 position-relative">
+              <!-- Icono con efecto flotante -->
+              <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-3" style="
+                  width: 80px;
+                  height: 80px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: linear-gradient(135deg, rgba(45, 31, 112, 0.1) 0%, rgba(106, 90, 205, 0.2) 100%);
+                  box-shadow: 0 8px 20px rgba(45, 31, 112, 0.15);
+                  transition: all 0.4s ease;
+                  animation: float 3s ease-in-out infinite;
+              ">
+                <i class="fa-solid fa-user fa-2x" style="
+                    color: transparent;
+                    background: linear-gradient(45deg, #2d1f70, #6a5acd);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                "></i>
+              </div>
 
+              
+              <!-- Título -->
+              <h3 class="h1 fw-bold mb-3" style="
+              background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              text-shadow: 0 2px 4px rgba(45, 31, 112, 0.1);
+              font-size: 2rem;
+          ">
+                  Prestamo a tu medida
+              </h3>
+              
+              <!-- Descripción -->
+              <p class="mb-4 text-justify px-3" style="
+                  font-size: 1.1rem;
+                  line-height: 1.7;
+                  color: #5a5a72;
+                  font-weight: 400;
+                  text-align: justify;
+              ">
+                  Para emprendedores que buscan expandirse. Obtén montos mayores con condiciones diseñadas para el crecimiento de tu negocio.
+              </p>
+              
+              <!-- Lista de beneficios -->
+          <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Montos desde $50,000.00</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Asesoria Personalizada</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <div class="me-3" style="
+                  width: 24px;
+                  height: 24px;
+                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
+                  border-radius: 50%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              ">
+                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+              </div>
+              <span style="font-weight: 500;">Plazos Flexibles</span>
+            </li>
+          </ul>
+              
+              <!-- Botón CTA -->
+              <div class="mt-auto pt-2 text-center">
+                  <a [routerLink]="'/credito-individual'" class="btn btn-lg btn-hover-icon rounded-pill px-5 position-relative shine-effect" style="
+                      background: linear-gradient(45deg, #002aff, #6a5acd);
+                      color: #ffffff;
+                      border: none;
+                      overflow: hidden;
+                      transition: all 0.4s ease;
+                      box-shadow: 0 8px 25px rgba(0, 42, 255, 0.4);
+                      font-weight: 600;
+                      letter-spacing: 0.5px;
+                  ">
+                      <span class="position-relative z-index-1 d-flex align-items-center justify-content-center">
+                          Más información <i class="fas fa-arrow-right ms-2 transition-all"></i>
+                      </span>
+                  </a>
+              </div>
+          </div>
+          
+          <!-- Pie de tarjeta -->
+          <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+              <div class="row text-center">
+                  <div class="col-6">
+                      <div class="d-flex flex-column align-items-center">
+                          <small class="text-primary fw-bold d-flex align-items-center justify-content-center" style="font-size: 1rem;">
+                              <div class="me-2" style="
+                                  width: 28px;
+                                  height: 28px;
+                                  background: rgba(0, 42, 255, 0.1);
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                              ">
+                                  <i class="fas fa-bolt" style="font-size: 0.8rem;"></i>
+                              </div>
+                              Rápido y sencillo
+                          </small>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="d-flex flex-column align-items-center">
+                          <small class="text-success fw-bold d-flex align-items-center justify-content-center" style="font-size: 1rem;">
+                              <div class="me-2" style="
+                                  width: 28px;
+                                  height: 28px;
+                                  background: rgba(40, 167, 69, 0.1);
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                              ">
+                                  <i class="fas fa-clock" style="font-size: 0.8rem;"></i>
+                              </div>
+                              Respuesta en 24h
+                          </small>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     <!-- Beneficios - Tarjeta destacada -->
     <div class="col-md-4">
       <div class="card h-100 border-0 shadow-lg hover-transform bg-dark text-white">
@@ -367,16 +505,16 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Logo_neutral_de_la_Comisi%C3%B3n_Federal_de_Electricidad.svg" alt="CFE" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
-                <img src="https://roams.mx/images/logos/Color_280px/megacable.webp" alt="Megacable" class="img-fluid brand-logo grayscale">
+                <img src="https://www.cdnlogo.com/logos/m/53/megacable.svg" alt="Megacable" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
-                <img src="https://gowi.mx/wp-content/uploads/2022/06/Aliado-Logo-izzi@2x.png" alt="Izzi" class="img-fluid brand-logo grayscale">
+                <img src="https://i.pinimg.com/736x/b7/11/39/b711391cbf38fbb0a39db2a11b34f5aa.jpg" alt="Izzi" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
-                <img src="https://images.seeklogo.com/logo-png/2/3/cablemas-logo-png_seeklogo-24388.png" alt="Cablemas" class="img-fluid brand-logo grayscale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVVWDFEseK_f7d1RwfQ40IehPiJZiZn6b9CA&s" alt="Cablemas" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
-                <img src="https://cdn.freebiesupply.com/logos/large/2x/axtel-logo-png-transparent.png" alt="Axtel" class="img-fluid brand-logo grayscale">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Axtel-logo.jpg" alt="Axtel" height="70" width="90" class="img-fluid brand-logo grayscale">
               </div>
             </div>
           </div>
@@ -426,7 +564,7 @@
                 <img src="https://tsociety.info/wp-content/uploads/2024/01/telcel-logo-300x150.webp" alt="Telcel" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
-                <img src="https://images.seeklogo.com/logo-png/19/2/unefon-logo-png_seeklogo-196154.png" alt="Unefon" class="img-fluid brand-logo grayscale">
+                <img src="https://www.unefon.com.mx/img/unefon-logo-color.png" alt="Unefon" class="img-fluid brand-logo grayscale">
               </div>
               <div class="col-4 col-sm-3">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="AT&T" class="img-fluid brand-logo grayscale">
@@ -538,6 +676,7 @@
           <div class="accordion-body bg-light text-muted fs-5 py-4">
             <p>
               Tenemos sucursales en varios municipios de Guanajuato como Dolores Hidalgo (Nuestra sede principal), San Luis de la Paz y Victoria.
+              Llena nuestra <a [routerLink]="'presolicitar-credito'" class="link-underline-warning">pre-solicitud</a> para que un asesor se ponga en contacto contigo y te brinde la atención personalizada que mereces.
             </p>
           </div>
         </div>
