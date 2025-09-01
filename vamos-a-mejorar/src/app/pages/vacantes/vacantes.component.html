@@ -1,5 +1,3 @@
-<!-- src/app/vacantes/vacantes.component.html -->
-
 <!-- Hero Section -->
 <div class="hero-section" style="background-image: url('assets/fachada.jpg');">
   <div class="h-[600px] w-full"></div>
@@ -13,94 +11,156 @@
   </div>
 </div>
 
-<!-- Contenido visible -->
 <div class="contenido">
-  <div class="fondo-irregular"></div>
-  <div class="dos-columnas">
-    <div class="columna-izquierda">
-      <h3 style="text-align: center;">
-        Buscamos personas apasionadas y comprometidas que deseen crecer profesionalmente y contribuir a un mundo mejor.
-      </h3>
-      <br>
-      <h3 style="text-align: center;">
-        ¡Únete al equipo de <strong>Vamos a Mejorar</strong> y transforma tu futuro con nosotros!
-      </h3>
+  <div class="row">
+    <!-- Columna izquierda: Vacantes -->
+    <div class="col-md-7">
+      <div class="text-center">
+        <h2 class="display-4 fw-bold title-underline">
+          
+          Vacantes <span class="text-gradient-primary">Disponibles</span>
+        </h2>
+      </div>
+      <div class="columna-izquierda">
+        <h3 style="text-align: justify;">
+          Buscamos personas apasionadas y comprometidas que deseen crecer profesionalmente y contribuir a un mundo
+          mejor.
+        </h3>
+        <h3 style="text-align: justify;">
+          ¡Únete al equipo de <strong>Vamos a Mejorar</strong> y transforma tu futuro con nosotros!
+        </h3>
+        <br>
+        <div class="alert alert-info">
+          <p class="header-p2">Completa tu postulación con tu CV en PDF y cuéntanos por qué eres el candidato ideal.</p>
+        </div>
+      </div>
     </div>
-    <div class="columna-derecha">
-      <img src="assets/Prestamoso.png" alt="">
+
+    <!-- Columna derecha: Texto + Imagen -->
+    <div class="col-md-5">
+      <div class="columna-derecha">
+        <img src="assets/Prestamoso.png" alt="Oportunidades laborales">
+      </div>
     </div>
   </div>
 </div>
-
 <!-- Main Content -->
-<div class="container">
-  <div class="section-title">
-    <h2 class="display-4 fw-bold mb-4 position-relative title-underline">
-      Vacantes <span class="text-gradient-primary">Disponibles</span>
-    </h2>
-    <p class="header-p">
-      Completa tu postulación con tu CV en PDF y cuéntanos por qué eres el candidato ideal.
-    </p>
-  </div>
-
-  <div *ngIf="loading">Cargando vacantes...</div>
-  <div *ngIf="!loading && vacantes.length">
-    <div *ngFor="let vacante of vacantes" class="vacante-detalle shadow-lg p-4 mb-5 bg-white rounded">
-      <div class="vacante-header d-flex justify-content-between align-items-start flex-wrap">
-        <div>
-          <h2 class="vacante-titulo-principal fw-bold text-primary mb-2">{{ vacante.titulo }}</h2>
-          <h3 class="vacante-area text-muted">{{ vacante.area }}</h3>
-        </div>
-        <button (click)="openModal(vacante)" class="btn-postularse btn btn-primary">
-          <i class="fas fa-paper-plane"></i> Postularse
-        </button>
-      </div>
-      <br>
-      <hr />
-      <div class="row">
-        <div class="col-md-6">
-          <h3 class="vacante-titulo"><i class="fas fa-info-circle me-2 text-primary"></i>Descripción del puesto</h3>
-          <p class="vacante-texto">{{ vacante.descripcion }}</p>
-
-                    <!-- Horario y ubicación -->
-          <section>
-            <h3 class="vacante-titulo"><i class="far fa-clock text-blue-600 mr-2"></i> Horario y ubicación</h3>
-            <ul class="vacante-lista">
-              <li>
-                <i class="far fa-calendar-alt icono"></i>{{ vacante.horario.dias }}
-              </li>
-              <li>
-                <i class="far fa-calendar-alt icono"></i>{{ vacante.horario.horas }}
-              </li>
-              <li>
-                <i class="fas fa-briefcase icono"></i>{{ vacante.modalidad }} ({{ vacante.tipo }})
-              </li>
-            </ul>
-          </section>
-          <h3 class="vacante-titulo mt-4"><i class="fas fa-gift me-2 text-primary"></i>Beneficios</h3>
-          <ul class="vacante-lista">
-            <li *ngFor="let beneficio of vacante.beneficios"><i class="fa-solid fa-circle small icono"></i>{{ beneficio
-              }}</li>
-          </ul>
+<div class="container-flex my-5">
+  <div class="container vacante-container">
+    <div *ngIf="!loading && vacantes.length">
+      <div *ngFor="let vacante of vacantes; let i = index" class="vacante-card">
+        <div class="vacante-header">
+          <div>
+            <h2 class="vacante-titulo">{{ vacante.titulo }}</h2>
+            <h3 class="vacante-area">{{ vacante.area }}</h3>
+          </div>
+          <button (click)="openModal(vacante)" class="btn btn-postularse">
+            <i class="fas fa-paper-plane me-2"></i>Postularse
+          </button>
         </div>
 
-        <div class="col-md-6">
-          <h3 class="vacante-titulo mt-4"><i class="fas fa-list me-2 text-primary"></i>Requisitos y habilidades</h3>
-          <ul class="vacante-lista enhanced-list list-disc pl-5">
-            <li *ngFor="let requisito of vacante.requisitos"><i class="fa-solid fa-circle small icono"></i> {{ requisito
-              }}</li>
-          </ul>
-        </div>
+        <div class="vacante-body">
+          <!-- Descripción del puesto -->
+          <div class="section" [class.collapsed]="!isSeccionVisible('descripcion', i)">
+            <div class="section-title fw-bold" (click)="toggleSeccion('descripcion', i)">
+              <h4 class="fw-bold"><i class="fas fa-info-circle"></i> Descripción del puesto</h4>
+              <i class="fas fa-chevron-down section-toggle"></i>
+            </div>
+            <div class="section-content">
+              <p class="vacante-texto">{{ vacante.descripcion }}</p>
+            </div>
+          </div>
 
+          <!-- Horario y ubicación -->
+          <div class="section" [class.collapsed]="!isSeccionVisible('horario', i)">
+            <div class="section-title" (click)="toggleSeccion('horario', i)">
+              <h4 class="fw-bold"><i class="far fa-clock"></i> Horario y ubicación</h4>
+              <i class="fas fa-chevron-down section-toggle"></i>
+            </div>
+            <div class="section-content">
+              <ul class="vacante-lista">
+                <li>
+                  <i class="fas fa-calendar-alt icono"></i>
+                  <span>{{ vacante.horario.dias }}</span>
+                </li>
+                <li>
+                  <i class="fas fa-clock icono"></i>
+                  <span>{{ vacante.horario.horas }}</span>
+                </li>
+                <li>
+                  <i class="fas fa-briefcase icono"></i>
+                  <span>{{ vacante.modalidad }}
+                    <span *ngIf="vacante.tipo" class="badge-modality">{{ vacante.tipo }}</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Beneficios -->
+          <div class="section" [class.collapsed]="!isSeccionVisible('beneficios', i)">
+            <div class="section-title" (click)="toggleSeccion('beneficios', i)">
+              <h4 class="fw-bold"><i class="fas fa-gift"></i> Beneficios</h4>
+              <i class="fas fa-chevron-down section-toggle"></i>
+            </div>
+            <div class="section-content">
+              <ul class="vacante-lista">
+                <li *ngFor="let beneficio of vacante.beneficios">
+                  <i class="fas fa-circle icono"></i>{{ beneficio }}
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Requisitos y habilidades -->
+          <div class="section" [class.collapsed]="!isSeccionVisible('requisitos', i)">
+            <div class="section-title" (click)="toggleSeccion('requisitos', i)">
+              <h4 class="fw-bold"> <i class="fas fa-list"></i> Requisitos y habilidades</h4>
+              <i class="fas fa-chevron-down section-toggle"></i>
+            </div>
+            <div class="section-content">
+              <ul class="vacante-lista">
+                <li class="lista requisitos" *ngFor="let requisito of vacante.requisitos">
+                  <i class="fas fa-circle icono"></i>{{ requisito }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="section requisitos" [class.collapsed]="!isSeccionVisible('requisitos', i)">
+            <div class="section-title" (click)="toggleSeccion('requisitos', i)">
+              <h4 class="fw-bold"><i class="fas fa-list"></i> Requisitos y habilidades</h4>
+              <i class="fas fa-chevron-down section-toggle"></i>
+            </div>
+            <div class="section-content">
+              <ul class="vacante-lista">
+                <li *ngFor="let requisito of vacante.requisitos">
+                  <i class="fas fa-circle icono"></i>{{ requisito }}
+                </li>
+              </ul>
+            </div>
+          </div> -->
+
+        </div>
       </div>
     </div>
+
+    <!-- Mensaje de carga -->
+    <div *ngIf="loading" class="text-center py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+      <p class="mt-3"><span>Espere unos segundos, se estan cargando las vacantes...</span></p>
+    </div>
+
+    <!-- Mensaje de error -->
+    <div *ngIf="error && !loading" class="alert alert-danger text-center" role="alert">
+      {{ error }}
+    </div>
   </div>
-  <div *ngIf="!loading && !vacantes.length">No hay vacantes disponibles.</div>
+  <div *ngIf="!loading && !vacantes.length"><span>No hay vacantes disponibles.</span></div>
 </div>
+
 
 <!-- Inyectamos el modal-condicional en el mismo template -->
-<app-card-vacante class=""
-  *ngIf="modalOpen && selectedVacante"
-  [vacante]="selectedVacante"
-  (close)="closeModal()">
+<app-card-vacante class="" *ngIf="modalOpen && selectedVacante" [vacante]="selectedVacante" (close)="closeModal()">
 </app-card-vacante>
