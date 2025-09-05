@@ -17,13 +17,13 @@
             <i class="fas fa-home me-2"></i> Inicio
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start" 
           [ngClass]="{'active': currentSection === 'descripcion'}"
             [routerLink]="[]" fragment="descripcion" style="color: #2d1f70;">
             <i class="fas fa-info-circle me-2"></i> Descripción
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start" 
           [ngClass]="{'active': currentSection === 'beneficios'}"
@@ -58,7 +58,7 @@
 </div>
 
 <!-- Hero Section -->
-<section id="inicio" appScrollSpy [sectionId]="'inicio'" (sectionInView)="onSectionChange($event)" class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden"  style="background-image: url('../../../assets/images/credito-individual.jpg');  background-size: cover;  background-position: center;  background-repeat: no-repeat;  background-color: #860505;">
+<section id="inicio" appScrollSpy [sectionId]="'inicio'" (sectionInView)="onSectionChange($event)" class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden"  style="background-image: url('../../../assets/images/vam-sma.png');  background-size: cover;  background-position: center;  background-repeat: no-repeat;  background-color: #860505;">
 
   <!-- Overlay oscuro -->
   <div 
@@ -88,7 +88,7 @@
   <div class="position-absolute bottom-0 start-0 w-100" style="height: 25%; background-color: white; opacity: 0.1;"></div>
 </section>
 <!-- Descripción -->
-<section id="descripcion" appScrollSpy [sectionId]="'descripcion'" (sectionInView)="onSectionChange($event)" class="py-2 bg-white">
+<!-- <section id="descripcion" appScrollSpy [sectionId]="'descripcion'" (sectionInView)="onSectionChange($event)" class="py-2 bg-white">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -125,12 +125,12 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- Beneficios -->
 <section id="beneficios" appScrollSpy [sectionId]="'beneficios'" (sectionInView)="onSectionChange($event)"  class="py-2 bg-light">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="badge bg-warning text-dark fs-5 fw-semibold mb-3 px-3 py-2">Beneficios exclusivos</span>
+      <span class="badge-custom">Beneficios Exclusivos</span>
       <h2 class="display-5 fw-bold mb-3">Ventajas de nuestro <span class="text-gradient-primary">crédito individual</span></h2>
       <p class="text-muted lead mx-auto" style="max-width: 700px;">Potencia tu negocio con estas ventajas diseñadas para tu crecimiento</p>
     </div>
@@ -231,7 +231,7 @@
 <section id="requisitos" appScrollSpy [sectionId]="'requisitos'" (sectionInView)="onSectionChange($event)" class="py-2 bg-white">
   <div class="container">
     <div class="text-center mb-5">
-      <span class="badge bg-primary text-white fs-5 fw-semibold mb-3 px-3 py-2">Requisitos</span>
+      <span class="badge-custom">Requisitos</span>
       <h2 class="display-5 fw-bold mb-3">¿Qué necesitas para <span class="text-gradient-primary">solicitarlo?</span></h2>
       <p class="text-muted lead mx-auto" style="max-width: 700px;">Condiciones básicas para acceder a tu crédito individual</p>
     </div>
@@ -313,7 +313,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="text-center mb-5">
-          <span class="badge bg-dark text-white fs-5 fw-semibold mb-3 px-3 py-2">Documentación</span>
+      <span class="badge-custom">Documentación</span>
           <h2 class="display-5 fw-bold mb-3">¿Qué documentos <span class="text-gradient-primary">necesitas?</span></h2>
           <p class="text-muted lead">Prepara estos documentos para agilizar tu trámite</p>
         </div>
@@ -323,7 +323,7 @@
             <div class="list-group list-group-flush">
               <div class="list-group-item p-4 border-bottom">
                 <div class="d-flex align-items-center">
-                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3 me-4">
+                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4" style="color:#3c9cc8 ;">
                     <i class="fas fa-id-card fa-2x"></i>
                   </div>
                   <div>
@@ -335,7 +335,7 @@
               
               <div class="list-group-item p-4 border-bottom">
                 <div class="d-flex align-items-center">
-                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3 me-4">
+                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4"  style="color:#3c9cc8 ;">
                     <i class="fas fa-file-invoice fa-2x"></i>
                   </div>
                   <div>
@@ -347,7 +347,7 @@
               
               <div class="list-group-item p-4 border-bottom">
                 <div class="d-flex align-items-center">
-                  <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3 me-4">
+                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4" style="color:#3c9cc8 ;">
                     <i class="fas fa-file-contract fa-2x"></i>
                   </div>
                   <div>

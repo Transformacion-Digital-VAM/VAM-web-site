@@ -12,476 +12,201 @@
   </div>
 
 <!-- HEADER -->
-<section class="hero-section  py-2 overflow-hidden">
-  <div class="container py-lg-5">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6 position-relative z-1">
-        <div class="mb-5">
-          <span class="badge bg-white fs-5 fw-bold mb-3 px-3 py-2 shadow-sm" style="color: #2d1f70;">Financiando sueños desde 2010</span>
-          <h1 class="display-3 fw-bold mb-4 text-gray animate__animated animate__fadeInUp">Da el salto 
-            <span class="text-emprendedor" style="color: #2d1f70;">emprendedor</span> que mereces</h1>
-          <p class="lead text-white-80 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Tu idea de negocio está a un crédito de distancia. Te acompañamos desde el primer paso.</p>
-          
-          <div class="d-flex flex-wrap gap-3 mb-5 animate__animated animate__fadeInUp animate__delay-2s">
-            <button class="btn btn-lg px-4 fw-bold shadow-lg hover-effect" style="background-color: #2d1f70; color: #ffffff;" routerLink="/asesor-virtual">
-              <i class="bi bi-chat-dots-fill me-2"></i>
-              {{displayedText}}
-              <i class="fa-solid fa-vr-cardboard ms-2"></i>
-            </button>
-            <a [routerLink]="'/credito-grupal'" class="btn btn-outline-dark btn-lg px-4 hover-effect" >
-              <i class="bi bi-arrow-right-circle me-2"></i> Descubre cómo iniciar tu negocio
-            </a>
-          </div>
-        </div>
-        
-        <div class="d-flex align-items-center animate__animated animate__fadeInUp animate__delay-3s">
-          <div class="pe-4 border-end border-light">
-            <h3 class="fw-bold  mb-0 display-5" style="color: #3c9cc8;">+14</h3>
-            <p class="text-white-60 mb-0">Años creando oportunidades</p>
-          </div>
-          <div class="px-4">
-            <h3 class="fw-bold mb-0 display-5 " style="color: #3c9cc8;">5K+</h3>
-            <p class="text-white-60 mb-0">Emprendores impulsados</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-lg-6 d-none d-lg-block">
-        <div class="position-relative">
-          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e" alt="Emprendedora sonriente" class="img-fluid rounded-4 shadow-lg floating-animation">
-          <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-3 shadow-sm ms-3 mb-3">
-            <div class="d-flex align-items-center">
-              <div class="bg-primary p-2 rounded-circle me-2">
-                <i class="bi bi-check-lg text-white fs-5"></i>
-              </div>
-              <div>
-                <p class="mb-0 fw-bold">Crédito aprobado en 24h</p>
-                <small class="text-muted">Para clientes calificados</small>
-              </div>
+<section class="hero-section">
+    <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 hero-content">
+                <div class="mb-5">
+                    <span class="hero-badge d-inline-block mb-4 animate__animated animate__fadeInDown">
+                        <i class="fas fa-rocket me-2"></i>Financiando sueños desde 2010
+                    </span>
+                    
+                    <h4 class="hero-title display-3 fw-bold animate__animated animate__fadeInUp">
+                        Da el salto <span class="text-emprendedor">emprendedor</span> que mereces
+                    </h4>
+                    
+                    <p class="hero-lead animate__animated animate__fadeInUp animate__delay-1s">
+                        Tu idea de negocio está a un crédito de distancia. Te acompañamos desde el primer paso con asesoría personalizada y soluciones financieras adaptadas a tus necesidades.
+                    </p>
+                    
+                    <div class="btn-group animate__animated animate__fadeInUp animate__delay-2s">
+                        <a class="btn btn-primary-custom shadow-lg" routerLink="/asesor-virtual" target="_blank">
+                            <i class="fas fa-comments me-2"></i>
+                            <span class="typewriter" id="typewriter-text">Asesor virtual</span>
+                            <i class="fas fa-vr-cardboard ms-2"></i>
+                        </a>
+                        
+                        <a routerLink="/credito-grupal" target="_blank" class="btn btn-outline-custom text-light" style="background: #3c9cc8;">
+                            <i class="fas fa-lightbulb me-2"></i> Descubre cómo iniciar tu negocio
+                        </a>
+                    </div>
+                    
+                    <div class="animate__animated animate__fadeInUp animate__delay-3s">
+                        <button type="button" class="btn btn-info-custom mt-3" data-bs-toggle="modal" data-bs-target="#microModal">
+                            <i class="fas fa-info-circle me-2"></i> 
+                            ¿Qué es un microcrédito y cómo puede ayudarte a crecer financieramente?
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="stats-container d-flex justify-content-around animate__animated animate__fadeInUp animate__delay-4s">
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <p class="stat-text">Años creando oportunidades</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <p class="stat-text">Emprendores impulsados</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <p class="stat-text">Clientes satisfechos</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            
+            <div class="col-lg-6 hero-image-container">
+                <div class="position-relative">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80" 
+                         alt="Emprendedora sonriente" class="img-fluid hero-img">
+                    
+                    <div class="floating-card">
+                        <div class="d-flex align-items-center">
+                            <div class="check-icon">
+                                <i class="fas fa-check text-primary-emphasis"></i>
+                            </div>
+                            <div>
+                                <p class="mb-0 fw-bold text-dark">Crédito aprobado en 24h</p>
+                                <small class="text-muted">Para clientes calificados</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  </section>
+</section>
 <!---BENEFICIOS Y CREDITOS-->
-<div class="container py-2 my-lg-2">
-  <div class="text-center mb-5">
-    <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">Impulsando tu éxito</span>
-    <h2 class="display-4 fw-bold mb-4 position-relative title-underline">Tu crecimiento es nuestra <span class="text-gradient-primary">prioridad</span></h2>
-    <p class="lead text-muted mx-auto" style="max-width: 700px;">Soluciones financieras diseñadas para cada etapa de tu emprendimiento</p>
-  </div>
+<section class="creditos">
+ <div class="container container-custom">
+        <div class="header-section">
+            <span class="badge-custom">Impulsando tu Éxito</span>
+            <h1 class="title-main display-4 fw-bold">
+              Tu crecimiento es nuestra <span class="title-gradient">prioridad</span>
+            </h1>
+            <p class="lead-text">Soluciones financieras diseñadas para cada etapa de tu emprendimiento</p>
 
-  <div class="row g-4">
-    <!-- Crédito Comunal - Tarjeta mejorada -->
-  <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-hover" style="
-          border-radius: 24px; 
-          overflow: hidden; 
-          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-          background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-          position: relative;
-          z-index: 1;
-      ">
-        <!-- Efecto de borde animado -->
-        <div class="position-absolute top-0 left-0 w-100 h-100 border-animation" style="
-            border-radius: 24px;
-            padding: 2px;
-            background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db, #6a5acd, #2d1f70);
-            background-size: 400% 400%;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        "></div>
-        
-        <!-- Ribbon de destacado con animación -->
-        <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
-          <span class="badge bg-gradient-warning text-dark rounded-pill px-3 py-2 shadow" style="
-              background: linear-gradient(45deg, #ffc107, #ffdb58);
-              font-weight: 600;
-              letter-spacing: 0.5px;
-          ">
-            <i class="fas fa-bolt me-1"></i> ¡LO MÁS POPULAR!
-          </span>
         </div>
         
-        <div class="card-body p-4 position-relative">
-          <!-- Icono con efecto flotante -->
-          <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-3" style="
-              width: 80px;
-              height: 80px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background: linear-gradient(135deg, rgba(45, 31, 112, 0.1) 0%, rgba(106, 90, 205, 0.2) 100%);
-              box-shadow: 0 8px 20px rgba(45, 31, 112, 0.15);
-              transition: all 0.4s ease;
-              animation: float 3s ease-in-out infinite;
-          ">
-            <i class="fa-solid fa-people-group fa-2x" style="
-                color: transparent;
-                background: linear-gradient(45deg, #2d1f70, #6a5acd);
-                -webkit-background-clip: text;
-                background-clip: text;
-            "></i>
-          </div>
-          
-          <!-- Título con gradiente y sombra de texto -->
-          <h3 class="h1 fw-bold mb-3" style="
-              background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              text-shadow: 0 2px 4px rgba(45, 31, 112, 0.1);
-              font-size: 2rem;
-          ">
-            Recursos para tus ideas
-          </h3>
-          
-          <!-- Texto descriptivo -->
-          <p class="mb-4" style="
-              font-size: 1.1rem;
-              line-height: 1.7;
-              color: #5a5a72;
-              font-weight: 400;
-          ">
-            ¿Listo para hacer crecer tu negocio? Nosotros te ayudamos a lograrlo con grandes beneficios y oportunidades pensadas para emprendedores como tú.
-          </p>
-          
-          <!-- Lista de beneficios con mejor diseño -->
-          <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card-custom card-1">
+              <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
+                <span class="badge bg-gradient-warning text-dark rounded-pill px-3 py-2 shadow" style="
+                    background: linear-gradient(45deg, #ffc107, #ffdb58);
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                ">
+                  <i class="fas fa-bolt me-1"></i> ¡LO MÁS POPULAR!
+                </span>
               </div>
-              <span style="font-weight: 500;">Sin comisiones por apertura</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
-              </div>
-              <span style="font-weight: 500;">Plazos flexibles</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
-              </div>
-              <span style="font-weight: 500;">Baja tasa de interés</span>
-            </li>
-          </ul>
-          
-          <!-- Botón con efecto hover mejorado -->
-          <div class="mt-auto pt-2">
-            <a [routerLink]="'/credito-grupal'" class="btn btn-lg btn-hover-icon rounded-pill px-4 position-relative" style="
-                background: linear-gradient(45deg, #2d1f70, #6a5acd);
-                color: #ffffff;
-                border: none;
-                overflow: hidden;
-                transition: all 0.4s ease;
-                box-shadow: 0 6px 20px rgba(106, 90, 205, 0.3);
-                font-weight: 500;
-                letter-spacing: 0.5px;
-                z-index: 1;
-            ">
-              <span class="position-relative z-index-1 d-flex align-items-center justify-content-center">
-                Más información <i class="fas fa-arrow-right ms-2 transition-all" style="transform: translateX(0);"></i>
-              </span>
-              <span class="position-absolute top-0 left-0 w-100 h-100 bg-white opacity-0 hover-opacity-10 transition-all"></span>
-              <span class="btn-hover-effect" style="
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  width: 5px;
-                  height: 5px;
-                  background: rgba(255, 255, 255, 0.5);
-                  opacity: 0;
-                  border-radius: 100%;
-                  transform: scale(1, 1) translate(-50%, -50%);
-                  transform-origin: 50% 50%;
-              "></span>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Pie de tarjeta con efecto de brillo -->
-        <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
-          <div class="d-flex align-items-center justify-content-between">
-            <small class="text-success fw-bold d-flex align-items-center" style="font-size: 0.9rem;">
-              <div class="me-2" style="
-                  width: 24px;
-                  height: 24px;
-                  background: rgba(40, 167, 69, 0.1);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-clock" style="font-size: 0.7rem;"></i>
-              </div>
-              <span>Aprobación en 48h</span>
-            </small>
-            <small class="text-primary fw-bold d-flex align-items-center" style="font-size: 0.9rem;">
-              <div class="me-2" style="
-                  width: 24px;
-                  height: 24px;
-                  background: rgba(45, 31, 112, 0.1);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-user-check" style="font-size: 0.7rem;"></i>
-              </div>
-              <span>+500 grupos</span>
-            </small>
-          </div>
-        </div>
-      </div>
-  </div>
-
-    <!-- Crédito Individual - Tarjeta mejorada -->
- <div class="col-md-4">
-      <div class="card h-100 individual-card shadow-hover card-hover" style="border-radius: 24px; overflow: hidden;">
-          <!-- Badge destacado -->
-        <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
-          <span class="badge bg-gradient-warning text-light rounded-pill px-3 py-2 shadow" style="
-              background: linear-gradient(45deg, #2003a3, #2003a3);
-              font-weight: 600;
-              letter-spacing: 0.5px;
-          ">
-            <i class="fa-solid fa-dollar-sign me-1"></i>  Mayores Montos
-          </span>
-        </div>
-          
-          <div class="card-body p-4 position-relative">
-              <!-- Icono con efecto flotante -->
-              <div class="icon-wrapper bg-gradient-primary bg-opacity-10 mb-4 p-3 rounded-3" style="
-                  width: 80px;
-                  height: 80px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  background: linear-gradient(135deg, rgba(45, 31, 112, 0.1) 0%, rgba(106, 90, 205, 0.2) 100%);
-                  box-shadow: 0 8px 20px rgba(45, 31, 112, 0.15);
-                  transition: all 0.4s ease;
-                  animation: float 3s ease-in-out infinite;
-              ">
-                <i class="fa-solid fa-user fa-2x" style="
-                    color: transparent;
-                    background: linear-gradient(45deg, #2d1f70, #6a5acd);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                "></i>
-              </div>
-
-              
-              <!-- Título -->
-              <h3 class="h1 fw-bold mb-3" style="
-              background: linear-gradient(45deg, #2d1f70, #6a5acd, #9370db);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              text-shadow: 0 2px 4px rgba(45, 31, 112, 0.1);
-              font-size: 2rem;
-          ">
-                  Prestamo a tu medida
-              </h3>
-              
-              <!-- Descripción -->
-              <p class="mb-4 text-justify px-3" style="
-                  font-size: 1.1rem;
-                  line-height: 1.7;
-                  color: #5a5a72;
-                  font-weight: 400;
-                  text-align: justify;
-              ">
-                  Para emprendedores que buscan expandirse. Obtén montos mayores con condiciones diseñadas para el crecimiento de tu negocio.
-              </p>
-              
-              <!-- Lista de beneficios -->
-          <ul class="list-unstyled mb-4" style="font-size: 1.05rem;">
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
-              </div>
-              <span style="font-weight: 500;">Montos desde $50,000.00</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
-              </div>
-              <span style="font-weight: 500;">Asesoria Personalizada</span>
-            </li>
-            <li class="mb-3 d-flex align-items-center">
-              <div class="me-3" style="
-                  width: 24px;
-                  height: 24px;
-                  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%);
-                  border-radius: 50%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-              ">
-                <i class="fas fa-check" style="color: #28a745; font-size: 0.8rem;"></i>
-              </div>
-              <span style="font-weight: 500;">Plazos Flexibles</span>
-            </li>
-          </ul>
-              
-              <!-- Botón CTA -->
-              <div class="mt-auto pt-2 text-center">
-                  <a [routerLink]="'/credito-individual'" class="btn btn-lg btn-hover-icon rounded-pill px-5 position-relative shine-effect" style="
-                      background: linear-gradient(45deg, #002aff, #6a5acd);
-                      color: #ffffff;
-                      border: none;
-                      overflow: hidden;
-                      transition: all 0.4s ease;
-                      box-shadow: 0 8px 25px rgba(0, 42, 255, 0.4);
-                      font-weight: 600;
-                      letter-spacing: 0.5px;
-                  ">
-                      <span class="position-relative z-index-1 d-flex align-items-center justify-content-center">
-                          Más información <i class="fas fa-arrow-right ms-2 transition-all"></i>
-                      </span>
-                  </a>
-              </div>
-          </div>
-          
-          <!-- Pie de tarjeta -->
-          <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
-              <div class="row text-center">
-                  <div class="col-6">
-                      <div class="d-flex flex-column align-items-center">
-                          <small class="text-primary fw-bold d-flex align-items-center justify-content-center" style="font-size: 1rem;">
-                              <div class="me-2" style="
-                                  width: 28px;
-                                  height: 28px;
-                                  background: rgba(0, 42, 255, 0.1);
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                              ">
-                                  <i class="fas fa-bolt" style="font-size: 0.8rem;"></i>
-                              </div>
-                              Rápido y sencillo
-                          </small>
-                      </div>
-                  </div>
-                  <div class="col-6">
-                      <div class="d-flex flex-column align-items-center">
-                          <small class="text-success fw-bold d-flex align-items-center justify-content-center" style="font-size: 1rem;">
-                              <div class="me-2" style="
-                                  width: 28px;
-                                  height: 28px;
-                                  background: rgba(40, 167, 69, 0.1);
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                              ">
-                                  <i class="fas fa-clock" style="font-size: 0.8rem;"></i>
-                              </div>
-                              Respuesta en 24h
-                          </small>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-    <!-- Beneficios - Tarjeta destacada -->
-    <div class="col-md-4">
-      <div class="card h-100 border-0 shadow-lg hover-transform bg-dark text-white">
-        <div class="card-body p-4 position-relative">
-          <div class="icon-wrapper bg-dark bg-opacity-25 mb-4">
-            <i class="fa-solid fa-crown fa-2x text-warning"></i>
-          </div>
-          <h3 class="h2 fw-bold mb-3 text-warning">Ventajas y Beneficios</h3>
-          <p class="text-white-80 mb-4">Beneficios diseñados para hacer crecer tu negocio</p>
-          
-          <div class="benefits-list">
-            <div class="d-flex mb-3">
-              <div class="me-3 text-warning">
-                <i class="fas fa-percentage fa-lg"></i>
-              </div>
-              <div>
-                <h5 class="mb-1">Baja tasa de interés</h5>
-                <p class="small text-white-60 mb-0">Las más competitivas del mercado</p>
-              </div>
+                <div class="card-header">
+                    <div class="card-icon ms-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="card-title mt-4" style="text-align: right;">Recursos para tus ideas</h3>
+                </div>
+                <div class="card-body-custom">
+                    <p class="card-text"  style="text-align: justify;">¿Listo para hacer crecer tu negocio? Te ayudamos a lograrlo con grandes beneficios y oportunidades pensadas para emprendedores como tú.</p>
+                    
+                    <hr class="card-divider">
+                    
+                    <ul class="benefits-list">
+                        <li>Sin comisiones por apertura</li>
+                        <li>Asesoría personalizada</li>
+                        <li>Plazos flexibles</li>
+                        <li>Tasas preferenciales</li>
+                    </ul>
+                    
+                    <a class="btn-custom" routerLink="/credito-grupal" >Descubrir más</a>
+                </div>
+                
             </div>
             
-            <div class="d-flex mb-3">
-              <div class="me-3 text-warning">
-                <i class="fas fa-gift fa-lg"></i>
+            <!-- Card 2 -->
+            <div class="card-custom card-2">
+              <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
+                <span class="badge bg-gradient-warning rounded-pill px-3 py-2 shadow" style="
+                    background: linear-gradient(45deg, #5ab4f0, #5ab4f0);
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    color: #f8f9fa;
+                ">
+                  <i class="fas fa-bolt me-1"></i> ¡MAYORES MONTOS!
+                </span>
               </div>
-              <div>
-                <h5 class="mb-1">Regalos por cumplimiento</h5>
-                <p class="small text-white-60 mb-0">Premios por tu historial de pago puntual</p>
-              </div>
+              <div class="card-header">
+                    <div class="card-icon ms-2">
+                        <i class="fa-solid fa-users me"></i>
+                    </div>
+                    <h3 class="card-title mt-4" style="text-align: left;">Financiamiento a tu medida</h3>
+                </div>
+                <div class="card-body-custom">
+                    <p class="card-text"  style="text-align: justify;">Para emprendedores que buscan expandirse. Obtén montos mayores con condiciones diseñadas para el crecimiento de tu negocio.</p>
+                    
+                    <hr class="card-divider">
+                    
+                    <ul class="benefits-list">
+                        <li>Mayores montos de financiamiento</li>
+                        <li>Atención hasta la puerta de tu casa</li>
+                        <li>Sin comisiones por apertura</li>
+                    </ul>
+                    
+                    <a class="btn-custom" routerLink="/credito-grupal">Descubrir más</a>
+                </div>
             </div>
             
-            <div class="d-flex mb-3">
-              <div class="me-3 text-warning">
-                <i class="fas fa-hand-holding-usd fa-lg"></i>
+            <!-- Card 3 -->
+            <div class="card-custom card-3">
+              <div class="position-absolute end-0 top-0 m-3 pulse-animation" style="z-index: 2;">
+                <span class="badge bg-gradient-warning rounded-pill px-3 py-2 shadow" style="
+                    background: linear-gradient(45deg, #ffa600, #ffa600);
+                    font-weight: 600;
+                    letter-spacing: 0.5px;
+                    color: #f8f9fa;
+                ">
+                  <i class="fa-solid fa-handshake"></i> ¡ELEGIRNOS TIENE RECOMPENSAS!
+                </span>
               </div>
-              <div>
-                <h5 class="mb-1">Bono por recomendación</h5>
-                <p class="small text-white-60 mb-0">Gana al traer nuevos clientes</p>
-              </div>
+                <div class="card-header">
+                    <div class="card-icon ms-2">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <h3 class="card-title mt-2" style="text-align: left;">Beneficios exclusivos</h3>
+                  </div>
+                <div class="card-body-custom">
+                    <p class="card-text" style="text-align: justify;">Programa de beneficios diseñado exclusivamente para hacer crecer tu negocio y recompensar tu esfuerzo.</p>
+
+                    <hr class="card-divider">
+                    
+                    <ul class="benefits-list">
+                        <li>Bono por recomendación</li>
+                        <li>Regalos por cumplimiento</li>
+                        <li>Más que finanzas, beneficios para tu hogar.</li>
+                        <li>Acceso a eventos exclusivos</li>
+                    </ul>
+                    
+                    <a class="btn-custom" routerLink="/presolicitar-credito" target="_blank">Solicitar ahora</a>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
+</section>
 <!---SERVICIOS EXTRA-->
-<section class="otros-servicios py-2 position-relative overflow-hidden">
-  <!-- Elemento decorativo -->
-  
+<section class="otros-servicios py-2 mb-2 position-relative overflow-hidden mt-4">
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
-      <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">Servicios adicionales</span>
+      <span class="badge-custom">Servicios Adicionales</span>
       <h2 class="display-5 fw-bold mb-3">Más formas de <span class="text-gradient-primary">ayudarte</span></h2>
       <p class="lead text-muted mx-auto" style="max-width: 700px;">Soluciones complementarias para simplificar tu vida financiera</p>
     </div>
@@ -491,9 +216,9 @@
       <div class="col-lg-6 col-md-6">
         <div class="service-card h-100 bg-white rounded-3 shadow-sm hover-transform border-0 p-4">
           <div class="icon-wrapper bg-info bg-opacity-10 mb-4 mx-auto">
-            <i class="fas fa-file-invoice-dollar fa-2x text-info"></i>
+            <i class="fas fa-file-invoice-dollar fa-2x" style="color: #5ab4f0;"></i>
           </div>
-          <h3 class="h4 fw-bold text-center mb-3">Pago de servicios</h3>
+          <h3 class="h4 fw-bold text-center mb-3 text-primary-emphasis">Pago de servicios</h3>
           <p class="text-muted text-center mb-4">Realiza pagos de luz, agua, teléfono y más en nuestras sucursales.</p>
           
           <div class="brands-grid mt-auto">
@@ -553,9 +278,9 @@
       <div class="col-lg-6 col-md-6">
         <div class="service-card h-100 bg-white rounded-3 shadow-sm hover-transform border-0 p-4">
           <div class="icon-wrapper bg-info bg-opacity-10 mb-4 mx-auto">
-            <i class="fas fa-mobile-alt fa-2x text-info"></i>
+            <i class="fas fa-mobile-alt fa-2x" style="color: #5ab4f0;"></i>
           </div>
-          <h3 class="h4 fw-bold text-center mb-3">Recarga de tiempo aire</h3>
+          <h3 class="h4 fw-bold text-center mb-3 text-primary-emphasis">Recarga de tiempo aire</h3>
           <p class="text-muted text-center mb-4">Recargas para todas las compañías con bonificaciones especiales.</p>
           
           <div class="brands-grid mt-auto">
@@ -584,7 +309,7 @@
 <section class="faq-section py-2 position-relative">  
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
-      <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">¿Tienes dudas?</span>
+      <span class="badge-custom">¿Tienes Dudas?</span>
       <h2 class="display-5 fw-bold mb-3">Preguntas <span class="text-gradient-primary">Frecuentes</span></h2>
       <p class="lead text-muted mx-auto" style="max-width: 700px;">Encuentra respuestas a las consultas más comunes sobre nuestros créditos</p>
     </div>
@@ -596,7 +321,7 @@
           <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
                   data-bs-toggle="collapse" data-bs-target="#collapseOne" 
                   aria-expanded="true" aria-controls="collapseOne">
-            <i class="fas fa-file-alt text-info me-3"></i>
+            <i class="fas fa-file-alt me-3" style="color: #3c9cc8 ;"></i>
             ¿Qué necesito para solicitar un crédito?
           </button>
         </h3>
@@ -625,7 +350,7 @@
           <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
                   data-bs-toggle="collapse" data-bs-target="#collapseTwo" 
                   aria-expanded="false" aria-controls="collapseTwo">
-            <i class="fas fa-clock text-info me-3"></i>
+            <i class="fas fa-clock me-3" style="color:#3c9cc8 ;"></i>
             ¿Cuánto tiempo tarda la aprobación?
           </button>
         </h3>
@@ -634,8 +359,8 @@
           <div class="accordion-body bg-light text-muted fs-5 py-4">
             <p>Nuestro proceso de aprobación es rápido y eficiente:</p>
             <ul class="list-unstyled">
-              <li class="mb-2"><span class="fw-bold text-primary">24 horas:</span> Para solicitudes completas con toda la documentación</li>
-              <li class="mb-2"><span class="fw-bold text-primary">48 horas:</span> Cuando se requieren verificaciones adicionales</li>
+              <li class="mb-2"><span class="fw-bold" style="color: #3c9cc8;">24 horas:</span> Para solicitudes completas con toda la documentación</li>
+              <li class="mb-2"><span class="fw-bold" style="color: #3c9cc8;">48 horas:</span> Cuando se requieren verificaciones adicionales</li>
             </ul>
           </div>
         </div>
@@ -647,7 +372,7 @@
           <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
                   data-bs-toggle="collapse" data-bs-target="#collapseThree" 
                   aria-expanded="false" aria-controls="collapseThree">
-                  <i class="fa-solid text-info fa-dollar-sign me-3"></i>
+                  <i class="fa-solid fa-dollar-sign me-3"  style="color:#3c9cc8 ;"></i>
                   ¿Cuál es el monto máximo que pueden prestarme?
           </button>
         </h3>
@@ -667,7 +392,7 @@
           <button class="accordion-button bg-white text-dark fw-bold p-4 fs-5 border-0 collapsed" type="button" 
                   data-bs-toggle="collapse" data-bs-target="#collapseFour" 
                   aria-expanded="false" aria-controls="collapseThree">
-            <i class="fa-solid text-info fa-map-pin me-3"></i>
+            <i class="fa-solid fa-map-pin me-3"  style="color:#3c9cc8 ;"></i>
             ¿Dónde pueden atenderme?
           </button>
         </h3>
@@ -675,8 +400,9 @@
              aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
           <div class="accordion-body bg-light text-muted fs-5 py-4">
             <p>
-              Tenemos sucursales en varios municipios de Guanajuato como Dolores Hidalgo (Nuestra sede principal), San Luis de la Paz y Victoria.
-              Llena nuestra <a [routerLink]="'presolicitar-credito'" class="link-underline-warning">pre-solicitud</a> para que un asesor se ponga en contacto contigo y te brinde la atención personalizada que mereces.
+              Contamos con sucursales en distintos municipios de Guanajuato, entre ellos Dolores Hidalgo (nuestra sede principal), 
+              San Luis de la Paz y Victoria. Completa nuestra <a [routerLink]="'/presolicitar-credito'" target="_blank" class="link-underline-primary">pre-solicitud</a>  y uno de nuestros asesores se pondrá en contacto contigo 
+              para ofrecerte la atención personalizada que mereces. 
             </p>
           </div>
         </div>
@@ -684,23 +410,21 @@
     </div>
 
     <div class="text-center mt-5">
-      <button class="btn btn-info btn-lg px-4 fw-bold shadow hover-transform" routerLink="/asesor-virtual">
+      <button class="btn btn-lg px-4 fw-bold shadow hover-transform text-light" style="background-color: #3c9cc8 ;" routerLink="/asesor-virtual">
         <i class="fas fa-question-circle me-2"></i> ¿Necesitas más ayuda?
         <br>
         Nuestro asesor prestamoso puede ayudarte
       </button>
     </div>
-
-
-
   </div>
 </section>
-<!--HORARIO DE ATENCION-->
 
-<section class="branches-section py-6 position-relative">  
+
+<!--HORARIO DE ATENCION-->
+<section class="branches-section mt-4 mb-4 position-relative">  
   <div class="container position-relative z-1">
     <div class="text-center mb-5">
-      <span class="badge bg-info text-dark fs-5 fw-semibold mb-3 px-3 py-2">Nuestras ubicaciones</span>
+      <span class="badge-custom">Conóce nuestras ubicaciones</span>
       <h2 class="display-5 fw-bold mb-3" style="color: #000000;">Encuentra nuestra <span style="color: rgb(10, 32, 117);">sucursal más cercana</span></h2>
       <p class="lead  mx-auto" style="max-width: 700px; color: #0000005e;">Visítanos y descubre cómo podemos ayudarte a hacer realidad tus proyectos</p>
     </div>
@@ -736,7 +460,7 @@
             <div class="branch-card">
               <div class="row g-0">
                 <div class="col-lg-4 branch-info bg-white p-4">
-                  <div class="branch-badge bg-success text-white mb-3">Sucursal Principal</div>
+                  <div class="branch-badge text-white mb-3" style="background-color: #3c9cc8;">Sucursal Principal</div>
                   <h4 class="fw-bold mb-3">Dolores Hidalgo</h4>
                   <div class="d-flex align-items-start mb-3">
                     <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
@@ -749,16 +473,16 @@
                     </h6>
                     <div class="d-flex justify-content-between mb-2">
                       <span class="fw-medium">Lunes a Viernes:</span>
-                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 6:00 PM</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="fw-medium">Sábados:</span>
-                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 2:00 PM</span>
                     </div>
                   </div>
                   
                   <div class="d-flex gap-2">
-                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-hover-icon" style="background-color: #2d1f70; color: #f8f9fa;">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 
@@ -869,7 +593,7 @@
                 <div class="col-lg-4 branch-info bg-white p-4">
                   <h4 class="fw-bold mb-3">San Luis de la Paz</h4>
                   <div class="d-flex align-items-start mb-3">
-                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <i class="fas fa-map-marker-alt text-primary-emphasis mt-1 me-2"></i>
                     <p class="mb-0"> C. Galeana 634, Ecce Homo, 37906 San Luis de la Paz, Gto.</p>
                   </div>
                   
@@ -879,16 +603,16 @@
                     </h6>
                     <div class="d-flex justify-content-between mb-2">
                       <span class="fw-medium">Lunes a Viernes:</span>
-                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 6:00 PM</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="fw-medium">Sábados:</span>
-                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 2:00 PM</span>
                     </div>
                   </div>
                   
                   <div class="d-flex gap-2">
-                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon" style="background-color: #2d1f70; color: #f8f9fa;">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 
@@ -912,7 +636,7 @@
                 <div class="col-lg-4 branch-info bg-white p-4">
                   <h4 class="fw-bold mb-3">San Felipe</h4>
                   <div class="d-flex align-items-start mb-3">
-                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <i class="fas fa-map-marker-alt text-primary-emphasis mt-1 me-2"></i>
                     <p class="mb-0"> C. Obregón #112 Int 7, Centro comercial Vianney</p>
                   </div>
                   
@@ -922,11 +646,11 @@
                     </h6>
                     <div class="d-flex justify-content-between mb-2">
                       <span class="fw-medium">Lunes a Viernes:</span>
-                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 6:00 PM</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="fw-medium">Sábados:</span>
-                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 2:00 PM</span>
                     </div>
                   </div>
                   
@@ -956,7 +680,7 @@
                 <div class="col-lg-4 branch-info bg-white p-4">
                   <h4 class="fw-bold mb-3">Victoria</h4>
                   <div class="d-flex align-items-start mb-3">
-                    <i class="fas fa-map-marker-alt text-primary mt-1 me-2"></i>
+                    <i class="fas fa-map-marker-alt text-primary-emphasis mt-1 me-2"></i>
                     <p class="mb-0"> Morelos 24, Centro, 37920 Victoria, Gto.</p>
                   </div>
                   
@@ -966,16 +690,16 @@
                     </h6>
                     <div class="d-flex justify-content-between mb-2">
                       <span class="fw-medium">Lunes a Viernes:</span>
-                      <span class="text-primary">9:00 AM - 6:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 6:00 PM</span>
                     </div>
                     <div class="d-flex justify-content-between">
                       <span class="fw-medium">Sábados:</span>
-                      <span class="text-primary">9:00 AM - 2:00 PM</span>
+                      <span class="text-primary-emphasis">9:00 AM - 2:00 PM</span>
                     </div>
                   </div>
                   
                   <div class="d-flex gap-1">
-                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon">
+                    <a href="tel:+524181544583" class="btn btn-primary btn-hover-icon" style="background-color: #2d1f70; color: #f8f9fa;">
                       <i class="fas fa-phone me-1"></i> Llamar ahora
                     </a>
 
@@ -996,3 +720,167 @@
     </div>
   </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="microModal"  tabindex="-1" aria-labelledby="microModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content fade-in">
+  
+      <!-- HEADER -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="microModalLabel">
+          <i class="bi bi-coin me-2"></i> Microcréditos: Financiamiento para el Desarrollo
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <!-- BODY -->
+      <div class="modal-body">
+        <!-- Navegación por pestañas -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="microTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="concept-tab" data-bs-toggle="pill" data-bs-target="#concept" type="button" role="tab" >Concepto</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="impact-tab" data-bs-toggle="pill" data-bs-target="#impact" type="button" role="tab">Impacto</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="features-tab" data-bs-toggle="pill" data-bs-target="#features" type="button" role="tab">Características</button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="microTabsContent">
+          <!-- Pestaña 1: Concepto -->
+          <div class="tab-pane fade show active" id="concept" role="tabpanel">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="mb-3">¿Qué es un microcrédito?</h3>
+                <p class="text-muted" style="text-align: justify;">
+                  Un microcrédito es un préstamo de pequeña cantidad dirigido específicamente a personas en situación de pobreza o exclusión financiera, que no tienen acceso a los préstamos tradicionales de los bancos porque carecen de avales, garantías o historial crediticio.
+                </p>
+                
+                <div class="quote my-4">
+                  <p class="mb-0">"El microcrédito no es caridad. Es negocio: negocio para luchar contra la pobreza."</p>
+                  <footer class="blockquote-footer mt-2">Muhammad Yunus</footer>
+                </div>
+                
+                <p style="text-align: justify;">
+                  Desarrollado por el economista <strong>Muhammad Yunus</strong> a través del <em>Grameen Bank</em> en Bangladés, el microcrédito es más que un préstamo; es una metodología integral de inclusión financiera y desarrollo social.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="img-container">
+                  <img src="https://images.ecestaticos.com/Qsw6XDgYVUXWg6bETKnEEAFoqgY=/93x0:3398x2327/992x700/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd38%2F452%2F17a%2Fd3845217a1cc9a8a6e682a20040be511.jpg" 
+                       alt="Muhammad Yunus con mujeres emprendedoras" 
+                       class="img-fluid rounded">
+                  <div class="img-caption">Muhammad Yunus, Premio Nobel de la Paz 2006</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pestaña 2: Impacto -->
+          <div class="tab-pane fade" id="impact" role="tabpanel">
+            <h3 class="mb-4 text-center">Impacto de los microcréditos</h3>
+            
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <h5>Beneficios sociales:</h5>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Empoderamiento económico de la mujer</li>
+                  <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Creación de redes de apoyo comunitario</li>
+                  <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Mejora de la educación y salud familiar</li>
+                  <li class="list-group-item"><i class="bi bi-check-circle-fill text-success me-2"></i> Reducción de la vulnerabilidad económica</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5>Resultados globales:</h5>
+                <div class="impact-stats">
+                  <div class="row text-center">
+                    <div class="col-6 mb-3">
+                      <div class="stat-number">80%</div>
+                      <div class="stat-label">Mujeres beneficiarias</div>
+                    </div>
+                    <div class="col-6 mb-3">
+                      <div class="stat-number">97%</div>
+                      <div class="stat-label">Tasa de recuperación</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-number">100+</div>
+                      <div class="stat-label">Países con programas</div>
+                    </div>
+                    <div class="col-6">
+                      <div class="stat-number">200M+</div>
+                      <div class="stat-label">Personas alcanzadas</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pestaña 3: Características -->
+          <div class="tab-pane fade" id="features" role="tabpanel">
+            <h3 class="mb-4 text-center">Características principales</h3>
+            
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <div class="feature-card card h-100 border-danger">
+                  <div class="card-body text-center p-3">
+                    <div class="feature-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h5>Enfoque grupal</h5>
+                    <p class="card-text">Sistemas de responsabilidad comunitaria donde grupos pequeños se avalan mutuamente.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-3">
+                <div class="feature-card card h-100 border-warning">
+                  <div class="card-body text-center p-3">
+                    <div class="feature-icon">
+                      <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h5>Préstamos progresivos</h5>
+                    <p class="card-text">Montos iniciales pequeños que aumentan según el historial de pagos y crecimiento del negocio.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4 mb-3">
+                <div class="feature-card card h-100 border-primary">
+                  <div class="card-body text-center p-3">
+                    <div class="feature-icon">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <h5>Educación financiera</h5>
+                    <p class="card-text">Capacitación en gestión de negocios, ahorro y presupuesto familiar incluida en el programa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <p class="text-center">
+                <span class="highlight">Este enfoque combina préstamos productivos, acompañamiento y educación financiera</span> para promover el <strong>empoderamiento económico</strong> y la <strong>reducción sostenible de la pobreza</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="modal-footer justify-content-between">
+        <div>
+          <span class="text-muted">Fuente: Banco Grameen & ONU</span>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline-primary me-2" data-bs-dismiss="modal">Cerrar</button>
+          <a type="button" class="btn btn" href="https://www.gaceta.udg.mx/muhammad-yunus-premio-nobel-de-la-paz-o-de-economia/" target="_blank" style="background: #2d1f70; color: #f8f9fa;">Más información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

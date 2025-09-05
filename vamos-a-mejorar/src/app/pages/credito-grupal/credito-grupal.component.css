@@ -1,9 +1,9 @@
 .bg-gradient-primary {
-    background: linear-gradient(135deg, #214aaa 0%, #5271d7 100%);
+    background: linear-gradient(135deg, #2d1f70 0%, #2d1f70 100%);
   }
   
   .text-gradient-primary {
-    background: linear-gradient(90deg, #214aaa, #5271d7);
+    background: linear-gradient(90deg, #2d1f70, #2d1f70);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -39,11 +39,11 @@
   }
   
   .bg-purple {
-    background-color: #6f42c1;
+    background-color: #2d1f70;
   }
   
   .text-purple {
-    color: #6f42c1;
+    color: #2d1f70;
   }
   
   .bg-light {
@@ -55,4 +55,16 @@
   background-color: #2d1f70;
   color: white !important;
   font-weight: bold;
+}
+
+
+.badge-custom {
+    background-color:#2d1f70;
+    color:  #f8f9fa;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(45, 31, 112, 0.3);
 }

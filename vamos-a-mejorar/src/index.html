@@ -17,67 +17,38 @@
   <app-root></app-root>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <script>
+<script>
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      if (navLinks.length === 0) return;
       
-        document.addEventListener('DOMContentLoaded', function() {
-          const navLinks = document.querySelectorAll('.nav-link');
-          if (navLinks.length === 0) return;
-          
-          const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5 // 50% de visibilidad
-          };
-          
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                  link.classList.remove('active');
-                  if (link.getAttribute('href') === `#${id}`) {
-                    link.classList.add('active');
-                  }
-                });
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // 50% de visibilidad
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
               }
             });
-          }, observerOptions);
-          
-          document.querySelectorAll('section[id]').forEach(section => {
-            observer.observe(section);
-          });
+          }
         });
-    </script>
+      }, observerOptions);
+      
+      document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+      });
+    });
+</script>
 
-     <script>
-        // document.getElementById('actionBtn').addEventListener('click', function() {
-        //     // Animación al hacer clic
-        //     this.classList.add('animate__animated', 'animate__pulse');
-            
-        //     // Redirigir después de la animación
-        //     setTimeout(() => {
-        //         window.location.href = '/';
-        //     }, 500);
-            
-        //     // Eliminar la clase para poder repetir la animación
-        //     setTimeout(() => {
-        //         this.classList.remove('animate__animated', 'animate__pulse');
-        //     }, 1000);
-        // });
-
-        // Efecto de movimiento con el cursor para los elementos flotantes
-    //     document.addEventListener('mousemove', (e) => {
-    //         const floatingElements = document.querySelectorAll('.animate-float, .animate-float-reverse');
-            
-    //         floatingElements.forEach(element => {
-    //             const speed = parseFloat(element.getAttribute('data-speed')) || 20;
-    //             const x = (window.innerWidth - e.pageX * speed) / 100;
-    //             const y = (window.innerHeight - e.pageY * speed) / 100;
-                
-    //             element.style.transform = `translateX(${x}px) translateY(${y}px) ${element.classList.contains('animate-float-reverse') ? 'rotate(5deg)' : 'rotate(-5deg)'}`;
-    //         });
-    //     });
-    // </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -102,6 +73,53 @@
   });
 </script>
 
+<script>
+    // Efecto de escritura para el texto del botón
+    document.addEventListener('DOMContentLoaded', function() {
+        const texts = ["Asesor virtual", "Asesoría", "Saber más"];
+        const typewriterElement = document.getElementById('typewriter-text');
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                typingSpeed = 1000; // Pausa al final del texto
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                typingSpeed = 500; // Pausa antes de empezar nuevo texto
+            }
+            
+            setTimeout(typeWriter, typingSpeed);
+        }
+        
+        // Iniciar el efecto de escritura
+        typeWriter();
+        
+        // Efecto de parallax suave en la imagen hero
+        const heroImage = document.querySelector('.hero-img');
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.1;
+            heroImage.style.transform = `rotateY(-5deg) rotateX(5deg) translateY(${rate}px)`;
+        });
+    });
+</script>
     
 </body>
 </html>

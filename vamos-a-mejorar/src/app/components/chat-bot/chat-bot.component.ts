@@ -10,10 +10,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   
 })
 export class ChatBotComponent {
-minimizeChat() {
-throw new Error('Method not implemented.');
-}
-isChatOpen: boolean = false; 
+  isBubbleVisible = true;
+
+  toggleBubble() {
+    this.isBubbleOpen = !this.isBubbleOpen;
+  }
+  minimizeChat() {
+  throw new Error('Method not implemented.');
+  }
+  isChatOpen: boolean = false; 
+  isBubbleOpen: boolean = false; 
  displayedText = '';
   private fullText = "Chatea con nuestro asesor virtual";
 

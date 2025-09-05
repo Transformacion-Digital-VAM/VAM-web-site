@@ -2,8 +2,8 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   padding: 0;
   border-radius: 50%;
   overflow: hidden;
@@ -19,8 +19,8 @@
 .chat-button:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  width: 75px;
-  height: 75px;
+  width: 95px;
+  height: 95px;
 }
 
 .chat-button:active {
@@ -94,9 +94,9 @@
 }
 
 .chat-header {
-  background: linear-gradient(135deg, #005fa3 0%, #003a6d 100%);
-  color: white;
-  padding: 14px;
+  background: linear-gradient(135deg, #ffffff41 0%, #ffffff4d 100%);
+  color: rgb(0, 0, 0);
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +131,7 @@
 }
 
 .close-button {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.605);
   border: none;
   width: 28px;
   height: 28px;
@@ -146,7 +146,7 @@
 }
 
 .close-button:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 56, 147, 0.3);
   transform: rotate(90deg);
 }
 
@@ -175,4 +175,70 @@
 @keyframes loading {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
+
+
+.chat-bubble {
+  position: fixed;
+  bottom: 115px; /* Justo encima del botón */
+  right: 50px; /* Alineada con el botón */
+  width: 280px;
+  background: #ffffff; /* Fondo sólido para mejor lectura */
+  color: #333;
+  padding: 16px 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #005fa3;
+  z-index: 999;
+  animation: bubbleFadeIn 0.6s ease-out;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Triángulo de la burbuja */
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 30px; /* centrado respecto al ancho */
+  border-width: 10px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* Botón de cierre */
+.bubble-close {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  background: rgba(0, 95, 163, 0.08);
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #005fa3;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.bubble-close:hover {
+  background: rgba(0, 95, 163, 0.2);
+  transform: scale(1.1);
+}
+
+/* Animación de aparición */
+@keyframes bubbleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
