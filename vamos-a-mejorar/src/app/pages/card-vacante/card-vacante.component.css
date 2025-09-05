@@ -26,7 +26,7 @@
   }
 
   .vacante-header {
-    background: linear-gradient(90deg, #c7dffe, #85b0c7); /* bg-gradient-to-r from-blue-100 to-blue-200 */
+    background: linear-gradient(90deg, #c7dffe, #85b0c7);
     padding: 24px; /* p-6 */
     color: #01051d; /* text-gray-800 */
     display: flex;
@@ -158,16 +158,15 @@
   }
 
   .modal-header {
-    background: linear-gradient(90deg, #00087a, #016da7);
+    background: linear-gradient(90deg, #c7dffe, #85b0c7);
     padding: 16px; /* p-4 */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Asegura que el header no se mueva al hacer scroll en el contenido del modal */
     position: sticky;
     top: 0;
-    z-index: 10; /* Asegura que el header esté por encima del contenido del formulario al hacer scroll */
+    z-index: 10; 
   }
 
   .modal-title {
