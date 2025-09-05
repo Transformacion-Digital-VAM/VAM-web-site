@@ -25,7 +25,13 @@
               <div class="card-body">
                 <h5 class="card-title">{{ tarjeta.titulo }}</h5>
                 <p class="card-text">{{ tarjeta.descripcion }}</p>
-                <i class="flip-icon fas fa-sync-alt"></i>
+                <!-- contenedor de iconos -->
+                <div class="iconos">
+                  <img *ngFor="let icono of tarjeta.contenido.iconos"
+                      [src]="icono"
+                      class="icono"
+                      alt="icono ODS">
+                </div>
               </div>
             </div>
           </div>

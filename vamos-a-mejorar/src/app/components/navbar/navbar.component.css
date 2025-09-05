@@ -1,29 +1,63 @@
 .navbar.sticky-top {
   top: 0;
-  z-index: 1030; /* más alto que otros elementos */
+  z-index: 1030;
 }
-    .navbar-custom {
-      position: sticky;
-      top: 0;
-      z-index: 1030;
-      background-color: #ffffff !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
-    }
 
-    .navbar-brand img {
-      transition: transform 0.3s ease;
-    }
+.navbar-custom {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
 
-    .navbar-brand img:hover {
-      transform: scale(1.05);
-    }
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
 
-    .nav-link {
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
 
-    .nav-link:hover {
-      color: #0d6efd;
-    }
+.nav-link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #0d6efd;
+}
+
+/* --- SUBMENÚS --- */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 25px;  /* ajusta según padding */
+  right: 100%; 
+  left: auto;
+  margin-top: -1px;
+  display: none;
+}
+
+.dropdown-submenu.show > .dropdown-menu {
+  display: block;
+}
+
+/* --- RESPONSIVE MÓVILES --- */
+@media (max-width: 991px) {  
+  .dropdown-submenu > .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;      
+    right: auto;
+    margin-top: 0;
+    display: none;
+  }
+
+  .dropdown-submenu.show > .dropdown-menu {
+    display: block;
+  }
+}
