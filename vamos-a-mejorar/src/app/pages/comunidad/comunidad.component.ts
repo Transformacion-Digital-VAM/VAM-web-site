@@ -42,11 +42,11 @@ export class ComunidadComponent implements OnInit {
     },
     {
       id: 'inclusion',
-      titulo: 'Inclución Financiera',
+      titulo: 'Inclusión Financiera',
       descripcion: 'Acceso financiero para todos.',
       imagen: '/assets/inclusion.jpg',
       contenido: {
-        titulo: 'Inclución Financiera',
+        titulo: 'Inclusión Financiera',
         descripcion: 'En Vamos a Mejorar estamos comprometidos con la inclusión financiera, ofreciendo servicios tanto grupales como individuales que facilitan el acceso a soluciones financieras adaptadas a las necesidades de cada cliente.',
         detalles: 'Nuestro enfoque busca brindar apoyo cercano y personalizado para que todas las personas puedan mejorar su bienestar económico con confianza y facilidad, contribuyendo así al crecimiento de comunidades fuertes y autosuficientes.',
         iconos: [

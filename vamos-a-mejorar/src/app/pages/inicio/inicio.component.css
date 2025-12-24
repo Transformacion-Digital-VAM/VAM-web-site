@@ -1,10 +1,12 @@
 .video-container {
   width: 100%;
+  position: relative;
   overflow: hidden;
   padding-top: 56.25%; /* Relación 16:9 */
 }
 
 .video-container video {
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1064,18 +1066,18 @@
             padding-bottom: 15px;
         }
         
-        .title-main:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1000px;
-            height: 4px;
-            background: linear-gradient(to right,#2d1f70,  #2d1f70);
-            border-radius: 2px;
+        .title-main::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;              /* ✅ RESPONSIVE */
+          max-width: 400px;        /* ✅ límite desktop */
+          height: 4px;
+          background: linear-gradient(to right, #2d1f70, #2d1f70);
+          border-radius: 2px;
         }
-        
         .title-gradient {
             background: linear-gradient(135deg,#2d1f70,  #2d1f70);
             -webkit-background-clip: text;
@@ -1307,5 +1309,104 @@
   
   .card-title {
     text-align: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  html, body {
+    overflow-x: hidden; /* mata cualquier scroll fantasma */
+  }
+
+  .title-main::after {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+/* ===============================
+   FIX MOBILE – SIN ROMPER ESTILOS
+================================ */
+
+/* Evita scroll horizontal fantasma */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Evita que el texto grande se corte */
+.hero-title {
+  line-height: 1.2;
+  overflow: visible;
+}
+
+/* Texto con gradiente (emprendedor) */
+.text-emprendedor {
+  display: inline-block;
+  padding-bottom: 0.15em; /* evita que se corte abajo */
+  line-height: 1.15;
+}
+
+/* SOLO EN CELULAR */
+@media (max-width: 576px) {
+
+  .text-emprendedor {
+    font-size: 38px;   /* antes se salía */
+    background-size: 300%;
+    word-break: break-word;
+  }
+
+  /* Quita la línea rara SOLO en móvil */
+  .title-main::after,
+  .text-gradient-primary::after {
+    display: none;
+  }
+}
+
+/* ===============================
+   FIX VIDEO HERO (VISIBLE SIEMPRE)
+================================ */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;        /* 🔥 da altura real */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 se adapta */
+  z-index: -1;         /* queda de fondo */
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    height: 60vh; /* no tan alto en móvil */
+  }
+}
+
+/* ===============================
+   FIX MOBILE – BOTÓN Y STATS
+================================ */
+
+@media (max-width: 576px) {
+
+  /* Espacio para el botón amarillo */
+  .btn-info-custom {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Stats apiladas correctamente */
+  .stats-container {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .stat-item {
+    text-align: center;
   }
 }
