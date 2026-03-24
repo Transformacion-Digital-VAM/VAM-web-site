@@ -17,6 +17,7 @@ import { CardVacanteComponent } from './pages/card-vacante/card-vacante.componen
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.component';
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
+import { CrediImpactoVamComponent } from './pages/credi-impacto-vam/credi-impacto-vam.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'inicio', pathMatch: 'full'},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path: 'entidades-financieras', component: EntidadesFinancierasComponent},
   {path: 'presolicitar-credito', component: PresolicitudCreditoComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
+  {path: 'credimpacto-vam', component: CrediImpactoVamComponent},
   {path: 'asesor-virtual', component: AsesorVirtualComponent},
   {path: 'error404', component: Error404Component},
   {path: '**', redirectTo: 'inicio'}

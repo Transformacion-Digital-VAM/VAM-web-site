@@ -1410,3 +1410,254 @@ html, body {
     text-align: center;
   }
 }
+
+/* Eco Card Styles */
+.eco-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.eco-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Image Section */
+.eco-img {
+  flex: 1;
+  min-width: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-img img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.eco-card:hover .eco-img img {
+  transform: scale(1.05);
+}
+
+.eco-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Content Section */
+.eco-content {
+  flex: 1;
+  padding: 2rem;
+  min-width: 280px;
+}
+
+.eco-content h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a472a;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.eco-content h4 i {
+  color: #2e7d32;
+  font-size: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.eco-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.eco-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #3c9cc8, #3c9cc8);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.eco-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.eco-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.eco-btn:hover {
+  background: linear-gradient(135deg, #1b5e20, #0a3d0f);
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .eco-row {
+    flex-direction: column;
+  }
+  
+  .eco-img {
+    min-width: 100%;
+    max-height: 250px;
+  }
+  
+  .eco-content {
+    padding: 1.5rem;
+  }
+  
+  .eco-content h4 {
+    font-size: 1.5rem;
+  }
+  
+  .eco-content h4 i {
+    font-size: 1.75rem;
+  }
+  
+  .eco-content p {
+    font-size: 1rem;
+  }
+  
+  .eco-btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eco-content h4 {
+    font-size: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .eco-content {
+    text-align: center;
+  }
+  
+  .eco-btn {
+    margin: 0 auto;
+  }
+}
+
+/* Optional: Add a subtle gradient border effect */
+.eco-card {
+  position: relative;
+}
+
+.eco-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2e7d32, #81c784, #2e7d32);
+  border-radius: 20px 20px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.eco-card:hover::after {
+  opacity: 1;
+}
+
+/* Accessibility */
+.eco-btn:focus-visible {
+  outline: 2px solid #2e377d;
+  outline-offset: 2px;
+}
+
+.eco-content h4, 
+.eco-content p {
+  margin: 0 0 1rem 0;
+}
+
+.eco-content p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.hr-text {
+  font-family: "century gothic", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 2.5em;
+  opacity: .5;
+  &:before {
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+  &:after {
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #000000;
+    background-color: #fcfcfa;
+  }
+}

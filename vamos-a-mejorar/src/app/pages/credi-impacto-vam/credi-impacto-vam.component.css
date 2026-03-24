@@ -1,0 +1,404 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===== HEADER MEJORADO ===== */
+.header-section {
+    background: 
+        linear-gradient(135deg, rgba(10, 31, 117, 0.689), rgba(26, 59, 158, 0.498)),
+        url('../../../assets/credimpacto.jpeg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.header-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.header-section .title-underline::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 4px;
+    background-color: #ffbb00; /* Amarillo para resaltar */
+    margin: 20px auto;
+    border-radius: 4px;
+}
+
+.header-section .lead {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ===== SECCIÓN PRINCIPAL (CON IMAGEN) MEJORADA ===== */
+.info-section {
+    padding: 40px 0 60px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: texto e imagen */
+    gap: 50px;
+    align-items: center;
+}
+
+.info-image img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 40, 80, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.info-image img:hover {
+    transform: scale(1.02);
+}
+
+.info-content h3 {
+    font-size: 2rem;
+    color: #0a2075;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.info-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 130px;
+    height: 4px;
+    background-color: #ffbb00;
+    border-radius: 2px;
+}
+
+.info-content h4 {
+    font-size: 1.4rem;
+    color: #1a3b9e;
+    margin: 30px 0 15px;
+}
+
+.info-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.benefits-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Beneficios en dos columnas */
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.benefits-list li {
+    background: #E6F4EC;
+    padding: 12px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #0a2075;
+    border-left: 4px solid #00861b;
+}
+
+/* Símbolo de check (puedes usar un icono de fuente si prefieres) */
+.benefits-list li::before {
+    content: "✓";
+    background-color: #004705;
+    color: white;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+}
+
+.feature-item strong {
+    color: #0a2075;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    margin: 0;
+    color: #5a6a7a;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #0a2075 0%, rgb(19, 0, 141) 100%);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-box h4 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid #0a2075;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: #ffd000;
+}
+
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+    .info-grid {
+        grid-template-columns: 1fr; /* Una columna en tablets */
+        gap: 30px;
+    }
+
+    .info-image {
+        order: -1; /* La imagen arriba en móviles */
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr; /* Beneficios en una columna */
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* Características en una columna */
+    }
+
+    .testimonios-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .info-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-section {
+        padding: 60px 15px;
+    }
+
+    .header-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .header-section .lead {
+        font-size: 1.1rem;
+    }
+
+    .cta-box h4 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+
+
+
+
+@-webkit-keyframes flap-r {
+  0%,10%   { 	border-top-width: 60px; }
+  40%,60%  { 	border-top-width: 10px; }
+  100%     { 	border-top-width: 60px; }
+}
+
+@-webkit-keyframes flap-l {
+  0%       { 	border-bottom-width: 0px; }
+  40%,60%  { 	border-bottom-width: 40px; }
+  100%     { 	border-bottom-width: 0px; }
+}
+
+@-webkit-keyframes fly {
+  0%   { 	left: 0%; top:100px;-webkit-transform:scale3d(0.5,0.5,1) }
+  100% { 	left: 100%; top:100px; -webkit-transform:scale3d(1,1,1) }
+}
+
+@-webkit-keyframes bob {
+  0%   { 	top: 25px; }
+  50%   { 	top: 0px; }
+  100% { 	top: 25px; }
+}
+
+#pictureframe {
+  position:relative;
+  width:100px;
+  margin-top:100px;
+  -webkit-animation: fly 3.5s infinite linear;
+}
+
+#shadow {
+  position:absolute;
+  width: 0px; height: 0px; 
+  top: 140px; left: 00px;
+  border-width: 10px;
+  border-left-width:50px;
+  border-top-width:0px;
+  border-right-width: 40px;
+  border-color: transparent;
+  border-bottom-color: rgba(210,210,210,0.6);
+  border-style:solid;
+  -webkit-filter: blur(5px);
+}
+
+#shadow:after {
+  content: " ";
+  position:absolute;
+  width: 00px; height: 0px; 
+  top: 10px; left: -50px;
+  border-width: 10px;
+  border-left-width:50px;
+  border-bottom-width:0px;
+  border-right-width: 40px;
+  border-color: transparent;
+  border-top-color: rgba(210,210,210,0.6);
+  border-style:solid;
+}
+
+#bird div {
+  position:absolute;
+}
+
+#bird { 
+  position:absolute;
+  -webkit-animation: bob 0.7s infinite cubic-bezier(0.7, 0.7, 0.1, 0.4);
+ }
+
+
+#body1,#body2,#wing-l,#wing-r {
+  	width: 0px; height: 0px;
+    border-color: transparent;
+    border-style: solid;
+}
+#body1 {
+border-width: 15px; 
+  border-left-width:25px;
+  border-top-width:15px;
+  border-right-width: 55px;
+  border-top-color: #0288C8;
+}
+
+#body2 { 
+  left: 50px; bottom: 0px;
+	border-width: 10px; 
+  border-left-width:5px;
+  border-top-width:0px;
+  border-right-width: 15px;
+  border-bottom-color: #59B2C8
+;
+}
+
+#wing-l {
+  left: 22px; bottom: 0px; 
+	border-width: 60px; 
+  border-left-width:20px;
+  border-top-width:0px;
+  border-right-width: 6px;
+  border-bottom-color: #E54E53;
+  -webkit-animation: flap-l 0.7s infinite; 
+}
+
+#wing-r {
+  left: 22px; top:0px;
+	border-width: 60px; 
+  border-left-width:20px;
+  border-bottom-width:0px;
+  border-right-width: 6px;
+  border-top-color: #FABE11;
+  -webkit-animation: flap-r 0.7s infinite; 
+}
+
+
+#caption a {
+  position:absolute;
+  font-family: courier;
+  left:10px; bottom:10px;
+  color: #444;
+}

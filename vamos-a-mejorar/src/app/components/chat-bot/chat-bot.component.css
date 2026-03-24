@@ -193,7 +193,7 @@
   border: 1px solid #005fa3;
   z-index: 999;
   animation: bubbleFadeIn 0.6s ease-out;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 /* Triángulo de la burbuja */

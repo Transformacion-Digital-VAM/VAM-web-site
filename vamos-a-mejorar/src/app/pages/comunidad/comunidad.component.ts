@@ -117,6 +117,20 @@ export class ComunidadComponent implements OnInit {
           'assets/ods8.png'
         ]
       }
+    },
+     {
+      id: 'credimpacto',
+      titulo: 'Vamos a Mejorar el Futuro',
+      descripcion: 'Impulso a soluciones ecológicas',
+      imagen: '../assets/images/credimpacto.png',
+      contenido: {
+        titulo: 'Vamos a Mejorar el Futuro',
+        descripcion: 'En Vamos a Mejorar creemos que crecer financieramente también implica mejorar nuestro entorno y construir un futuro más sostenible. Por eso, nuestro crédito individual también está diseñado para impulsar soluciones que no solo beneficien tu economía, sino que también contribuyan a los Objetivos de Desarrollo Sostenible, promoviendo el uso responsable de los recursos, el acceso a energías limpias y el bienestar de las comunidades.',
+        iconos: [
+          'assets/ods13.png',
+          'assets/ods12.png',
+        ]
+      }
     }
   ];
 
@@ -263,7 +277,7 @@ export class ComunidadComponent implements OnInit {
         ]
       }
     },
-    {
+  {
       id: 'generos',
       contenido: {
         titulo: 'Igualdad de Género',
@@ -279,6 +293,26 @@ export class ComunidadComponent implements OnInit {
             texto: 'ODS 8: Trabajo decente y crecimiento económico', 
             enlace: 'https://www.un.org/sustainabledevelopment/es/economic-growth/',
             descripcion: 'Promover el crecimiento económico sostenido, inclusivo y sostenible, el empleo pleno y productivo y el trabajo decente para todos.' 
+          }
+        ]
+      }
+    },
+        {
+      "id": "credimpacto",
+      "contenido": {
+        "titulo": "Vamos a Mejorar el Futuro",
+        "descripcion": "En Vamos a Mejorar impulsamos soluciones financieras que generan bienestar económico y ambiental. A través de nuestro crédito individual, promovemos inversiones en tecnologías sostenibles que ayudan a reducir gastos, optimizar recursos y mejorar la calidad de vida, contribuyendo activamente a un futuro más responsable y consciente.",
+        "impacto": "Fomentamos el acceso a soluciones ecológicas como energías limpias y el uso eficiente del agua, alineándonos con los ODS 7 y 12 para impulsar comunidades más sostenibles, resilientes y comprometidas con el medio ambiente.",
+        "lista": [
+          { 
+            "texto": "ODS 7: Energía asequible y no contaminante", 
+            "enlace": "https://www.un.org/sustainabledevelopment/es/energy/",
+            "descripcion": "Garantizar el acceso a una energía asequible, segura, sostenible y moderna para todos." 
+          },
+          { 
+            "texto": "ODS 12: Producción y consumo responsables", 
+            "enlace": "https://www.un.org/sustainabledevelopment/es/sustainable-consumption-production/",
+            "descripcion": "Garantizar modalidades de consumo y producción sostenibles mediante el uso eficiente de los recursos." 
           }
         ]
       }

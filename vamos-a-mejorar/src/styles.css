@@ -7,4 +7,10 @@
   /* Transición suave al hacer scroll */
   html {
     scroll-behavior: smooth;
+    
   }
+
+  body {
+    color: #2d3e4f; /* Color de texto principal más suave */
+    background-color: #ffffff;
+}

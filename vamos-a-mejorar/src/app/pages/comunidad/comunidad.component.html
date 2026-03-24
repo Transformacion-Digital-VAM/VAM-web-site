@@ -23,7 +23,7 @@
             <div class="card-image">
               <img [src]="tarjeta.imagen" class="card-img-top" [alt]="tarjeta.titulo">
               <div class="card-body">
-                <h5 class="card-title">{{ tarjeta.titulo }}</h5>
+                <h3 class="card-title">{{ tarjeta.titulo }}</h3>
                 <p class="card-text">{{ tarjeta.descripcion }}</p>
                 <!-- contenedor de iconos -->
                 <div class="iconos">
@@ -52,7 +52,9 @@
 </div>
 
 <!-- Modal -->
-<div class="modal-backdrop" *ngIf="mostrarModal" (click)="cerrarModal()"></div>
+<div class="modal-backdrop" *ngIf="mostrarModal" (click)="cerrarModal()">
+
+</div>
 
 <div class="modal" [class.show]="mostrarModal" *ngIf="mostrarModal && modalSeleccionado">
   <div class="modal-content">
