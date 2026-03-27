@@ -13,12 +13,12 @@ export class ComunidadComponent implements OnInit {
     {
       id: 'artixan',
       titulo: 'Artixan',
-      descripcion: 'Impulso a la Artesanía Mexicana',
+      descripcion: 'Impulsamos el crecimiento de los negocios de nuestros clientes artesanos',
       imagen: '/assets/artixan.jpeg',
       contenido: {
         titulo: 'Artixan',
         descripcion: 'En Vamos a Mejorar, apoyamos con orgullo a nuestros clientes artesanos a través de Artixan, una plataforma dedicada a impulsar sus creaciones hechas a mano.',
-        detalles: 'Creemos firmemente en el valor de lo auténtico, lo hecho con el corazón y las manos. Por eso, trabajamos codo a codo con una comunidad de artesanos que han dedicado su vida a preservar y compartir la riqueza cultural de nuestro país.',
+        detalles: 'Creemos firmemente en el valor de lo auténtico, de lo hecho con el corazón y las manos. Por eso, trabajamos de cerca con nuestros clientes artesanos, quienes han dedicado su vida a preservar y compartir la riqueza cultural de nuestro país.',
         iconos: [
           'assets/ods8.png',
           'assets/ods11.png'
@@ -28,7 +28,7 @@ export class ComunidadComponent implements OnInit {
     {
       id: 'atencion-personalizada',
       titulo: 'Atención Personalizada',
-      descripcion: 'Atención hasta tu domicilio',
+      descripcion: 'Atención personalizada hasta tu hogar',
       imagen: '/assets/atencion2.png',
       contenido: {
         titulo: 'Atención Personalizada',
@@ -47,7 +47,7 @@ export class ComunidadComponent implements OnInit {
       imagen: '/assets/inclusion.jpg',
       contenido: {
         titulo: 'Inclusión Financiera',
-        descripcion: 'En Vamos a Mejorar estamos comprometidos con la inclusión financiera, ofreciendo servicios tanto grupales como individuales que facilitan el acceso a soluciones financieras adaptadas a las necesidades de cada cliente.',
+        descripcion: 'En Vamos a Mejorar estamos comprometidos con la inclusión financiera acercando nuestros servicios, educación y oportunidades a personas que tradicionalmente han enfrentado barreras para acceder a productos financieros. Nos enfocamos especialmente en apoyar a mujeres, quienes a menudo tienen menos acceso a recursos económicos, brindándoles herramientas y acompañamiento para que puedan mejorar su bienestar económico de manera segura y confiable. Ofreciendo créditos grupales e individuales.',
         detalles: 'Nuestro enfoque busca brindar apoyo cercano y personalizado para que todas las personas puedan mejorar su bienestar económico con confianza y facilidad, contribuyendo así al crecimiento de comunidades fuertes y autosuficientes.',
         iconos: [
           'assets/ods5.png',
@@ -57,9 +57,26 @@ export class ComunidadComponent implements OnInit {
       }
     },
     {
+      id: 'educacion',
+      titulo: 'Educación Financiera',
+      descripcion: 'Te ayudamos a mejorar la forma en la que manejas tu dinero',
+      imagen: '/assets/educacion.png',
+      contenido: {
+        titulo: 'Educación Financiera',
+        descripcion: 'En Vamos a Mejorar creemos fielmente que el accesos al dinero no es suficiente; también es importante saber cómo administrarlo. Por eso ofrecemos educación financiera gratuita para ayudarte a tomar las mejores decisiones, evitando deudas innecesarias y construyendo un futuro económico más sólido.',
+        detalles: 'Nuestro enfoque se centra en fomentar la educación financiera a través de un acompañamiento cercano y personalizado, brindando a las personas las herramientas y conocimientos necesarios para tomar decisiones económicas informadas. Así, impulsamos su bienestar financiero y contribuimos al desarrollo de comunidades más sólidas, responsables y autosuficientes.',
+        iconos: [
+          'assets/ods4.png',
+          'assets/ods8.png',
+          'assets/ods10.png',
+          'assets/ods11.png'
+        ]
+      }
+    },
+    {
       id: 'despensas',
-      titulo: 'Apoyo de Despensas',
-      descripcion: 'Apoyo a la alimentación',
+      titulo: 'Compromiso por el bienestar',
+      descripcion: 'Combatimos el hambre y la desnutrición',
       imagen: 'https://www.caritas.org.mx/wp-content/uploads/2020/07/que-lleva-una-despensa-basica.jpg',
       contenido: {
         titulo: 'Apoyo de Despensas',
@@ -71,26 +88,26 @@ export class ComunidadComponent implements OnInit {
         ]
       }
     },
-    {
-      id: 'circulo-vam',
-      titulo: 'Círculo VAM',
-      descripcion: 'Fortalecer el vínculo con nuestros clientes',
-      imagen: '/assets/testimonio.jpg',
-      contenido: {
-        titulo: 'Círculo VAM',
-        descripcion: 'Círculo VAM es un evento exclusivo diseñado para convivir y fortalecer el vínculo con nuestros clientes. Este espacio nace con el propósito de reconocer su compromiso y fidelidad, así como compartir los beneficios que disfrutan al formar parte de nuestra financiera.',
-        detalles: 'Durante el evento, creamos un ambiente cercano mediante dinámicas interactivas, experiencias significativas y momentos de diálogo. En estos espacios, mostramos de forma clara cómo nuestros servicios contribuyen a su crecimiento y cómo pueden seguir obteniendo beneficios al trabajar con nosotros.',
-        iconos: [
-          'assets/ods4.png',
-          'assets/ods5.png',
-          'assets/ods8.png'
-        ]
-      }
-    },
+    // {
+    //   id: 'circulo-vam',
+    //   titulo: 'Círculo VAM',
+    //   descripcion: 'Fortalecer el vínculo con nuestros clientes',
+    //   imagen: '/assets/testimonio.jpg',
+    //   contenido: {
+    //     titulo: 'Círculo VAM',
+    //     descripcion: 'Círculo VAM es un evento exclusivo diseñado para convivir y fortalecer el vínculo con nuestros clientes. Este espacio nace con el propósito de reconocer su compromiso y fidelidad, así como compartir los beneficios que disfrutan al formar parte de nuestra financiera.',
+    //     detalles: 'Durante el evento, creamos un ambiente cercano mediante dinámicas interactivas, experiencias significativas y momentos de diálogo. En estos espacios, mostramos de forma clara cómo nuestros servicios contribuyen a su crecimiento y cómo pueden seguir obteniendo beneficios al trabajar con nosotros.',
+    //     iconos: [
+    //       'assets/ods4.png',
+    //       'assets/ods5.png',
+    //       'assets/ods8.png'
+    //     ]
+    //   }
+    // },
     {
       id: 'utiles',
       titulo: 'Entrega de Kits Escolares',
-      descripcion: 'Un apoyo constante a nuestras familias',
+      descripcion: 'Impulsamos la educación con herramientas de cálidad',
       imagen: 'assets/kitutiles.jpeg',
       contenido: {
         titulo: 'Útiles Escolares',
@@ -139,7 +156,7 @@ export class ComunidadComponent implements OnInit {
       id: 'artixan',
       contenido: {
         titulo: 'Artixan',
-        descripcion: 'Artixan fomenta el empleo digno y el crecimiento económico de artesanos locales, al tiempo que preserva la riqueza cultural de México.',
+        descripcion: 'Artixan fomenta el empleo digno y el crecimiento económico de nuestros artesanos, al tiempo que preserva la riqueza cultural de México.',
         impacto: 'Con ello, contribuye al ODS 8 y al ODS 11, fortaleciendo la identidad cultural y generando oportunidades económicas sostenibles.',
         lista: [
           { 
@@ -156,7 +173,7 @@ export class ComunidadComponent implements OnInit {
         web: [
           {
             texto: 'Visita Artixan',
-            enlace: 'https://artixan.com.mx/'
+            enlace: 'https://www.instagram.com/artixanmx/'
           }
         ]
       }
@@ -207,6 +224,36 @@ export class ComunidadComponent implements OnInit {
       }
     },
     {
+      id: 'educacion',
+      contenido: {
+            titulo: 'Educación Financiera',
+            descripcion: 'Promovemos la educación financiera mediante herramientas y acompañamiento accesible para personas y grupos, fortaleciendo sus conocimientos para tomar decisiones económicas informadas y mejorar su bienestar.',
+            impacto: 'Esta iniciativa se alinea con el ODS 4, el ODS 5, el ODS 8 y el ODS 10, al impulsar el conocimiento financiero como base para la inclusión, la equidad y el desarrollo económico sostenible.',
+            lista: [
+              { 
+                texto: 'ODS 4: Educación de calidad', 
+                enlace: 'https://www.un.org/sustainabledevelopment/es/education/',
+                descripcion: 'Fomenta habilidades financieras clave como el ahorro, la planificación y la toma de decisiones responsables.' 
+              },
+              { 
+                texto: 'ODS 5: Igualdad de género', 
+                enlace: 'https://www.un.org/sustainabledevelopment/es/gender-equality/',
+                descripcion: 'Impulsa el acceso de las mujeres a conocimientos financieros que fortalecen su autonomía económica.' 
+              },
+              { 
+                texto: 'ODS 8: Trabajo decente y crecimiento económico', 
+                enlace: 'https://www.un.org/sustainabledevelopment/es/economic-growth/',
+                descripcion: 'Desarrolla capacidades para una mejor gestión de ingresos, promoviendo estabilidad y crecimiento económico.' 
+              },
+              { 
+                texto: 'ODS 10: Reducción de desigualdades', 
+                enlace: 'https://www.un.org/sustainabledevelopment/es/inequality/',
+                descripcion: 'Reduce brechas al acercar la educación financiera a comunidades con menor acceso a información económica.' 
+              }
+            ]
+    }
+    },
+    {
       id: 'despensas',
       contenido: {
         titulo: 'Apoyo de Despensas',
@@ -226,32 +273,32 @@ export class ComunidadComponent implements OnInit {
         ]
       }
     },
-    {
-      id: 'circulo-vam',
-      contenido: {
-        titulo: 'Círculo VAM',
-        descripcion: 'Círculo VAM fortalece los vínculos con los clientes mediante eventos interactivos.',
-        impacto: 'Contribuye a la educación con el ODS 4, ODS 5 la igualdad de género y oportunidades económicas en el ODS 8 a través de capacitación, inclusión y actividades que impulsan la innovación y colaboración.',
-        lista: [
-          {
-            texto: 'ODS 4: Educación de calidad',
-            enlace: 'https://www.un.org/sustainabledevelopment/es/education/',
-            descripcion: 'Ofrece capacitación y transferencia de conocimiento (talleres, charlas, materiales) que mejoran las capacidades financieras y productivas de los participantes.'
-          },
-          {
-            texto: 'ODS 5: Igualdad de género',
-            enlace: 'https://www.un.org/sustainabledevelopment/es/gender-equality/',
-            descripcion: 'Incluye acciones para promover la participación y empoderamiento de mujeres (convocatorias inclusivas, talleres específicos y acceso a recursos/mentoría).'
-          },
-          {
-            texto: 'ODS 8: Trabajo decente y crecimiento económico',
-            enlace: 'https://www.un.org/sustainabledevelopment/es/economic-growth/',
-            descripcion: 'Fomenta oportunidades de emprendimiento y mejora de capacidades que pueden traducirse en generación de ingresos y empleo local.'
-          }
-        ],
-        enlace: ''
-      }
-    },
+    // {
+    //   id: 'circulo-vam',
+    //   contenido: {
+    //     titulo: 'Círculo VAM',
+    //     descripcion: 'Círculo VAM fortalece los vínculos con los clientes mediante eventos interactivos.',
+    //     impacto: 'Contribuye a la educación con el ODS 4, ODS 5 la igualdad de género y oportunidades económicas en el ODS 8 a través de capacitación, inclusión y actividades que impulsan la innovación y colaboración.',
+    //     lista: [
+    //       {
+    //         texto: 'ODS 4: Educación de calidad',
+    //         enlace: 'https://www.un.org/sustainabledevelopment/es/education/',
+    //         descripcion: 'Ofrece capacitación y transferencia de conocimiento (talleres, charlas, materiales) que mejoran las capacidades financieras y productivas de los participantes.'
+    //       },
+    //       {
+    //         texto: 'ODS 5: Igualdad de género',
+    //         enlace: 'https://www.un.org/sustainabledevelopment/es/gender-equality/',
+    //         descripcion: 'Incluye acciones para promover la participación y empoderamiento de mujeres (convocatorias inclusivas, talleres específicos y acceso a recursos/mentoría).'
+    //       },
+    //       {
+    //         texto: 'ODS 8: Trabajo decente y crecimiento económico',
+    //         enlace: 'https://www.un.org/sustainabledevelopment/es/economic-growth/',
+    //         descripcion: 'Fomenta oportunidades de emprendimiento y mejora de capacidades que pueden traducirse en generación de ingresos y empleo local.'
+    //       }
+    //     ],
+    //     enlace: ''
+    //   }
+    // },
     {
       id: 'utiles',
       contenido: {

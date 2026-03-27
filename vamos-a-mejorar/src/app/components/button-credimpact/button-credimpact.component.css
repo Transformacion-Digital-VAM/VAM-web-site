@@ -1,0 +1,211 @@
+.sun-cloud {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* Nubes */
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 60px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cloud-circle {
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Nube principal (detrás) */
+.cloud-1 {
+  width: 70px;
+  height: 45px;
+  top: 15px;
+  left: 10px;
+  background: white;
+  z-index: 1;
+}
+
+.cloud-1 .cloud-circle:nth-child(1) {
+  width: 35px;
+  height: 35px;
+  top: -18px;
+  left: 5px;
+}
+
+.cloud-1 .cloud-circle:nth-child(2) {
+  width: 42px;
+  height: 42px;
+  top: -22px;
+  left: 22px;
+}
+
+.cloud-1 .cloud-circle:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  top: -12px;
+  left: 45px;
+}
+
+/* Nube secundaria */
+.cloud-2 {
+  width: 55px;
+  height: 38px;
+  top: 40px;
+  left: 45px;
+  background: white;
+  z-index: 2;
+}
+
+.cloud-2 .cloud-circle:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  left: 5px;
+}
+
+.cloud-2 .cloud-circle:nth-child(2) {
+  width: 35px;
+  height: 35px;
+  top: -18px;
+  left: 25px;
+}
+
+/* Sol */
+.sun {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sun-core {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #FFD966, #FFB347);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 180, 71, 0.6);
+  transition: all 0.3s ease;
+}
+
+.sun-ray {
+  position: absolute;
+  background: linear-gradient(135deg, #FFB347, #FFD966);
+  border-radius: 10px;
+  transform-origin: center;
+}
+
+/* Rayos del sol */
+.ray-1, .ray-2, .ray-3, .ray-4, .ray-5, .ray-6, .ray-7, .ray-8 {
+  width: 12px;
+  height: 4px;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+}
+
+.ray-1 { transform: rotate(0deg) translateX(32px); }
+.ray-2 { transform: rotate(45deg) translateX(32px); }
+.ray-3 { transform: rotate(90deg) translateX(32px); }
+.ray-4 { transform: rotate(135deg) translateX(32px); }
+.ray-5 { transform: rotate(180deg) translateX(32px); }
+.ray-6 { transform: rotate(225deg) translateX(32px); }
+.ray-7 { transform: rotate(270deg) translateX(32px); }
+.ray-8 { transform: rotate(315deg) translateX(32px); }
+
+/* Texto */
+.text {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2C3E50;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 4;
+}
+
+/* Animaciones */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cloudFloat {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+/* Efectos hover */
+.sun-cloud:hover .sun-core {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 180, 71, 0.9);
+}
+
+.sun-cloud:hover .sun-ray {
+  animation: rotateSlow 4s linear infinite;
+}
+
+.sun-cloud:hover .cloud-1 {
+  animation: cloudFloat 2s ease-in-out infinite;
+}
+
+.sun-cloud:hover .cloud-2 {
+  animation: cloudFloat 2.5s ease-in-out infinite reverse;
+}
+
+.sun-cloud:hover .text {
+  transform: translateX(-50%) translateY(-5px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #FFB347;
+}
+
+.sun-cloud:active {
+  transform: scale(0.98);
+}

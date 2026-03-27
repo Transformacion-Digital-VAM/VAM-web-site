@@ -43,6 +43,7 @@ import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 import { AsesorVirtualComponent } from './pages/asesor-virtual/asesor-virtual.component';
 import { BeneficiosComponent } from './pages/beneficios/beneficios.component';
 import { CrediImpactoVamComponent } from './pages/credi-impacto-vam/credi-impacto-vam.component';
+import { ButtonCredimpactComponent } from './components/button-credimpact/button-credimpact.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CrediImpactoVamComponent } from './pages/credi-impacto-vam/credi-impact
     BeneficiosComponent,
     CardVacanteComponent,
     VacantesComponent,
-    CrediImpactoVamComponent
+    CrediImpactoVamComponent,
+    ButtonCredimpactComponent
   ],
   imports: [
     BrowserModule,

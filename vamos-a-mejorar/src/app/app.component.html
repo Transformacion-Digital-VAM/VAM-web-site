@@ -13,6 +13,9 @@
 </div>
 
 <!-- <app-alertafraude></app-alertafraude> -->
+<app-button-credimpact></app-button-credimpact>
 <app-chat-bot></app-chat-bot>
-<router-outlet></router-outlet>
+<div [@fadeAnimation]="prepareRoute(outlet)" style="min-height: 60vh;">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
 <app-footer></app-footer>
