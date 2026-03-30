@@ -25,8 +25,10 @@ export class CrediImpactoVamComponent implements OnInit, OnDestroy {
     { title: 'Focos ahorradores', img: '../../../assets/images/focos-catalogo.jpeg', alt: '1' },
     { title: 'Captadores de agua', img: '../../../assets/images/catalizador.jpeg', alt: '2' },
     { title: 'Paneles solares', img: '../../../assets/images/paneles-solares.jpeg', alt: '3' },
-      { title: 'Calentadores de agua', img: '../../../assets/images/calentador-solar.jpeg', alt: '4' },
-      { title: 'Aerogeneradores portátiles', img: '../../../assets/images/aerogeneradores.jpeg', alt: '5' },
+    { title: 'Calentadores de agua', img: '../../../assets/images/calentador-solar.jpeg', alt: '4' },
+    { title: 'Aerogeneradores portátiles', img: '../../../assets/images/aerogeneradores.jpeg', alt: '5' },
+    
+      
   ];
   currentIndex = 0;
   transitionStyle = 'transform 0.5s ease';
