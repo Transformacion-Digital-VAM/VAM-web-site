@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./card-vacante.component.css']
 })
 export class CardVacanteComponent {
-  @Input() vacante!: Vacante;
+  @Input() vacante?: Vacante;
   @Output() close = new EventEmitter<void>();
 
   submitting = false;
@@ -58,7 +58,9 @@ export class CardVacanteComponent {
     // Preparamos FormData
     const data = new FormData();
     // Si quieres enviar el título de la vacante:
-    data.append('titulo', this.vacante.titulo);
+    if (this.vacante) {
+      data.append('titulo', this.vacante.titulo);
+    }
     data.append('nombre', this.form.nombre.trim());
     data.append('telefono', this.form.telefono.trim());
     data.append('email', this.form.email.trim());

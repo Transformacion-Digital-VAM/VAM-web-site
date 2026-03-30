@@ -1,4 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-credi-impacto-vam',
@@ -7,28 +8,30 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './credi-impacto-vam.component.css'
 })
 export class CrediImpactoVamComponent implements OnInit, OnDestroy {
-    private autoplayInterval: any;
-    ngOnInit() {
+  private autoplayInterval: any;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
       this.autoplayInterval = setInterval(() => {
         if (!this.isDragging) {
           this.moveCarousel();
         }
       }, 3500); // Cambia la imagen cada 3.5 segundos
     }
+  }
 
-    ngOnDestroy() {
-      if (this.autoplayInterval) {
-        clearInterval(this.autoplayInterval);
-      }
+  ngOnDestroy() {
+    if (this.autoplayInterval) {
+      clearInterval(this.autoplayInterval);
     }
+  }
   carouselItems = [
     { title: 'Focos ahorradores', img: '../../../assets/images/focos-catalogo.jpeg', alt: '1' },
     { title: 'Captadores de agua', img: '../../../assets/images/catalizador.jpeg', alt: '2' },
     { title: 'Paneles solares', img: '../../../assets/images/paneles-solares.jpeg', alt: '3' },
     { title: 'Calentadores de agua', img: '../../../assets/images/calentador-solar.jpeg', alt: '4' },
-    { title: 'Aerogeneradores portátiles', img: '../../../assets/images/aerogeneradores.jpeg', alt: '5' },
-    
-      
+    { title: 'Aerogeneradores portátiles', img: '../../../assets/images/aerogeneradores.jpeg', alt: '5' }
   ];
   currentIndex = 0;
   transitionStyle = 'transform 0.5s ease';
@@ -37,6 +40,7 @@ export class CrediImpactoVamComponent implements OnInit, OnDestroy {
   private startX = 0;
   private isDragging = false;
   private dragThreshold = 20;
+
 
   moveCarousel() {
     if (this.currentIndex < this.carouselItems.length - 1) {
