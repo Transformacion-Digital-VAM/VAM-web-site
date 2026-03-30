@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { interval, takeWhile } from 'rxjs';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { interval, Subscription, takeWhile } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
@@ -23,14 +24,26 @@ export class ChatBotComponent {
  displayedText = '';
   private fullText = "Chatea con nuestro asesor virtual";
 
+  private typingSubscription?: Subscription;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    this.startTypingAnimation();
+    if (isPlatformBrowser(this.platformId)) {
+      this.startTypingAnimation();
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.typingSubscription) {
+      this.typingSubscription.unsubscribe();
+    }
   }
 
 
   
   startTypingAnimation(): void {
-    interval(88) // Intervalo de 100ms entre caracteres
+    this.typingSubscription = interval(88) // Intervalo de 100ms entre caracteres
       .pipe(
         takeWhile(index => index <= this.fullText.length)
       )

@@ -51,8 +51,8 @@
       <div *ngFor="let vacante of vacantes; let i = index" class="vacante-card">
         <div class="vacante-header">
           <div>
-            <h2 class="vacante-titulo">{{ vacante.titulo }}</h2>
-            <h3 class="vacante-area">{{ vacante.area }}</h3>
+            <h2 class="vacante-titulo">{{ vacante?.titulo }}</h2>
+            <h3 class="vacante-area">{{ vacante?.area }}</h3>
           </div>
           <button (click)="openModal(vacante)" class="btn btn-postularse">
             <i class="fas fa-paper-plane me-2"></i>Postularse
@@ -67,7 +67,7 @@
               <i class="fas fa-chevron-down section-toggle"></i>
             </div>
             <div class="section-content">
-              <p class="vacante-texto">{{ vacante.descripcion }}</p>
+              <p class="vacante-texto">{{ vacante?.descripcion }}</p>
             </div>
           </div>
 
@@ -81,16 +81,16 @@
               <ul class="vacante-lista">
                 <li>
                   <i class="fas fa-calendar-alt icono"></i>
-                  <span>{{ vacante.horario.dias }}</span>
+                  <span>{{ vacante?.horario?.dias }}</span>
                 </li>
                 <li>
                   <i class="fas fa-clock icono"></i>
-                  <span>{{ vacante.horario.horas }}</span>
+                  <span>{{ vacante?.horario?.horas }}</span>
                 </li>
                 <li>
                   <i class="fas fa-briefcase icono"></i>
-                  <span>{{ vacante.modalidad }}
-                    <span *ngIf="vacante.tipo" class="badge-modality">{{ vacante.tipo }}</span>
+                  <span>{{ vacante?.modalidad }}
+                    <span *ngIf="vacante?.tipo" class="badge-modality">{{ vacante?.tipo }}</span>
                   </span>
                 </li>
               </ul>
@@ -105,7 +105,7 @@
             </div>
             <div class="section-content">
               <ul class="vacante-lista">
-                <li *ngFor="let beneficio of vacante.beneficios">
+                <li *ngFor="let beneficio of vacante?.beneficios">
                   <i class="fas fa-circle icono"></i>{{ beneficio }}
                 </li>
               </ul>
@@ -120,7 +120,7 @@
             </div>
             <div class="section-content">
               <ul class="vacante-lista">
-                <li class="lista requisitos" *ngFor="let requisito of vacante.requisitos">
+                <li class="lista requisitos" *ngFor="let requisito of vacante?.requisitos">
                   <i class="fas fa-circle icono"></i>{{ requisito }}
                 </li>
               </ul>

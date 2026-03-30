@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { TabsModule } from 'primeng/tabs';
 import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
-import { interval, takeWhile } from 'rxjs';
+import { interval, Subscription, takeWhile } from 'rxjs';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -17,12 +18,24 @@ export class InicioComponent {
  displayedText = '';
   private fullText = "Chatea con nuestro asesor virtual";
 
+  private typingSubscription?: Subscription;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
   ngOnInit(): void {
-    this.startTypingAnimation();
+    if (isPlatformBrowser(this.platformId)) {
+      this.startTypingAnimation();
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.typingSubscription) {
+      this.typingSubscription.unsubscribe();
+    }
   }
 
   startTypingAnimation(): void {
-    interval(88) // Intervalo de 100ms entre caracteres
+    this.typingSubscription = interval(88) // Intervalo de 100ms entre caracteres
       .pipe(
         takeWhile(index => index <= this.fullText.length)
       )
