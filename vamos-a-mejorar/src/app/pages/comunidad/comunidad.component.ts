@@ -28,7 +28,7 @@ export class ComunidadComponent implements OnInit {
     {
       id: 'atencion-personalizada',
       titulo: 'Atención Personalizada',
-      descripcion: 'Atención personalizada hasta tu hogar',
+      descripcion: 'Atención hasta tu hogarn para entender tus necesidades y ofrecerte soluciones a tu medida',
       imagen: '/assets/atencion2.png',
       contenido: {
         titulo: 'Atención Personalizada',
@@ -79,7 +79,7 @@ export class ComunidadComponent implements OnInit {
       descripcion: 'Combatimos el hambre y la desnutrición',
       imagen: 'https://www.caritas.org.mx/wp-content/uploads/2020/07/que-lleva-una-despensa-basica.jpg',
       contenido: {
-        titulo: 'Apoyo de Despensas',
+        titulo: 'Compromiso por el bienestar',
         descripcion: 'En Vamos a Mejorar, creemos en el poder de la colaboración para generar un impacto positivo. Por eso, nos hemos unido a la Fundación Nutrición y Vida, una organización comprometida con combatir la desnutrición en nuestra región mediante el acceso a alimentos básicos.',
         detalles: 'Gracias a esta alianza, no solo brindamos apoyo a nuestros clientes, sino también a personas en situación vulnerable. Este esfuerzo conjunto busca mejorar la calidad de vida de muchas familias y contribuir activamente al desarrollo social y comunitario.',
         iconos: [
@@ -110,7 +110,7 @@ export class ComunidadComponent implements OnInit {
       descripcion: 'Impulsamos la educación con herramientas de cálidad',
       imagen: 'assets/kitutiles.jpeg',
       contenido: {
-        titulo: 'Útiles Escolares',
+        titulo: 'Entrega de Kits Escolares',
         descripcion: 'En Vamos a Mejorar, creemos en el poder de la educación y en el valor de apoyar a nuestras comunidades. Por eso, desde hace más de 15 años, entregamos kits escolares gratuitos a los hijos e hijas de nuestros clientes, como parte del compromiso que tenemos con su calidad de vida y desarrollo.',
         detalles: 'Este programa ha beneficiado a miles de familias, ayudándolas a iniciar el ciclo escolar con las herramientas necesarias para un buen desempeño académico. Los kits incluyen útiles escolares de calidad.',
         iconos: [
@@ -124,7 +124,7 @@ export class ComunidadComponent implements OnInit {
       id: 'generos',
       titulo: 'Igualdad de Género',
       descripcion: 'Reforzando el empoderamiento de mujeres',
-      imagen: 'assets/generos.jpeg',
+      imagen: '../assets/images/igualdad.png',
       contenido: {
         titulo: 'Igualdad de Género',
         descripcion: 'En vamos a Mejorar, promovemos la igualdad de género proporcionando empleos a mujeres, apoyándolas en su desarrollo personal y profesional. Con un 80% de nuestros empleados siendo mujeres, reafirmamos nuestro compromiso con la equidad y el empoderamiento femenino.',
@@ -156,7 +156,7 @@ export class ComunidadComponent implements OnInit {
       id: 'artixan',
       contenido: {
         titulo: 'Artixan',
-        descripcion: 'Artixan fomenta el empleo digno y el crecimiento económico de nuestros artesanos, al tiempo que preserva la riqueza cultural de México.',
+        descripcion: 'En Vamos a Mejorar impulsamos a nuestros clientes artesanos a través de Artixan, brindándoles un espacio de exposición que les permite generar mayores ingresos y dar a conocer su trabajo, preservando la riqueza cultural de México.',
         impacto: 'Con ello, contribuye al ODS 8 y al ODS 11, fortaleciendo la identidad cultural y generando oportunidades económicas sostenibles.',
         lista: [
           { 
@@ -256,8 +256,8 @@ export class ComunidadComponent implements OnInit {
     {
       id: 'despensas',
       contenido: {
-        titulo: 'Apoyo de Despensas',
-        descripcion: 'El programa de despensas garantiza el acceso a alimentos esenciales, promoviendo la seguridad alimentaria y el bienestar de las familias.',
+        titulo: 'Compromiso por el bienestar',
+        descripcion: 'El programa compromiso por el bienestar garantiza el acceso a alimentos esenciales, promoviendo la seguridad alimentaria y el bienestar de las familias.',
         impacto: 'Esto contribuye directamente al ODS 2 y al ODS 3, apoyando comunidades más saludables y resilientes.',
         lista: [
           { 

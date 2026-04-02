@@ -6,7 +6,7 @@
 /* ===== HEADER MEJORADO ===== */
 .header-section {
     background: 
-        linear-gradient(135deg, rgba(10, 31, 117, 0.689), rgba(26, 59, 158, 0.498)),
+        linear-gradient(135deg, rgba(10, 31, 117, 0.542), rgba(26, 59, 158, 0.443)),
         url('../../../assets/credimpacto.jpeg');
     
     background-size: cover;
@@ -176,7 +176,7 @@
     color: #ffffff;
 }
 
-.btn {
+/* .btn {
     display: inline-block;
     padding: 15px 40px;
     background-color: #ffc107;
@@ -192,7 +192,7 @@
 .btn:hover {
     background-color: transparent;
     color: #ffd000;
-}
+} */
 
 
 /* ===== MEDIA QUERIES ===== */
@@ -405,6 +405,7 @@ border-width: 15px;
   transition: transform 0.3s ease-in-out;
   display: flex;
   align-items: flex-end;
+  
 }
 .carousel__item img {
   width: 100%;
