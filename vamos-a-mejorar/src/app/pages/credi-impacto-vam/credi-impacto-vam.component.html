@@ -13,7 +13,7 @@
             ayudarte para invertir en soluciones climáticas que reduzcan tus gastos y mejoren
             tu calidad de vida.
         </p>
-        <a href="/presolicitar-credito" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s mt-4">
+        <a routerLink="/presolicitar-credito" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s mt-4">
           Solicitar ahora <i class="fas fa-arrow-right ms-2"></i>
         </a>
     </div>
@@ -128,7 +128,7 @@
      (touchend)="onTouchEnd($event)">
   <div class="carousel__track" [style.transform]="'translateX(' + (-currentIndex * 320) + 'px)'" [style.transition]="transitionStyle">
     <div class="carousel__item" *ngFor="let item of carouselItems; let i = index">
-      <div class="carousel__title badge" style="background-color: #002594;">{{item.title}}</div>
+      <div class="carousel__title">{{item.title}}</div>
       <img [src]="item.img" [alt]="item.alt">
     </div>
   </div>
