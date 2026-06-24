@@ -1,19 +1,20 @@
 <!-- Sidebar de Navegación Flotante -->
 <div class="position-fixed d-none d-lg-block" style="top: 50%; left: 20px; transform: translateY(-50%); z-index: 1000;">
   <!-- Botón de toggle (siempre visible) -->
-  <button class="btn rounded-circle p-1 mb-2 shadow" (click)="toggleSidebar()" style="background-color: #2d1f70; border-width: 1px;">
+  <button class="btn rounded-circle p-1 mb-2 shadow" (click)="toggleSidebar()"
+    style="background-color: #2d1f70; border-width: 1px;">
     <i class="fas" [class.fa-bars]="!sidebarVisible" [class.fa-times]="sidebarVisible" style="color: aliceblue;"></i>
   </button>
-  
-  
+
+
   <!-- Contenido del sidebar con animación -->
   <div class="card shadow-lg rounded-4 border-0" [@sidebarAnimation]="sidebarVisible ? 'visible' : 'hidden'">
     <div class="card-body p-2">
       <ul class="nav flex-column gap-2">
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start" 
-          [ngClass]="{'active': currentSection === 'inicio'}"
-            [routerLink]="[]" fragment="inicio" style="color: #2d1f70;">
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'inicio'}" [routerLink]="[]" fragment="inicio"
+            style="color: #2d1f70;">
             <i class="fas fa-home me-2"></i> Inicio
           </a>
         </li>
@@ -25,30 +26,30 @@
           </a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start" 
-          [ngClass]="{'active': currentSection === 'beneficios'}"
-            [routerLink]="[]" fragment="beneficios" style="color: #2d1f70;">
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'beneficios'}" [routerLink]="[]" fragment="beneficios"
+            style="color: #2d1f70;">
             <i class="fas fa-star me-2"></i> Beneficios
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start" 
-          [ngClass]="{'active': currentSection === 'requisitos'}"
-            [routerLink]="[]" fragment="requisitos" style="color: #2d1f70;">
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'requisitos'}" [routerLink]="[]" fragment="requisitos"
+            style="color: #2d1f70;">
             <i class="fas fa-clipboard-check me-2"></i> Requisitos
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"  
-          [ngClass]="{'active': currentSection === 'documentacion'}"
-            [routerLink]="[]" fragment="documentacion" style="color: #2d1f70;">
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'documentacion'}" [routerLink]="[]" fragment="documentacion"
+            style="color: #2d1f70;">
             <i class="fas fa-file-alt me-2"></i> Documentación
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"  
-          [ngClass]="{'active': currentSection === 'contacto'}"
-            [routerLink]="[]" fragment="contacto" style="color: #2d1f70;">
+          <a class="nav-link btn btn-sm btn-outline-info rounded-pill text-start"
+            [ngClass]="{'active': currentSection === 'contacto'}" [routerLink]="[]" fragment="contacto"
+            style="color: #2d1f70;">
             <i class="fas fa-phone-alt me-2"></i> Contacto
           </a>
         </li>
@@ -58,11 +59,12 @@
 </div>
 
 <!-- Hero Section -->
-<section id="inicio" appScrollSpy [sectionId]="'inicio'" (sectionInView)="onSectionChange($event)" class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden"  style="background-image: url('../../../assets/images/vam-sma.png');  background-size: cover;  background-position: center;  background-repeat: no-repeat;  background-color: #860505;">
+<section id="inicio" appScrollSpy [sectionId]="'inicio'" (sectionInView)="onSectionChange($event)"
+  class="hero-section bg-gradient-primary text-white py-2 position-relative overflow-hidden"
+  style="background-image: url('../../../assets/images/vam-sma.png');  background-size: cover;  background-position: center;  background-repeat: no-repeat;  background-color: #860505;">
 
   <!-- Overlay oscuro -->
-  <div 
-    class="position-absolute top-0 start-0 w-100 h-100" 
+  <div class="position-absolute top-0 start-0 w-100 h-100"
     style="background: radial-gradient(rgba(17, 17, 158, 0.681)); z-index: 1;">
   </div>
 
@@ -77,7 +79,8 @@
         <p class="lead mb-5 fs-3 animate__animated animate__fadeIn animate__delay-1s">
           Financiamiento personalizado para impulsar tu negocio al siguiente nivel
         </p>
-        <a [routerLink]="'/presolicitar-credito'" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+        <a [routerLink]="'/presolicitar-credito'"
+          class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
           Solicitar ahora <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
@@ -85,7 +88,8 @@
   </div>
 
   <!-- Faja blanca inferior -->
-  <div class="position-absolute bottom-0 start-0 w-100" style="height: 25%; background-color: white; opacity: 0.1;"></div>
+  <div class="position-absolute bottom-0 start-0 w-100" style="height: 25%; background-color: white; opacity: 0.1;">
+  </div>
 </section>
 <!-- Descripción -->
 <!-- <section id="descripcion" appScrollSpy [sectionId]="'descripcion'" (sectionInView)="onSectionChange($event)" class="py-2 bg-white">
@@ -127,14 +131,17 @@
   </div>
 </section> -->
 <!-- Beneficios -->
-<section id="beneficios" appScrollSpy [sectionId]="'beneficios'" (sectionInView)="onSectionChange($event)"  class="py-2 bg-light">
+<section id="beneficios" appScrollSpy [sectionId]="'beneficios'" (sectionInView)="onSectionChange($event)"
+  class="py-2 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       <span class="badge-custom">Beneficios Exclusivos</span>
-      <h2 class="display-5 fw-bold mb-3">Ventajas de nuestro <span class="text-gradient-primary">crédito individual</span></h2>
-      <p class="text-muted lead mx-auto" style="max-width: 700px;">Potencia tu negocio con estas ventajas diseñadas para tu crecimiento</p>
+      <h2 class="display-5 fw-bold mb-3">Ventajas de nuestro <span class="text-gradient-primary">crédito
+          individual</span></h2>
+      <p class="text-muted lead mx-auto" style="max-width: 700px;">Potencia tu negocio con estas ventajas diseñadas para
+        tu crecimiento</p>
     </div>
-    
+
     <div class="row g-4">
       <!-- Beneficio 1 -->
       <div class="col-md-6 col-lg-4">
@@ -144,11 +151,11 @@
               <i class="fas fa-money-bill-wave fa-2x text-primary"></i>
             </div>
             <h4 class="fw-bold mb-3">Monto inicial accesible</h4>
-            <p class="text-muted mb-4">Desde $4,000 hasta $200,000 pesos</p>
+            <p class="text-muted mb-4">Desde $5,000 hasta $200,000 pesos</p>
           </div>
         </div>
       </div>
-      
+
       <!-- Beneficio 2 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -165,7 +172,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Beneficio 3 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -182,7 +189,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Beneficio 4 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -196,7 +203,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Beneficio 5 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -210,7 +217,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Beneficio 6 -->
       <div class="col-md-6 col-lg-4">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -228,14 +235,17 @@
   </div>
 </section>
 <!-- Requisitos -->
-<section id="requisitos" appScrollSpy [sectionId]="'requisitos'" (sectionInView)="onSectionChange($event)" class="py-2 bg-white">
+<section id="requisitos" appScrollSpy [sectionId]="'requisitos'" (sectionInView)="onSectionChange($event)"
+  class="py-2 bg-white">
   <div class="container">
     <div class="text-center mb-5">
       <span class="badge-custom">Requisitos</span>
-      <h2 class="display-5 fw-bold mb-3">¿Qué necesitas para <span class="text-gradient-primary">solicitarlo?</span></h2>
-      <p class="text-muted lead mx-auto" style="max-width: 700px;">Condiciones básicas para acceder a tu crédito individual</p>
+      <h2 class="display-5 fw-bold mb-3">¿Qué necesitas para <span class="text-gradient-primary">solicitarlo?</span>
+      </h2>
+      <p class="text-muted lead mx-auto" style="max-width: 700px;">Condiciones básicas para acceder a tu crédito
+        individual</p>
     </div>
-    
+
     <div class="row g-4">
       <!-- Requisito 1 -->
       <div class="col-md-6 col-lg-3">
@@ -253,7 +263,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Requisito 2 -->
       <div class="col-md-6 col-lg-3">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -270,7 +280,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Requisito 3 -->
       <div class="col-md-6 col-lg-3">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -287,7 +297,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Requisito 4 -->
       <div class="col-md-6 col-lg-3">
         <div class="card h-100 border-0 rounded-4 shadow-sm hover-transform">
@@ -308,16 +318,17 @@
   </div>
 </section>
 <!-- Documentación -->
-<section id="documentacion" appScrollSpy [sectionId]="'documentacion'" (sectionInView)="onSectionChange($event)" class="py-2 bg-light">
+<section id="documentacion" appScrollSpy [sectionId]="'documentacion'" (sectionInView)="onSectionChange($event)"
+  class="py-2 bg-light">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="text-center mb-5">
-      <span class="badge-custom">Documentación</span>
+          <span class="badge-custom">Documentación</span>
           <h2 class="display-5 fw-bold mb-3">¿Qué documentos <span class="text-gradient-primary">necesitas?</span></h2>
           <p class="text-muted lead">Prepara estos documentos para agilizar tu trámite</p>
         </div>
-        
+
         <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
           <div class="card-body p-0">
             <div class="list-group list-group-flush">
@@ -332,10 +343,10 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="list-group-item p-4 border-bottom">
                 <div class="d-flex align-items-center">
-                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4"  style="color:#3c9cc8 ;">
+                  <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4" style="color:#3c9cc8 ;">
                     <i class="fas fa-file-invoice fa-2x"></i>
                   </div>
                   <div>
@@ -344,7 +355,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="list-group-item p-4 border-bottom">
                 <div class="d-flex align-items-center">
                   <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-4" style="color:#3c9cc8 ;">
@@ -365,10 +376,12 @@
 </section>
 
 <!-- CTA Section -->
-<section id="contacto" appScrollSpy [sectionId]="'contacto'" (sectionInView)="onSectionChange($event)" class="py-2 bg-lightS text-dark position-relative overflow-hidden">
+<section id="contacto" appScrollSpy [sectionId]="'contacto'" (sectionInView)="onSectionChange($event)"
+  class="py-2 bg-lightS text-dark position-relative overflow-hidden">
   <div class="container position-relative z-1 text-center">
     <h2 class="display-5 fw-bold mb-4">¿Listo para impulsar tu negocio?</h2>
-    <p class="lead mb-5 mx-auto" style="max-width: 700px;">Contáctanos hoy mismo y uno de nuestros asesores te guiará en el proceso para obtener tu crédito individual</p>
+    <p class="lead mb-5 mx-auto" style="max-width: 700px;">Contáctanos hoy mismo y uno de nuestros asesores te guiará en
+      el proceso para obtener tu crédito individual</p>
     <div class="d-flex flex-wrap justify-content-center gap-3">
       <a [routerLink]="'/presolicitar-credito'" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg">
         Solicitar crédito <i class="fas fa-arrow-right ms-2"></i>
